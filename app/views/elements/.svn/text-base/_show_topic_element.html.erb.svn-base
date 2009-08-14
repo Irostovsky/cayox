@@ -1,0 +1,23 @@
+<% unless session.user.guest? || session.user.topics.include?(@topic) %>
+<form id="vote_form" class="rating" title="Average Rating: <%= @element.average_vote %>" action="#">
+  <%= hidden_field :name => "element_id", :value => @element.id %>
+  <%= partial "shared/rating_stars", :element => @element, :readonly => false %>
+</form>
+<% end %>
+
+<ul class="action_links">
+  <% if @element.removable_by?(session.user) %>
+    <li class="remove"><%= link_to(_('Remove'), '#', :class => "remove_element") %></li>
+  <% end %>
+  <% if @element.editable_by?(session.user) %>
+    <li class="edit"><%= link_to(_("Edit"), resource(@topic, @element, :edit), :class => "edit_element_link") %></li>
+  <% end %>
+  <li class="link"><%= link_to(_("Link"), resource(@topic, @element, :permalink), :id => 'permalink_link') %></li>
+  <% unless session.user.guest? %>
+    <li class="bookmark"><%= link_to(_("Add bookmark"), resource(:bookmarks,:new,:element_id => @element.id) , :class => "add_bookmark_link" ) %></li>
+  <% end %>
+  <li class="flag"><%= link_to(_("Flag"), resource(@topic, @element, :flags, :new), :class => "flag_element_link") %></li>
+</ul>
+<%= form :action => resource(@topic, @element), :id => "remove_element_form", :method => 'delete' do %><% end =%>
+
+<%= partial("comments/comments", :with => @element, :as => :commentable) %>

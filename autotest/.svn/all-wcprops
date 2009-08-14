@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Cayox/!svn/ver/125/trunk/CayoxClouds/autotest
+END
+discover.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Cayox/!svn/ver/125/trunk/CayoxClouds/autotest/discover.rb
+END
+merb_rspec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Cayox/!svn/ver/125/trunk/CayoxClouds/autotest/merb_rspec.rb
+END
+merb.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Cayox/!svn/ver/125/trunk/CayoxClouds/autotest/merb.rb
+END

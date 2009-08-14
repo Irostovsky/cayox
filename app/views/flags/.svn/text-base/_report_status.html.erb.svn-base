@@ -1,0 +1,10 @@
+<p>
+  <%= _("Thank you for reporting. '%s' has been flagged by you as '%s'.") % [translate(@object.name), _(@flag.description)] %><br/><br/>
+  <% if @object_flag.pending? %>
+    <%= _("Your request is <strong>waiting</strong> for topic maintainer approval.") %>
+  <% elsif @object_flag.rejected? %>
+    <%= _("Your request has been <strong>rejected</strong> by topic maintainer.") %>
+  <% end %>
+  <br/><br/>
+  <%= link_to _("Close"), '#', :class => "close" %>
+</p>

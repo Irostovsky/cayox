@@ -1,0 +1,25 @@
+<% if @comments %>
+  <% last_user_id = 0 %>
+
+<% @comments.each do |comment| %>
+  <div class="comment">
+    <% if last_user_id != comment.user.id %>
+      <p class="comment-meta">
+        <img class="user-icon" src="<%= gravatar(comment.user.email, 48) %>" />
+      </p>  
+      <p class="comment-author">
+        <%= comment.user.name %> <%= _("said:") %>
+      </p>
+    <% end %>   
+    <p class="comment-content">
+      <span class="comment-date"><%= comment.created_at.strftime("%d/%m/%Y @ %H:%M")%></span>:
+      <span class="comment-body"><%= comment.body %></span>
+      <% last_user_id = comment.user.id %>
+    </p>
+    </div>
+<% end %>
+
+  <%= paginator(@comments_page_count, :url => "/comments/element_comments?element_id=#{@element.id}") %>
+<% else %>
+  <span class="minor-info"><%= _("No comments at the moment.") %></span>
+<% end %>

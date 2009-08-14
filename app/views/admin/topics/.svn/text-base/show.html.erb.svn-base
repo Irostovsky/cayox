@@ -1,0 +1,19 @@
+<span class="back-link"><%= back_link_to_results %></span>
+
+<%= partial :"topics/topic_info" %>
+
+<ul class="action_links">
+  <li class="remove">
+    <%= link_to(_("Permanently remove"), resource(:admin, @topic, :remove), :class => "remove_topic") %>
+  </li>
+  <li class="blocking">
+    <%= @topic.visible? ? link_to(_("Block"), resource(:admin, @topic, :block), :class => "block") : link_to(_("Unblock"), resource(:admin, @topic, :unblock), :class => "unblock") %>
+  </li>
+  <% if @topic.visible? %>
+    <li class="key"><%= link_to _("Edit Roles"), resource(:admin, @topic, :sig_members)  %></li>
+  <% end %>
+</ul>
+
+<%= autocomplete_url_script(resource(:admin, @topic, :element_tags_autocomplete, :blocked => params[:blocked])) %>
+
+<% throw_content :for_right_column, partial("admin/elements", :with => @topic, :as => :parent) + element_tag_cloud(@all_tags, @selected_tags) %>

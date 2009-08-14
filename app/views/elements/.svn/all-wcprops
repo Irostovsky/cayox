@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Cayox/!svn/ver/789/trunk/CayoxClouds/app/views/elements
+END
+_show_topic_element.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Cayox/!svn/ver/789/trunk/CayoxClouds/app/views/elements/_show_topic_element.html.erb
+END
+flag.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/609/trunk/CayoxClouds/app/views/elements/flag.html.erb
+END
+_element_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Cayox/!svn/ver/576/trunk/CayoxClouds/app/views/elements/_element_form.html.erb
+END
+_element_thumbnail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Cayox/!svn/ver/575/trunk/CayoxClouds/app/views/elements/_element_thumbnail.html.erb
+END
+_show_favourite_element.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Cayox/!svn/ver/606/trunk/CayoxClouds/app/views/elements/_show_favourite_element.html.erb
+END
+_edit_element_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Cayox/!svn/ver/554/trunk/CayoxClouds/app/views/elements/_edit_element_form.html.erb
+END
+_flag_success.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Cayox/!svn/ver/610/trunk/CayoxClouds/app/views/elements/_flag_success.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/641/trunk/CayoxClouds/app/views/elements/show.html.erb
+END
+permalink.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Cayox/!svn/ver/621/trunk/CayoxClouds/app/views/elements/permalink.html.erb
+END
+_new_element_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Cayox/!svn/ver/424/trunk/CayoxClouds/app/views/elements/_new_element_form.html.erb
+END

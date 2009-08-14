@@ -1,0 +1,27 @@
+<p>
+  <%= select :name => "lang", :class => "language_select", :selected => @language.iso_code,
+             :label => _("Language version"), :collection => language_options(@element), :text_method => :name, :value_method => :iso_code %>
+</p>
+<div class="element">
+  <p>
+    <% if @element.new_record? %>
+      <%= text_field :url, :label => _("URL"), :class => @element.errors.on(:url) ? "error" : "" %>
+      <%= error_on(@element, :url) %>
+    <% else %>
+      <label><%= _("URL") %></label><%= @element.url %>
+    <% end %>
+  </p>
+  <p>
+    <%= text_field :name, :value => @element.name[@language.iso_code], :label => _("Element name"), :class => @element.errors.on(:name) ? "element_name error" : "element_name" %>
+    <%= error_on(@element, :name) %>
+  </p>
+  <p>
+    <label><%= _("Description") %></label>
+    <%= text_area @element.description[@language.iso_code], :name => "element[description]", :class => "element_description" %>
+    <%= error_on(@element, :description) %>
+  </p>
+  <p>
+    <%= text_field :tag_list, :value => formatted_tags(@element.tag_list), :label => _("Tags"), :class => @element.errors.on(:tag_list) ? "element_tag_list error" : "element_tag_list" %>
+    <%= error_on(@element, :tag_list) %>
+  </p>
+</div>

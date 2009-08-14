@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/lib/tasks
+END
+fixes.rake
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Cayox/!svn/ver/685/trunk/CayoxClouds/lib/tasks/fixes.rake
+END
+topic_abandon.rake
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/731/trunk/CayoxClouds/lib/tasks/topic_abandon.rake
+END
+daily_mails.rake
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Cayox/!svn/ver/566/trunk/CayoxClouds/lib/tasks/daily_mails.rake
+END
+localization.rake
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Cayox/!svn/ver/252/trunk/CayoxClouds/lib/tasks/localization.rake
+END
+notifications.rake
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/lib/tasks/notifications.rake
+END
+flags.rake
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Cayox/!svn/ver/651/trunk/CayoxClouds/lib/tasks/flags.rake
+END

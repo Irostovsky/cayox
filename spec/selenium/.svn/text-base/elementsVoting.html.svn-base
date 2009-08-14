@@ -1,0 +1,1742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>elementsVoting_BUG</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">elementsVoting_BUG</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Topic name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Topic name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'VotingTest' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'VotingTest description' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_description</td>
+	<td>topicDesc</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicDesc}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>topicUrl</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>URL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>URL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.google.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'ElemVotingTest' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_url</td>
+	<td>elemUrl</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>OTHER ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>el1Url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>xpath=//*[@id=&quot;vote_form&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--vote for element-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin2}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<!--check the votes-->
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[1]/a@title</td>
+	<td>Cancel Rating</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]/a@title</td>
+	<td>Bad</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]/a@title</td>
+	<td>OK</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]/a@title</td>
+	<td>Good</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]/a@title</td>
+	<td>Cool</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]/a@title</td>
+	<td>Awesome</td>
+</tr>
+<!--vote-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('vote_form').title.replace(/^\s+|\s+$/, '')</td>
+	<td>Average Rating:</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 3.0</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>3</td>
+</tr>
+<!--check votes on the right side-->
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>(Votes: 1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--another vote: fractional average-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin3}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 3.0</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 3.5</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>4</td>
+</tr>
+<!--check votes on the right side-->
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>(Votes: 2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--cancel & vote again-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin2}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 3.5</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='vote_form']/div[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 4.0</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>4</td>
+</tr>
+<!--check votes on the right side-->
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>(Votes: 1)</td>
+	<td></td>
+</tr>
+<!--vote once again-->
+<tr>
+	<td>click</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 2.5</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>3</td>
+</tr>
+<!--check votes on the right side-->
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>(Votes: 2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--another vote for this element-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin4}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 2.5</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 2.5</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>3</td>
+</tr>
+<!--check votes on the right side-->
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li/div/input@value</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>(Votes: 3)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--try to vote on this element as unauthorized user-->
+<tr>
+	<td>open</td>
+	<td>${el1Url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>OTHER ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>xpath=//*[@id=&quot;vote_form&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=//*[@class=&quot;average_vote&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>selenium.browserbot.getCurrentWindow().document.getElementsByTagName('input').item(2).value</td>
+	<td>3</td>
+</tr>
+<!--add element within the same topic & check whether it has 0 votes-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>URL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>URL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.onet.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'ElemVotingTest2' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName2</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_url</td>
+	<td>elemUrl2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${elemName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>OTHER ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin4}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comments on ${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('vote_form').title.replace(/^\s+|\s+$/, '')</td>
+	<td>Average Rating:</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=/html/body/div[3]/div[3]/ul/li[2]/div/input</td>
+	<td></td>
+</tr>
+<!--change vote-->
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 2.0</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('input')[2].value</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[2]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[3]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[4]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[5]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>xpath=/html/body/div[3]/div[2]/form/div[6]@class</td>
+	<td>star star_group_rate star_live star_on</td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>vote_form@title</td>
+	<td>Average Rating: 5.0</td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>rate@value</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

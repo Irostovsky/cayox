@@ -1,0 +1,34 @@
+<span class="back-link"><%= back_link_to_topic(@favourite) %></span>
+
+<h2><%= _("New elements added to topic '%s'" % translate(@favourite.topic.name)) %></h2>
+
+<p><%= _("Following elements have been added to topic by its maintainers. Please accept elements you want to add to favourite '%s'.") % @favourite.name %></p>
+
+<%= form :action => resource(@favourite, :confirm_fresh), :id => "fresh_elements_form" do %>
+  <table class="standard wide">
+    <tbody>
+      <% @elements.each do |element| %>
+        <tr>
+          <td class="fresh_element">
+            <%= link_to(translate(element.name), '#', :class => "element_name fresh") %>
+            - <%= link_to(element.url, element.url, :target => "_blank") %>
+            <p style="display: none"><%= translate(element.description).gsub("\n", "<br/>") %></p>
+          </td>
+          <td class="checkbox">
+            <%= check_box :name => "element_ids[]", :value => element.id %>
+          </td>
+        </tr>
+      <% end %>
+      <tr>
+        <td colspan="2">
+          <fieldset style="float: right">
+              <%= submit _("Add to favourite"), :name => "add", :class => "button" %>
+              <%= submit _("Reject"), :name => "reject", :class => "button", :style => "margin-right: 0" %>
+          </fieldset>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end =%>
+
+<%= paginator(@page_count) %>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Cayox/!svn/ver/688/trunk/CayoxClouds/app/views/comments
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/280/trunk/CayoxClouds/app/views/comments/index.html.erb
+END
+_element_comments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Cayox/!svn/ver/688/trunk/CayoxClouds/app/views/comments/_element_comments.html.erb
+END
+_topic_comments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Cayox/!svn/ver/688/trunk/CayoxClouds/app/views/comments/_topic_comments.html.erb
+END
+_comments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Cayox/!svn/ver/651/trunk/CayoxClouds/app/views/comments/_comments.html.erb
+END

@@ -1,0 +1,53 @@
+<h2><%= _("BOOKMARKS") %> <%= link_to _("Create new bookmark"), resource(:bookmarks, :new), :class => "link", :id => "create_new_bookmark_link" %> </h2>
+
+<ul class="topic_list">
+  <%= form :action => resource(:topics,:new), :id => "create_topic_from_bookmarks" do %>
+    <% @bookmarks.each do |bookmark| %>
+    <li>
+	<p>
+        <div class="clearfix">		
+		  <%= link_to bookmark.name, resource(bookmark), :class => "bookmark" %> 
+		  <span class="options_links">
+		    <%= link_to 'edit', resource(bookmark,:edit), :class => "edit_bookmark" %> <%= link_to 'destroy', resource(bookmark,:delete) , :class => "remove_bookmark" %>  <%= check_box :name => "bookmarks[]", :boolean => false, :value => bookmark.id %>
+		  </span>
+		</div>
+		<p><%= bookmark.description.to_s.truncate(100) %></p>
+	</p>
+    </li>
+    <% end %>
+  <fieldset>
+  <p class="right">
+    <%= link_to _("Create topic from selected bookmarks"), "#" , :id => "create_topic_from_bookmarks_link", :class => "button"  %>
+  </p>
+  </fieldset>
+  <% end =%>
+  
+<%
+ topics =  @user_topics.inject([]) { |acc, topic| acc << [topic.id,translate_for_user(topic.name, session.user)]; acc }
+%>
+
+<% if topics.length > 0 %>
+
+  <%= form :action => resource(:topics, :add), :id => "add_bookmarks_to_topic" do %>
+  <fieldset>
+	  <p>
+	 <%#= select :name => "topic", :class => "topic_select",
+	             :label => _("Topic:"), :collection => @user_topics, :text_method => :select_name, :value_method => :id   , :class => "left" %>
+	<%= select :name => "topic", :class => "topic_select", :class => "left",
+             :collection => topics %>
+
+   <%= submit _("Add bookmarks to selected topic"), :class => "button"  %>
+  </p>
+  </fieldset>
+  <% end =%>
+<% end %>
+
+</ul>	
+	
+<%= paginator(@page_count) %>
+
+<%= autocomplete_url_script(resource(:bookmarks, :tags_autocomplete)) %>
+
+<% throw_content(:for_right_column, bookmark_tag_cloud(@all_tags, @selected_tags)) %>
+
+

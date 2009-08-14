@@ -1,0 +1,4175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>asAdminBlockUsersTopicsElements</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">asAdminBlockUsersTopicsElements</td></tr>
+</thead><tbody>
+<!--An Admin User can block Users, Topics and Elements-->
+<!--block users-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[1].textContent</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>active</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1].textContent</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>User blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>blocked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1].textContent</td>
+	<td>unblock</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Sorry, your account has been blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Sorry, your account has been blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>request_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you have forgotten your Cayox password please enter your screenname and email address and we will send you password reset link.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>email</td>
+	<td>${userEmail10}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Sorry, your account has been blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>blocked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1].textContent</td>
+	<td>unblock</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>User unlocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>active</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1].textContent</td>
+	<td>Block</td>
+</tr>
+<!--admin can't block himself-->
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>active</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Can't block self</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>active</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--Block topics & elements-->
+<!--prepare test data-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Public</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName1</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_description</td>
+	<td>topicDesc1</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_tag_list</td>
+	<td>topicTags1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicDesc1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>topicUrl1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.google.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName1pub</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element[description]</td>
+	<td>elemDesc1pub</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_tag_list</td>
+	<td>elemTags1pub</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>elemUrl1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName1}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Closed User Group</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName2</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_description</td>
+	<td>topicDesc2</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_tag_list</td>
+	<td>topicTags2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicDesc2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>topicUrl2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.yahoo.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName1cug</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element[description]</td>
+	<td>elemDesc1cug</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_tag_list</td>
+	<td>elemTags1cug</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>elemUrl2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName2}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Private</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName3</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_description</td>
+	<td>topicDesc3</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_tag_list</td>
+	<td>topicTags3</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicDesc3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>topicUrl3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.google.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName1prv</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element[description]</td>
+	<td>elemDesc1prv</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_tag_list</td>
+	<td>elemTags1prv</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>elemUrl3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName3}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VISIBLE TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<!--block/unblock private element & topic-->
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Block</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Permanently remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td>Permanently remove</td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This element will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This element will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element '${elemName1prv}' has been successfully blocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td>Permanently remove</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--check whether the blocked element isn't available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This topic will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This topic will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--check whether the blocked topic isn't available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<!--unblock private topic & element-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this topic?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this topic?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Permanently remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--check whether the unblocked topic is available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Remove</td>
+	<td></td>
+</tr>
+<!--check whether the access level wasn't changed-->
+<tr>
+	<td>click</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Edit Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>topic_access_level</td>
+	<td>private</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<!--unblock the element & check whether it's accessible for owner-->
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this element?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this element?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element '${elemName1prv}' has been successfully unblocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Element '${elemName1prv}' has been successfully unblocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No elements in this topic.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1prv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${elemUrl3}?page=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--block/unblock closed user group element & topic-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VISIBLE TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Block</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Permanently remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td>Permanently remove</td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This element will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This element will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element '${elemName1cug}' has been successfully blocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td>Permanently remove</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--check whether the blocked element isn't available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This topic will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This topic will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--check whether the blocked topic isn't available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<!--unblock cug topic & element-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this topic?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this topic?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Permanently remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--check whether the unblocked topic is available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add to favourites</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Abandon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<!--check whether the access level wasn't changed-->
+<tr>
+	<td>click</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Edit Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>topic_access_level</td>
+	<td>closed_user_group</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<!--unblock the element & check whether it's accessible for owner-->
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this element?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this element?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element '${elemName1cug}' has been successfully unblocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Element '${elemName1cug}' has been successfully unblocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No elements in this topic.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1cug}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${elemUrl2}?page=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--check whether this cug topic/elements still aren't available for guests-->
+<tr>
+	<td>open</td>
+	<td>${topicUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<!--block/unblock public element & topic-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>VISIBLE TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Block</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Permanently remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td>Permanently remove</td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This element will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This element will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element '${elemName1pub}' has been successfully blocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[2]</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//body[@id='admin_topics_show']/div[3]/div[3]/ul/li/a[3]</td>
+	<td>Permanently remove</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--check whether the blocked element isn't available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This topic will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>This topic will be hidden and not accessible by the users. Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--check whether the blocked topic isn't available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${topicUrl1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<!--unblock cug topic & element-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Unblock</td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this topic?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this topic?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('blocking')[0].childNodes[1].textContent</td>
+	<td>Block</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Permanently remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<!--check whether the unblocked topic is available for owner-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add to favourites</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Abandon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit Roles</td>
+	<td></td>
+</tr>
+<!--check whether the access level wasn't changed-->
+<tr>
+	<td>click</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Edit Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>topic_access_level</td>
+	<td>public</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${elemUrl1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Requested resource cannot be found. Try searching on homepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Topics</td>
+	<td></td>
+</tr>
+<!--unblock the element & check whether it's accessible for owner-->
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this element?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Unblock</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure to unblock this element?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element '${elemName1pub}' has been successfully unblocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Element '${elemName1pub}' has been successfully unblocked.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No elements in this topic.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin7}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${elemUrl1}?page=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--check whether this cug topic/elements still aren't available for guests-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicTags1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${topicUrl1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>${elemUrl1}?page=1</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

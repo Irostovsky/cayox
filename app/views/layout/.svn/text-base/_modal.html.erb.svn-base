@@ -1,0 +1,38 @@
+    <div class="modal-background hidden"></div>
+    <div id="modal" class="hidden">
+      <div class="header">
+        HEADER
+        <a class="close" href="#">Close</a>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.</p>
+
+        <form>
+          <fieldset>
+            <h4>Login</h4>
+
+
+            <div class="error">
+              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+            </div>
+
+            <p>
+              <label for="login"><% _("Login") %></label>
+              <input type="text" id="login" />
+            </p>
+            <p>
+              <label for="login">><% _("Password") %></label>
+              <input class="error" type="password" id="password" />
+            </p>
+            <p class="indented">
+              <input class="button" value="Login" type="submit" />
+            </p>
+            <p class="indented">
+              <a href="#"><% _("Forgot my password") %></a>
+              <a href="#">><% _("Register a new account") %></a>
+            </p>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+

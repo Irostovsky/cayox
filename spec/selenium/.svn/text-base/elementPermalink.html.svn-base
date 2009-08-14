@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>elementPermalink</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">elementPermalink</td></tr>
+</thead><tbody>
+<!--unauthorized user-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Browse topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Browse topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Browse topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/div[3]/div[2]/div[@id='topic_list']/ul/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '*'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body[@id='topics_show']/div[3]/div[3]/ul[1]/li[1]/a[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>OTHER ELEMENTS IN '*'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/\d{1,4}(?=\?)/.exec(window.document.URL)</td>
+	<td>elemId</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${elemId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>permalink_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>permalink_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permalink for *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permalink for *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Here is permalink for '*'. If you want to copy it to clipboard click on 'Copy' button or select it and press Ctrl+C.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Send it to your friend</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>If you want to share this link with your friend enter his e-mail address and add some comment.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>E-mail address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>permalink_form_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Comment for this link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>permalink_form[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<!--assertion below check whether topic id is the same as topic id in permalink-->
+<tr>
+	<td>assertEval</td>
+	<td>/\d{1,4}(?=-)/.exec(window.document.getElementById('permalink').value)</td>
+	<td>${elemId}</td>
+</tr>
+<!--assertion below check whether form contains copy button-->
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementById('copy_permalink').value</td>
+	<td>Copy</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Link</td>
+	<td></td>
+</tr>
+<!--authorized user-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Join</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname/email:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Browse topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/div[3]/div[2]/div[@id='topic_list']/ul/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ELEMENTS IN '*'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body[@id='topics_show']/div[3]/div[3]/ul[1]/li[1]/a[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>OTHER ELEMENTS IN '*'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/\d{1,4}(?=\?)/.exec(window.document.URL)</td>
+	<td>elemId</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>permalink_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>permalink_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permalink for *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permalink for *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Here is permalink for '*'. If you want to copy it to clipboard click on 'Copy' button or select it and press Ctrl+C.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Send it to your friend</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>If you want to share this link with your friend enter his e-mail address and add some comment.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>E-mail address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>permalink_form_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Comment for this link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>permalink_form[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<!--assertion below check whether topic id is the same as topic id in permalink-->
+<tr>
+	<td>assertEval</td>
+	<td>/\d{1,4}(?=-)/.exec(window.document.getElementById('permalink').value)</td>
+	<td>${elemId}</td>
+</tr>
+<!--assertion below check whether form contains copy button-->
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementById('copy_permalink').value</td>
+	<td>Copy</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Close</td>
+	<td></td>
+</tr>
+<!--validations-->
+<tr>
+	<td>click</td>
+	<td>permalink_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permalink for *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permalink for *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>send_permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You must enter email address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You must enter email address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form_email</td>
+	<td>sss</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>send_permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>This email address has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This email address has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form_email</td>
+	<td>wwwwww.wwwwwww.ww.ww</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>send_permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>This email address has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This email address has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form_email</td>
+	<td>test@</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>send_permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>This email address has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This email address has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form_email</td>
+	<td>${email1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>permalink_form[comment]</td>
+	<td>selenium permalink test</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>send_permalink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

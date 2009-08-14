@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec
+END
+mail_controller_specs_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/mail_controller_specs_helper.rb
+END
+spec_fixtures.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Cayox/!svn/ver/657/trunk/CayoxClouds/spec/spec_fixtures.rb
+END
+cayox_controller_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/621/trunk/CayoxClouds/spec/cayox_controller_helper.rb
+END
+fixtures_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Cayox/!svn/ver/707/trunk/CayoxClouds/spec/fixtures_helper.rb
+END
+cayox_matchers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Cayox/!svn/ver/657/trunk/CayoxClouds/spec/cayox_matchers.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Cayox/!svn/ver/769/trunk/CayoxClouds/spec/spec_helper.rb
+END
+spec.opts
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Cayox/!svn/ver/140/trunk/CayoxClouds/spec/spec.opts
+END

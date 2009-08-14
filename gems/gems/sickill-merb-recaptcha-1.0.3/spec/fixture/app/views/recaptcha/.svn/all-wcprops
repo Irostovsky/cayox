@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha
+END
+noajax_with_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/noajax_with_options.html.erb
+END
+ajax_with_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/ajax_with_options.html.erb
+END
+ajax_with_callback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/ajax_with_callback.html.erb
+END
+noajax_with_noscript.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/noajax_with_noscript.html.erb
+END
+ajax_with_jquery.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/ajax_with_jquery.html.erb
+END
+ajax.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/ajax.html.erb
+END
+noajax_without_noscript.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/Cayox/!svn/ver/776/trunk/CayoxClouds/gems/gems/sickill-merb-recaptcha-1.0.3/spec/fixture/app/views/recaptcha/noajax_without_noscript.html.erb
+END

@@ -1,0 +1,10 @@
+<li class="<%= active ? "active" : "" %>">
+  <div class="average_vote">
+    <%= partial "shared/rating_stars", :element => element, :readonly => true %>
+  </div>
+  <%= link_to(translate(element.name), resource(parent, element, :page => pagination_page), :title => element.link.url) %>
+  -
+  <%= link_to(element.link.site, element.link.url, :title => element.link.url, :target => "_blank") %>
+
+  <span>(<%= _("Votes: %s") % element.votes_count %>)</span>
+</li>

@@ -1,0 +1,2659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>search</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">search</td></tr>
+</thead><tbody>
+<!--public topics-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>javascript{(new Date()).getTime()}</td>
+	<td>tag1</td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>javascript{(new Date()).getTime()}</td>
+	<td>tag2</td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>javascript{(new Date()).getTime()}</td>
+	<td>tag3</td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>javascript{(new Date()).getTime()}</td>
+	<td>tag4</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td>${tag1}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Public</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName1</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_description</td>
+	<td>topicDesc1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicDesc1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>topicUrl1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.google.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>${tag1}, ${tag2}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName1pub</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element[description]</td>
+	<td>elemDesc1pub</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName1}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td>${tag1}, ${tag2}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Public</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName2</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_description</td>
+	<td>topicDesc2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicDesc2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>topicUrl2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.yahoo.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>${tag1}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName2pub</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element[description]</td>
+	<td>elemDesc2pub</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName2}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.live.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>${tag3}, ${tag4}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName3pub</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element[description]</td>
+	<td>elemDesc3pub</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName2}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='CAYOX']</td>
+	<td></td>
+</tr>
+<!--search this topics-->
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${tag1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to search results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to search results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<!--filtering by tags-->
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1} ${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No elements in this topic.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag4}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag4}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to search results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--search & filter as guest-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${tag1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to search results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName1pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to search results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<!--filtering by tags as guest-->
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1} ${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag1}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No elements in this topic.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag4}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag4}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>${tag3}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Selected tags: ${tag3} ${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${tag4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName2pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${elemName3pub}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to search results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=New search</td>
+	<td></td>
+</tr>
+<!--try to search a topic with no tag assigned, search by topic name-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Public</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.llp.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='CAYOX']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${topicName}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Tag ${topicName} has been removed as it didn't provide any result.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=New search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>${elemName}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Tag ${elemName} has been removed as it didn't provide any result.</td>
+	<td></td>
+</tr>
+<!--tag case-sensitivity test-->
+<tr>
+	<td>click</td>
+	<td>link=New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_description</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>topic_tag_list</td>
+	<td>CASE_SENSITIVE_1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>topic_access_level</td>
+	<td>label=Public</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_name</td>
+	<td>topicName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>topic_tag_list</td>
+	<td>topicTag</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_url</td>
+	<td>http://www.google.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_name</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element[description]</td>
+	<td>javascript{'test' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>element_tag_list</td>
+	<td>CASE_SENSITIVE_2</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_name</td>
+	<td>elemName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>element_tag_list</td>
+	<td>elemTag</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Add element']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Element name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>element_name</td>
+	<td>${elemName}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>element_tag_list</td>
+	<td>case_sensitive_2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to '${topicName}'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Edit Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>topic_name</td>
+	<td>${topicName}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>topic_tag_list</td>
+	<td>case_sensitive_1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='CAYOX']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>CASE_SENSITIVE_1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='CAYOX']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>case_sensitive_1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${topicName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${topicName}</td>
+	<td></td>
+</tr>
+<!--can't search for element through the main search-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='CAYOX']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td>CASE_SENSITIVE_2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Tag case_sensitive_2 has been removed as it didn't provide any result.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td>case_sensitive_2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=${elemName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Tag case_sensitive_2 has been removed as it didn't provide any result.</td>
+	<td></td>
+</tr>
+<!--topics position-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Browse topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Please filter topics by selecting tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li').length</td>
+	<td>listLength</td>
+</tr>
+<!--compare number of visits for first & second topics-->
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[0].childNodes[3].textContent)</td>
+	<td>numb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb1'])</td>
+	<td>visitsNumb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[1].childNodes[3].textContent)</td>
+	<td>numb2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb2'])</td>
+	<td>visitsNumb2</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars['visitsNumb1'] &gt;= storedVars['visitsNumb2']</td>
+	<td>true</td>
+</tr>
+<!--compare number of visits for first & last topics-->
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[0].childNodes[3].textContent)</td>
+	<td>numbFirst</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numbFirst'])</td>
+	<td>visitsNumbFirst</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[${listLength} - 1].childNodes[3].textContent)</td>
+	<td>numbLast</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numbLast'])</td>
+	<td>visitsNumbLast</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars['visitsNumbFirst'] &gt;= storedVars['visitsNumbLast']</td>
+	<td>true</td>
+</tr>
+<!--compare number of visits for last & next to last topics-->
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[${listLength} - 2].childNodes[3].textContent)</td>
+	<td>numb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb1'])</td>
+	<td>visitsNumb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[${listLength} - 1].childNodes[3].textContent)</td>
+	<td>numb2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb2'])</td>
+	<td>visitsNumb2</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars['visitsNumb1'] &gt;= storedVars['visitsNumb2']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--topics position for guest-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Browse topics</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Please filter topics by selecting tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li').length</td>
+	<td>listLength</td>
+</tr>
+<!--compare number of visits for first & second topics-->
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[0].childNodes[3].textContent)</td>
+	<td>numb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb1'])</td>
+	<td>visitsNumb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[1].childNodes[3].textContent)</td>
+	<td>numb2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb2'])</td>
+	<td>visitsNumb2</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars['visitsNumb1'] &gt;= storedVars['visitsNumb2']</td>
+	<td>true</td>
+</tr>
+<!--compare number of visits for first & last topics-->
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[0].childNodes[3].textContent)</td>
+	<td>numbFirst</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numbFirst'])</td>
+	<td>visitsNumbFirst</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[${listLength} - 1].childNodes[3].textContent)</td>
+	<td>numbLast</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numbLast'])</td>
+	<td>visitsNumbLast</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars['visitsNumbFirst'] &gt;= storedVars['visitsNumbLast']</td>
+	<td>true</td>
+</tr>
+<!--compare number of visits for last & next to last topics-->
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[${listLength} - 2].childNodes[3].textContent)</td>
+	<td>numb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb1'])</td>
+	<td>visitsNumb1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/(?:\s+)\d{1,4}/.exec(window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li')[${listLength} - 1].childNodes[3].textContent)</td>
+	<td>numb2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['numb2'])</td>
+	<td>visitsNumb2</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars['visitsNumb1'] &gt;= storedVars['visitsNumb2']</td>
+	<td>true</td>
+</tr>
+<!--no search results-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>CAYOX</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>join_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>join_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search_terms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Please filter topics by selecting tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>TOPIC CLOUD</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>exception</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>filter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>TOPICS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Please filter topics by selecting tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>TOPIC CLOUD</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>exception</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>error</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

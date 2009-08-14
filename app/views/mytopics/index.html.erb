@@ -1,0 +1,21 @@
+<% if session.user.has_pending_element_propositions? %>
+  <p>
+    <%= _("There are element propositions for your topics.") %> <%= link_to(_("Show them"), resource(:element_propositions)) %>
+  </p>
+<% end %>
+<% if session.user.has_pending_reports? %>
+  <p>
+    <%= _("There are pending flagged items for your topics.") %> <%= link_to(_("Show them"), resource(:flags)) %>
+  </p>
+<% end %>
+<h2><%=  _("MY TOPICS") %> <%= link_to _('New Topic'), resource(:topics, :new), :class => "new_topic_link link" %></h2>
+
+<%= invalid_tags_info(@invalid_tags) %>
+
+<div id="topic_list">
+  <%= partial "topics/topics_list", :admin => false %>
+</div>
+
+<%= autocomplete_url_script(resource(:mytopics, :tags_autocomplete)) %>
+
+<% throw_content :for_right_column, topic_tag_cloud(@topics_tags, @selected_tags) %>

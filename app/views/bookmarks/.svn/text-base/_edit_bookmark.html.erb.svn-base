@@ -1,0 +1,10 @@
+<%= form_for @bookmark, :action => resource(@bookmark), :method => :put do %>
+  <fieldset>
+
+    <%= partial :bookmark_form %>
+
+    <p class="indented">
+      <%= submit _("Update"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), resource(:bookmarks), :class => "close") %>
+    </p>
+  </fieldset>
+<% end =%>

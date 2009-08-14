@@ -1,0 +1,20 @@
+<p>
+  <% if @bookmark.new_record? %>
+    <%= text_field :url, :label => _("Link") %>
+    <%= error_on(@bookmark, :url) %><%= error_on(@bookmark, :link_id) %>
+  <% else %>
+    <label><%= _("Link") %></label><%= @bookmark.url %>
+  <% end %>
+</p>
+<p>
+  <%= text_field :name, :label => _("Bookmark name") %>
+  <%= error_on(@bookmark, :name) %>
+</p>
+<p>
+  <%= text_area :description, :label => _("Description") %>
+  <%= error_on(@bookmark, :description) %>
+</p>
+<p>
+  <%= text_field :tag_list, :label => _("Tags"), :value => formatted_tags(@bookmark.tag_list), :class => @bookmark.errors.on(:tag_list) ? "error" : "" %>
+  <%= error_on(@bookmark, :tag_list) %>
+</p>

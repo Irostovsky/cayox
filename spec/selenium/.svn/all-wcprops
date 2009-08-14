@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium
+END
+asAdminRemoveUsers.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminRemoveUsers.html
+END
+addAccessibleElementsToBookmarks.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/addAccessibleElementsToBookmarks.html
+END
+asAdminPromoteUserToAdminRole.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminPromoteUserToAdminRole.html
+END
+comments.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/comments.html
+END
+profilePageEditPassword.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/profilePageEditPassword.html
+END
+asAdminEditTopicRoles.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminEditTopicRoles.html
+END
+topicsVoting.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/topicsVoting.html
+END
+flagingTopics.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/flagingTopics.html
+END
+elementsCRUD.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/elementsCRUD.html
+END
+elementPermalink.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/elementPermalink.html
+END
+asAdminRemoveTopicsAndElements.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminRemoveTopicsAndElements.html
+END
+myFavourites.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/myFavourites.html
+END
+setup.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/setup.html
+END
+abandonTopic.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/abandonTopic.html
+END
+search.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/search.html
+END
+loginFormAndItsValidation.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/loginFormAndItsValidation.html
+END
+resendActivationEmail.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/resendActivationEmail.html
+END
+asAdminFilterUserListing.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminFilterUserListing.html
+END
+flaggingElements.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/flaggingElements.html
+END
+backNavigation.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/backNavigation.html
+END
+topicPermalink.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/topicPermalink.html
+END
+cugTopicRoles.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/cugTopicRoles.html
+END
+publicTopicRoles.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/publicTopicRoles.html
+END
+user-extensions.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/user-extensions.js
+END
+tagBookmarks.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/tagBookmarks.html
+END
+asAdminBlockUsersTopicsElements.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminBlockUsersTopicsElements.html
+END
+friends.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/friends.html
+END
+cayox_test_suite.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/cayox_test_suite.html
+END
+topicCRUD.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/topicCRUD.html
+END
+createTopicFromBookmarks.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/createTopicFromBookmarks.html
+END
+asAdminSeeListOfFlagedTopicsAndElements.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/asAdminSeeListOfFlagedTopicsAndElements.html
+END
+requestPassForm.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/requestPassForm.html
+END
+elementsVoting.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/elementsVoting.html
+END
+testCasesForDefects.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/testCasesForDefects.html
+END
+accessAsGuestToNotAllowedAreas.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/accessAsGuestToNotAllowedAreas.html
+END
+bookmarksCrud.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/bookmarksCrud.html
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/readme.txt
+END
+registrationFormValidation.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Cayox/!svn/ver/813/trunk/CayoxClouds/spec/selenium/registrationFormValidation.html
+END

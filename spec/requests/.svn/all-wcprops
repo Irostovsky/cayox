@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Cayox/!svn/ver/811/trunk/CayoxClouds/spec/requests
+END
+language_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Cayox/!svn/ver/281/trunk/CayoxClouds/spec/requests/language_spec.rb
+END
+comments_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Cayox/!svn/ver/748/trunk/CayoxClouds/spec/requests/comments_spec.rb
+END
+search_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/707/trunk/CayoxClouds/spec/requests/search_spec.rb
+END
+sessions_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Cayox/!svn/ver/538/trunk/CayoxClouds/spec/requests/sessions_spec.rb
+END
+voting_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/353/trunk/CayoxClouds/spec/requests/voting_spec.rb
+END
+favourites_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/592/trunk/CayoxClouds/spec/requests/favourites_spec.rb
+END
+bookmarks_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Cayox/!svn/ver/811/trunk/CayoxClouds/spec/requests/bookmarks_spec.rb
+END
+friends_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Cayox/!svn/ver/806/trunk/CayoxClouds/spec/requests/friends_spec.rb
+END
+elements_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Cayox/!svn/ver/797/trunk/CayoxClouds/spec/requests/elements_spec.rb
+END
+flags_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Cayox/!svn/ver/809/trunk/CayoxClouds/spec/requests/flags_spec.rb
+END
+sig_members_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/requests/sig_members_spec.rb
+END
+element_propositions_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Cayox/!svn/ver/768/trunk/CayoxClouds/spec/requests/element_propositions_spec.rb
+END
+topics_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/790/trunk/CayoxClouds/spec/requests/topics_spec.rb
+END
+users_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Cayox/!svn/ver/762/trunk/CayoxClouds/spec/requests/users_spec.rb
+END

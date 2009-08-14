@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    <title>CAYOX</title>
+    <%= partial "layout/assets" %>
+  </head>
+  <body class="main">
+    <div id="top">
+      <ul>
+    	<%= partial "layout/top_links" %>
+      </ul>
+    </div>
+    
+    <div class="header">
+      <h1><img src="/images/cayox-logo-big.gif" alt="CAYOX" /></h1>
+      <h2><%= _("HUMAN POWERED SEARCH") %></h2>
+    </div>
+    
+    <div id="flash" class="<%= message.keys.first %>" style="<%= 'display: block' unless message.keys.empty? %>">
+      <%= h message[message.keys.first] %>
+    </div>
+
+    <%= catch_content :for_layout %>
+
+    <%= partial("layout/#{menu_type}_menu") unless session.user.guest? || menu_type.nil? %>
+    
+    <ul class="footer">
+      <li>&copy; 2009 Moase Solutions</li>
+      <li><a href="#">About CAYOX</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li class="revision"></li>
+    </ul>
+    <% if self.status == 401 || params[:action] == "unauthenticated" && !session.authentication.authenticated? %>
+      <script type="text/javascript">var _needAuth = true;</script>
+    <% end %>
+    <% if session.authentication.authenticated? && params[:controller] == "topics" && params[:action] == "new" %>
+      <script type="text/javascript">var _exec = "Application.openNewTopicForm()";</script>
+    <% end %>
+  </body>
+</html>

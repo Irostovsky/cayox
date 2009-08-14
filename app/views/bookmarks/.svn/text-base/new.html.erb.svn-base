@@ -1,0 +1,3 @@
+<h2><%= _("Create new bookmark") %></h2>
+
+<%= partial "bookmarks/new_bookmark" %>

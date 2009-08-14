@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/spec/models/notifications
+END
+summary_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/summary_notification_spec.rb
+END
+role_assigned_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/role_assigned_notification_spec.rb
+END
+notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/spec/models/notifications/notification_spec.rb
+END
+element_propositions_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/element_propositions_notification_spec.rb
+END
+role_removed_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/role_removed_notification_spec.rb
+END
+friendship_request_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/friendship_request_notification_spec.rb
+END
+invitation_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/invitation_notification_spec.rb
+END
+password_reset_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/password_reset_notification_spec.rb
+END
+registration_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/registration_notification_spec.rb
+END
+role_changed_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/role_changed_notification_spec.rb
+END
+flags_notification_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/spec/models/notifications/flags_notification_spec.rb
+END

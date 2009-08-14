@@ -1,0 +1,11 @@
+<ul id="user_menu">
+  <% if session.user.guest? %>
+    <li><%= link_to _('Login'), url(:login), :id => "login_link" %> <%= _("or") %></li>
+    <li><%= link_to _('Join'), resource(:users, :new), :id => "join_link" %></li>
+  <% else %>
+    <li><%= _("Welcome") %>, <%= h session.user.name %> | </li>
+    <% if session.user.admin? %><li><%= link_to _('Administration'), resource(:admin, :users) %> |</li><% end %>
+    <li><%= link_to _('Profile'), resource(session.user, :edit) %> |</li>
+    <li><%= link_to _('Logout'), url(:logout) %></li>
+  <% end %>
+</ul>

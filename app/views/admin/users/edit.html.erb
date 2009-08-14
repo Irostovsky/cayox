@@ -1,0 +1,22 @@
+<% unless @user.name.to_s.empty? %>
+  <h2><%= _("%s's Profile") % @user.name %></h2>
+<% else %>
+  <h2><%= _("Profile") %></h2>
+<% end %>
+
+<%= form_for @user, :action => resource(:admin, @user), :id => "edit_user_form" do %>
+  <fieldset>
+    <%= partial "users/user_form" %>
+    <p class="indented">
+      <%= submit _("Save"), :class => "button" %>
+    </p>
+  </fieldset>
+<% end =%>
+
+<% unless @user.admin? %>
+  <h2><%= _("Promote to Admin") %></h2>
+  <%= link_to "Make Admin", resource(:admin, @user, :promote), :id => "promote" %>
+<% else %>
+  <h2><%= _("Demote from Admin") %></h2>
+  <%= link_to "Demote", resource(:admin, @user, :demote), :id => "demote" %>
+<% end %>

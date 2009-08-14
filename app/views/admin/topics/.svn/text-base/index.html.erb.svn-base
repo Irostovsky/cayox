@@ -1,0 +1,16 @@
+<%= link_to(_("Visible"), resource(:admin, :topics)) %> | <%= link_to(_("Blocked"), resource(:admin, :topics, :blocked)) %>
+<% if params[:blocked] %>
+  <h2><%=  _("BLOCKED TOPICS") %></h2>
+<% else %>
+  <h2><%=  _("VISIBLE TOPICS") %></h2>
+<% end %>
+
+<%= invalid_tags_info(@invalid_tags) %>
+
+<div id="topic_list">
+  <%= partial "topics/topics_list", :admin => true %>
+</div>
+
+<%= autocomplete_url_script(resource(:admin, :topics, :tags_autocomplete, :blocked => (params[:blocked] ? "1" : "0"))) %>
+
+<% throw_content :for_right_column, topic_tag_cloud(@topics_tags, @selected_tags) %>

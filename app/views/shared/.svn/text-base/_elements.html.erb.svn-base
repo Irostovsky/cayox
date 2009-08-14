@@ -1,0 +1,31 @@
+<h2>
+  <% if @element %>
+    <%= _("OTHER ELEMENTS IN '%s'") % translate(parent.name) %>
+  <% else %>
+    <%= _("ELEMENTS IN '%s'") % translate(parent.name) %>
+  <% end %>
+</h2>
+
+<% if parent.is_a?(Favourite) && !@element && parent.new_elements.size > 0 %>
+  <p class="fresh_elements">
+    <%= _("New elements have been added to topic '%s'." % translate(parent.topic.name)) %>
+    <%= link_to(_("Show them"), resource(parent, :fresh)) %>
+  </p>
+<% end %>
+
+<% if @elements.size > 0 %>
+  <ul class="element_list">
+    <% @elements.each do |element| %>
+      <%= partial "shared/element_link", :with => element, :as => :element, :parent => parent, :active => (element == @element) %>
+    <% end %>
+  </ul>
+ <%= paginator(@page_count) %>
+<% else %>
+  <%= parent.is_a?(Favourite) ? _("No elements in this favourite.") : _("No elements in this topic.") %>
+<% end %>
+
+<ul class="action_links">
+  <% if parent.editable_by?(session.user) %>
+    <li class="new"><%= link_to(_("Add new element"), resource(parent, :elements, :new), :class => "new_element_link") %></li>
+  <% end %>
+</ul>

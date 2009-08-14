@@ -1,0 +1,11 @@
+<h2><%= _("MY FAVOURITES") %></h2>
+
+<% if @favourites.empty? %>
+  <%= _("You have no favourites yet.") %>
+<%  else %>
+  <%= partial "favourites_list" %>
+<% end %>
+
+<%= autocomplete_url_script(resource(:favourites, :tags_autocomplete)) %>
+
+<% throw_content(:for_right_column, favourite_tag_cloud(@all_tags, @selected_tags)) %>

@@ -1,0 +1,10 @@
+dm-is-remixable
+dm-core
+dm-more
+builder
+gettext
+do_postgres -v=0.9.11
+ruby-pg
+postgres-pr
+data_objects
+extlib -v=0.9.12

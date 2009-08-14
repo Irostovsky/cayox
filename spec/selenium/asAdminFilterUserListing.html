@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>asAdminFilterUserListing</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">asAdminFilterUserListing</td></tr>
+</thead><tbody>
+<!--An Admin User can filter the User listing-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminLogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].childNodes[0].childNodes[1].textContent</td>
+	<td>Screen name</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].childNodes[0].childNodes[3].textContent</td>
+	<td>Registered at</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].childNodes[0].childNodes[5].textContent</td>
+	<td>Last login</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].childNodes[0].childNodes[7].textContent</td>
+	<td>Actions</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[0].childNodes[9].textContent</td>
+	<td>Status</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].childNodes.length/2</td>
+	<td>11</td>
+</tr>
+<!--check whether the labels for filter options are proper-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').nextSibling.textContent</td>
+	<td>Inactive</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').nextSibling.textContent</td>
+	<td>Blocked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').nextSibling.textContent</td>
+	<td>Active</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--show only active users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<!--check whether the first & last elements from first results pages are active users-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>active</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr').length</td>
+	<td>elemNumb</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[storedVars['elemNumb'] - 1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>active</td>
+</tr>
+<!--check whether the proper option is still selected after sending a form-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--show only blocked users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<!--check whether the first & last elements from first results pages are active users-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>blocked</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr').length</td>
+	<td>elemNumb</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[storedVars['elemNumb'] - 1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>blocked</td>
+</tr>
+<!--check whether the proper option is still selected after sending a form-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--show only inactive users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<!--check whether the first & last elements from first results pages are active users-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>inactive</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr').length</td>
+	<td>elemNumb</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[storedVars['elemNumb'] - 1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>inactive</td>
+</tr>
+<!--check whether the proper option is still selected after sending a form-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--show only inactive & blocked users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<!--check whether the first & last elements from first results pages are active users-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>regexp:inactive|blocked</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr').length</td>
+	<td>elemNumb</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[storedVars['elemNumb'] - 1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>regexp:inactive|blocked</td>
+</tr>
+<!--check whether the proper option is still selected after sending a form-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--show only inactive & active users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_blocked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<!--check whether the first & last elements from first results pages are active users-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>regexp:inactive|active</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr').length</td>
+	<td>elemNumb</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[storedVars['elemNumb'] - 1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>regexp:inactive|active</td>
+</tr>
+<!--check whether the proper option is still selected after sending a form-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--show only blocked & active users-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>nil_class_inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name</td>
+	<td></td>
+</tr>
+<!--check whether the first & last elements from first results pages are active users-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').childNodes[1].getElementsByTagName('tr')[1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>regexp:active|blocked</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr').length</td>
+	<td>elemNumb</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[storedVars['elemNumb'] - 1].childNodes[9].textContent.replace(/^\s+|\s+$/g, '')</td>
+	<td>regexp:active|blocked</td>
+</tr>
+<!--check whether the proper option is still selected after sending a form-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_active').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_inactive').getAttribute('checked')</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('nil_class_blocked').getAttribute('checked')</td>
+	<td>checked</td>
+</tr>
+<!--check whether there are links for action - not just plain text - select all anchors from table row-->
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementById('role_administration').getElementsByTagName('tr')[1].getElementsByTagName('a').length</td>
+	<td>6</td>
+</tr>
+<!--search for user by login & email, submit also blank form-->
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>exception</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userEmail10}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${userLogin10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--get the user id from the users list-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>/\d{1,4}/.exec(window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[1].firstChild.getAttribute('href'))</td>
+	<td>userId</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>/\d{1,4}/.exec(window.document.getElementById('user_menu').getElementsByTagName('li')[2].childNodes[0].getAttribute('href')) != storedVars['userId']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[1].textContent</td>
+	<td>userName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[5].textContent</td>
+	<td>link1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].textContent</td>
+	<td>link2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--access administration as non-authorized-->
+<tr>
+	<td>open</td>
+	<td>/admin/users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users/${userId}/edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users/${userId}/block</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users/${userId}/resend_activation_mail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<!--check whether the actions weren't performed-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>/\d{1,4}/.exec(window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[1].firstChild.getAttribute('href'))</td>
+	<td>${userId}</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[5].textContent</td>
+	<td>${link1}</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].textContent</td>
+	<td>${link2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--access administration as unprivileged user-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userLogin1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users/${userId}/edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users/${userId}/block</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/admin/users/${userId}/resend_activation_mail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Permission Denied.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<!--check whether the actions weren't performed-->
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>/\d{1,4}/.exec(window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[1].firstChild.getAttribute('href'))</td>
+	<td>${userId}</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[5].textContent</td>
+	<td>${link1}</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>window.document.getElementsByTagName('tbody')[0].childNodes[2].childNodes[7].textContent</td>
+	<td>${link2}</td>
+</tr>
+<!--admin access to the user's profile-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>nil_class_query</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${userLogin11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${userLogin11}'s Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${userLogin11}'s Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Promote to Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_name</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_full_name</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_email</td>
+	<td>${userEmail11}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin11}qwerty</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>${userLogin11}qwerty</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${accName}11qwerty${domain}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>user_name</td>
+	<td>userName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>user_email</td>
+	<td>userEmail</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>User updated.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${userName}'s Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${userName}'s Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_name</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_full_name</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_email</td>
+	<td>${userEmail}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${userName}'s Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_name</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_full_name</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_email</td>
+	<td>${userEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${userEmail11}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Your profile has been updated.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${adminEmail}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Welcome, ${adminLogin}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Users list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>nil_class_query</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>nil_class_query</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=${userLogin11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${userLogin11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>${userLogin11}'s Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_name</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_full_name</td>
+	<td>${userLogin11}</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_email</td>
+	<td>${userEmail11}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

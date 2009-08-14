@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Cayox/!svn/ver/707/trunk/CayoxClouds/app/views/bookmarks
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/511/trunk/CayoxClouds/app/views/bookmarks/edit.html.erb
+END
+_bookmark_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Cayox/!svn/ver/582/trunk/CayoxClouds/app/views/bookmarks/_bookmark_form.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Cayox/!svn/ver/707/trunk/CayoxClouds/app/views/bookmarks/index.html.erb
+END
+_edit_bookmark.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Cayox/!svn/ver/578/trunk/CayoxClouds/app/views/bookmarks/_edit_bookmark.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Cayox/!svn/ver/381/trunk/CayoxClouds/app/views/bookmarks/new.html.erb
+END
+_new_bookmark.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Cayox/!svn/ver/478/trunk/CayoxClouds/app/views/bookmarks/_new_bookmark.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Cayox/!svn/ver/640/trunk/CayoxClouds/app/views/bookmarks/show.html.erb
+END

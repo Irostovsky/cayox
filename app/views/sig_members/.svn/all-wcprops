@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Cayox/!svn/ver/769/trunk/CayoxClouds/app/views/sig_members
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Cayox/!svn/ver/769/trunk/CayoxClouds/app/views/sig_members/index.html.erb
+END
+_ownership_requests.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Cayox/!svn/ver/731/trunk/CayoxClouds/app/views/sig_members/_ownership_requests.html.erb
+END
+_cug_access_requests.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Cayox/!svn/ver/657/trunk/CayoxClouds/app/views/sig_members/_cug_access_requests.html.erb
+END

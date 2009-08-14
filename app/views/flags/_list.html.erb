@@ -1,0 +1,35 @@
+<h3><%= type == :topics ? _("Flagged topics") : _("Flagged elements") %></h3>
+
+<% if collection.empty? %>
+  <p><%= type == :topics ? _("Currently there are no flagged topics.") : _("Currently there are no flagged elements.") %></p>
+<% else %>
+  <%= form :action => resource_path(:flags, :confirm), :class => "flagged_form" do %>
+    <%= hidden_field :name => "type", :value => type %>
+    <table class="standard wide">
+      <tbody>
+        <% collection.each do |tf| %>
+          <tr>
+            <td class="proposed_element">
+              <%= link_to(translate(tf.name), '#', :class => "element_name flagged") %>
+              <% if type == :elements %>(<%= _("in topic '%s'") % translate(tf.topic_element.topic.name) %>)<% end %>
+              - <%= _("flagged as '%s'") % _(tf.flag.description) %>
+              <p style="display: none"><%= translate(tf.description).gsub("\n", "<br/>") %></p>
+            </td>
+            <td class="checkbox">
+              <%= check_box :name => "flagging_ids[]", :value => tf.id %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td colspan="2">
+            <fieldset style="float: right">
+                <%= submit(_("Remove items"), :name => "remove", :class => "button") %>
+                <%= submit(_("Reject reports"), :name => "reject", :class => "button", :style => "margin-right: 0") %>
+            </fieldset>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <% end =%>
+  <%= paginator(pagination_parameter, :param => :"#{type}_page") %>
+<% end %>

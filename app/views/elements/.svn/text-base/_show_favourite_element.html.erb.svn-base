@@ -1,0 +1,20 @@
+<% if proposition = @favourite_element.proposition %>
+  <p class="proposition_info">
+    <%= _("This element has been proposed by you for topic '%s'.") % translate(@topic.topic.name) %>
+    <% if proposition.accepted? %>
+      <%= _("It has been accepted.") %>
+    <% elsif proposition.rejected? %>
+      <%= _("It has been rejected.") %>
+    <% end %>
+  </p>
+<% end %>
+<ul class="action_links">
+  <li class="remove"><%= link_to(_('Remove'), '#', :class => "remove_element") %></li>
+  <% if @element.custom_in_favourite?(@topic) %>
+    <li class="edit"><%= link_to(_("Edit"), resource(@topic, @element, :edit), :class => "edit_element_link") %></li>
+    <% unless @element.proposed_for_topic?(@topic) || @topic.topic.nil? %>
+      <li class="propose"><%= link_to(_("Propose for topic"), resource(@topic, @element, :propose), :title => _("Propose this element for topic '%s'") % translate(@topic.topic.name)) %></li>
+    <% end %>
+  <% end %>
+</ul>
+<%= form :action => resource(@topic, @element), :id => "remove_element_form", :method => 'delete' do %><% end =%>

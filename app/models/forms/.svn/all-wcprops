@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/forms
+END
+notification_filter_form.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/forms/notification_filter_form.rb
+END
+permalink_form.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/forms/permalink_form.rb
+END
+invitation_form.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/forms/invitation_form.rb
+END

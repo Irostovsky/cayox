@@ -1,0 +1,9 @@
+<form id="search" action="/search" method="GET">
+  <fieldset>
+    <input type="text" id="search_terms" name="tags[]" />
+    <a href="#" class="search-button main-search">Search</a>
+    <ul class="extras">
+      <li><%= link_to(_("Browse topics"), url(:search)) %></li>
+    </ul>
+  </fieldset>
+</form>

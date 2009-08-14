@@ -1,0 +1,11 @@
+<%= form_for @invitation_form, :action => url(:friends) do %>
+  <fieldset>
+    <p>
+      <%= text_field :email, :label => _("Friend's e-mail") %>
+      <%= error_on(@invitation_form, :email) %>
+    </p>
+    <p class="indented">
+      <%= submit _("Invite"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), resource(:friends), :class => "close") %>
+    </p>
+  </fieldset>
+<% end =%>

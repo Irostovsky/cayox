@@ -1,0 +1,7 @@
+<li>
+  <%= translate(element.name) %> - <%= link_to(element.link.site, element.link.url, :title => element.link.url, :target => "_blank") %>
+  <span>(<%= _("Votes: %s") % element.votes_count %>)</span> -
+  <%= params[:blocked] ? link_to(_("Unblock"), resource(:admin, @topic, element, :unblock), :class => "action_link unblock") : link_to(_("Block"), resource(:admin, @topic, element, :block), :class => "action_link block") %>
+  |
+  <%= link_to(_("Permanently remove"), resource(:admin, @topic, element, :remove), :class => "action_link remove_element") %>
+</li>

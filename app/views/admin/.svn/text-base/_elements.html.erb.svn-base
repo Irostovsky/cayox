@@ -1,0 +1,20 @@
+<h2>
+  <% if params[:blocked] %>
+    <%= _("BLOCKED ELEMENTS IN '%s'") % translate(parent.name) %>
+  <% else %>
+    <%= _("ELEMENTS IN '%s'") % translate(parent.name) %>
+  <% end %>
+</h2>
+
+<%= link_to(_("Visible"), resource(:admin, @topic)) %> | <%= link_to(_("Blocked"), resource(:admin, @topic, :blocked_elements)) %><br/><br/>
+
+<% if @elements.size > 0 %>
+  <ul class="element_list">
+    <% @elements.each do |element| %>
+      <%= partial "admin/element_link", :with => element, :as => :element, :parent => parent %>
+    <% end %>
+  </ul>
+ <%= paginator(@page_count) %>
+<% else %>
+  <%=  _("No elements in this topic.") %>
+<% end %>

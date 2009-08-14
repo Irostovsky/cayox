@@ -1,0 +1,10 @@
+<ul class="favourite_list">
+<% @favourites.each do |fav| %>
+  <li>
+      <%= link_to(fav.name, resource(fav), :class => "favourite") %>
+      <span>(<%= "#{fav.elements.count} #{_('elements')}" %>)</span>
+      <p><%= fav.description.truncate(100) %></p>
+  </li>
+<% end %>
+</ul>
+<%= paginator(@page_count) %>

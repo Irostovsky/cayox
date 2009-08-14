@@ -1,0 +1,36 @@
+<h3><%= _("Permalink for") %> <em><%= translate(object.name) %></em></h3>
+<p><%= _("Here is permalink for '%s'. If you want to copy it to clipboard click on 'Copy' button or select it and press Ctrl+C.") % translate(object.name) %></p>
+<fieldset>
+  <p class="button_and_link">
+    <%= text_field :value => object.permalink(session.user.preferred_content_language(object.name, language_from_headers)), :id => "permalink" %>
+    <%= submit _("Copy"), :class => "button copy", :id => "copy_permalink" %><% if session.user.guest? %> <%= _("or") %> <%= link_to(_("Cancel"), '#', :class => "close") %><% end %>
+  </p>
+</fieldset>
+
+<% unless session.user.guest? || object.private? %>
+  <br/>
+  <br/>
+
+  <h3><%= _("Send it to your friend") %></h3>
+  <p><%= _("If you want to share this link with your friend enter his e-mail address and add some comment.") %><br/><br/></p>
+  <%= form_for @permalink_form, :action => object.is_a?(Topic) ? resource(object, :permalink) : resource(object.topic, object.element, :permalink) do %>
+    <fieldset>
+      <p>
+        <%= text_field :email, :label => _("E-mail address") %>
+        <%= error_on(@permalink_form, :email) %>
+      </p>
+      <p>
+        <%= text_area @permalink_form.comment, :name => "permalink_form[comment]", :label => _("Comment for this link") %>
+      </p>
+      <% languages = object.name.keys.map { |iso_code| [iso_code, Language[iso_code].name] } %>
+      <% if languages.size > 1 %>
+        <p>
+          <%= select :lang, :label => _("Language version"), :collection => languages %>
+        </p>
+      <% end %>
+      <p class="indented">
+        <%= submit _("Send"), :class => "button", :id => "send_permalink" %> <%= _("or") %> <%= link_to(_("Cancel"), "#", :class => "close") %>
+      </p>
+    </fieldset>
+  <% end =%>
+<% end %>

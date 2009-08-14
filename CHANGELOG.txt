@@ -1,0 +1,88 @@
+2209/05/29
+
+- Dropped NOT NULL constraint from user_id column on topic_flags and topic_element_flags tables
+  run:
+      rake db:migrate
+- Added recaptcha
+  Set recaptcha_public/private_key in local_config.rb
+
+2009/05/25
+
+- Added two rake tasks to clear notifications older than N days (set it in local_config - :max_notification_age variable)
+  add to cron:
+      rake cayox:clear_invalid_notification
+      rake cayox:clear_old_notification
+
+2009/05/22
+
+- Added Notification model
+    run:
+        rake db:autoupgrade
+
+2009/05/19
+
+- Added abandoned filed
+    run:
+        rake db:autoupgrade
+
+2009/05/07
+
+- Added rake task to fix tags names case
+    run:
+        rake cayox:fix:tags_case
+
+2009/04/30
+
+- Refactored invitation mechanism
+    run:
+        rake db:autoupgrade
+
+2009/04/10
+
+- Added status property to Topic model
+    run:
+        rake db:autoupgrade
+
+2009/04/06
+
+- Added status property to TopicElement model
+    run:
+        rake db:autoupgrade
+- Added favourite_sync_interval to local_config (copy it from local_config.example to your local_config.rb)
+
+2009/04/02
+
+- Added elements_per_page setting to local_config (copy it from local_config.example to your local_config.rb)
+
+2009/03/26
+
+- Links which point to domain root and don't end with "/" are appended with "/" (http protocol requires path)
+    run:
+        rake cayox:fix:links_at_domain_root
+
+2009/03/19
+
+- Added creator property to Topic model
+    run:
+        rake db:autoupgrade
+        rake cayox:fix:set_topics_creators
+
+2009/03/18
+
+- Added ElementProposition model
+    run: rake db:autoupgrade
+- If you want email notifications about proposed elements add "rake cayox:send_proposed_elements_notifications" to crontab
+
+2009/03/02
+
+- Added "custom" property for FavouriteElement indicating if element was added by user (true) or imported (false)
+    run: rake db:autoupgrade
+
+
+2009/02/27
+
+run:
+    rake db:autoupgrade
+
+and in merb console (merb -i) run:
+    FavouriteTag.all.each { |ft| ft.tag.update_users_favourites_stats(ft.favourite.user) }

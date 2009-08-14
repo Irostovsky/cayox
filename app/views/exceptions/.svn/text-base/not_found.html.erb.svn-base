@@ -1,0 +1,1 @@
+<p class="errorpage"><%= _("Requested resource cannot be found. Try searching on %s") % link_to(_("homepage"), '/') %></p>

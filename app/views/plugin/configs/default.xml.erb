@@ -1,0 +1,93 @@
+<cayox>
+  <OnlineSignOut>
+    <cayoxcontrol name="bCayoxMenu">
+      <type>splitbutton</type>
+      <captions>Cayox</captions>
+      <image>Resources/item222.jpg</image>
+      <items>
+        <cayoxcontrol name="bCayoxSignIn">
+          <captions>Sign In</captions>
+          <image/>
+          <action>
+          <type>goToUrl</type>
+          <value>www.alpha.cayox.com/signin</value>
+          </action>
+        </cayoxcontrol>
+        <cayoxcontrol name="bCayoxAbout">
+          <captions>About</captions>
+          <image/>
+          <action>
+          <type>nativeDialogBox</type>
+          <value>AboutDialog</value>
+          </action>
+        </cayoxcontrol>
+        <cayoxcontrol name="bCayoxHelp">
+          <captions>Help</captions>
+          <image/>
+          <action>
+          <type>goToUrl</type>
+          <value>www.alpha.cayox.com/help</value>
+          </action>
+        </cayoxcontrol>
+      </items>
+    </cayoxcontrol>
+  </OnlineSignOut>
+  <!--Есть инет, user прошел аутентификацию-->
+
+  <OnlineSignIn>
+    <cayoxcontrol name="bImageButton1">
+      <type>button</type>
+      <captions/>
+      <image>ImageButton.jpg</image>
+      <action>
+      <type>sideBar</type>
+      <value>SideBarDialog</value>
+      </action>
+    </cayoxcontrol>
+    <cayoxcontrol name="bCayoxMenu">
+      <type>splitbutton</type>
+      <captions>Cayox</captions>
+      <image>Resources/item222.jpg</image>
+      <items>
+        <cayoxcontrol name="bCayoxSignIn">
+          <captions>Sign In</captions>
+          <image/>
+          <action>
+          <type>goToUrl</type>
+          <value>www.alpha.cayox.com/signin</value>
+          </action>
+        </cayoxcontrol>
+        <cayoxcontrol name="bCayoxSideBar">
+          <captions>Side Bar</captions>
+          <image>ImageButton.jpg</image>
+          <action>
+          <type>sideBar</type>
+          <value>SideBarDialog</value>
+          </action>
+        </cayoxcontrol>
+        <cayoxcontrol name="bCayoxAbout">
+          <captions>About</captions>
+          <image/>
+          <action>
+          <type>nativeDialogBox</type>
+          <value>AboutDialog</value>
+          </action>
+          </cayoxcontrol>
+          <cayoxcontrol name="bCayoxHelp">
+          <captions>Help</captions>
+          <image/>
+          <action>
+          <type>goToUrl</type>
+          <value>www.alpha.cayox.com/help</value>
+          </action>
+        </cayoxcontrol>
+      </items>
+    </cayoxcontrol>
+  </OnlineSignIn>
+
+  <OfflineSignOut>
+  </OfflineSignOut>
+
+  <OfflineSignIn>
+  </OfflineSignIn>
+</cayox>

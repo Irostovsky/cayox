@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Cayox/!svn/ver/698/trunk/CayoxClouds/app/views/users
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Cayox/!svn/ver/698/trunk/CayoxClouds/app/views/users/edit.html.erb
+END
+_password_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Cayox/!svn/ver/669/trunk/CayoxClouds/app/views/users/_password_fields.html.erb
+END
+_request_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Cayox/!svn/ver/668/trunk/CayoxClouds/app/views/users/_request_password.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Cayox/!svn/ver/658/trunk/CayoxClouds/app/views/users/new.html.erb
+END
+_activation_mail_request.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Cayox/!svn/ver/617/trunk/CayoxClouds/app/views/users/_activation_mail_request.html.erb
+END
+_user_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/300/trunk/CayoxClouds/app/views/users/_user_form.html.erb
+END

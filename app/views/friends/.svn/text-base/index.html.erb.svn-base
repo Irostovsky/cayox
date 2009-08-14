@@ -1,0 +1,18 @@
+<h2><%= _("FRIENDS") %> <%= link_to _("Invite a friend"), resource(:friends, :new), :class => "link", :id => "invite_friend" %> </h2>
+
+<% unless @friendships.empty? %>
+  <% @friendships.each do |friendship| %>
+    <dl class="friend">
+      <dt><%= friendship.friend.name %></dt>
+      <dd class="avatar">
+        <%= image_tag gravatar(friendship.friend.email, 60) %>
+      </dd>
+      <dd class="actions">
+        <%= link_to "Remove friend", url(:cancel_friend,friendship), :class => "remove remove_friend" %>
+	    </dd>
+    </dl>
+  <% end %>
+  <%= paginator(@page_count) %>
+<% end %>
+
+<% throw_content(:for_right_column, partial("friends/not_confirmed_friendships") ) %>

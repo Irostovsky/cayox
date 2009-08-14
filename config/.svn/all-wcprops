@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Cayox/!svn/ver/816/trunk/CayoxClouds/config
+END
+rack.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Cayox/!svn/ver/795/trunk/CayoxClouds/config/rack.rb
+END
+router.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Cayox/!svn/ver/811/trunk/CayoxClouds/config/router.rb
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Cayox/!svn/ver/150/trunk/CayoxClouds/config/.gitignore
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Cayox/!svn/ver/795/trunk/CayoxClouds/config/init.rb
+END
+dependencies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Cayox/!svn/ver/795/trunk/CayoxClouds/config/dependencies.rb
+END
+local_config.rb.example
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Cayox/!svn/ver/795/trunk/CayoxClouds/config/local_config.rb.example
+END
+database.yml.example
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Cayox/!svn/ver/126/trunk/CayoxClouds/config/database.yml.example
+END
+deploy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Cayox/!svn/ver/784/trunk/CayoxClouds/config/deploy.rb
+END

@@ -1,0 +1,37 @@
+<span class="back-link"><%= back_link_to_results %></span>
+
+<h2><%= _("Elements proposed for your topics") %></h2>
+
+<% if @element_propositions.empty? %>
+  <p><%= _("Currently there are no proposed elements for topics you manage.") %></p>
+<% else %>
+  <p><%= _("Other Cayox users proposed following elements for topics you manage:") %><br/><br/></p>
+  <%= form :action => resource(:element_propositions, :confirm), :id => "proposed_elements_form" do %>
+    <table class="standard wide">
+      <tbody>
+        <% @element_propositions.each do |ep| %>
+          <tr>
+            <td class="proposed_element">
+              <%= link_to(translate(ep.favourite_element.element.name), '#', :class => "element_name proposed") %>
+              - <%= link_to(ep.favourite_element.element.url, ep.favourite_element.element.url, :target => "_blank") %>
+              (<%= _("for topic '%s'") % translate(ep.topic.name) %>)
+              <p style="display: none"><%= translate(ep.favourite_element.element.description).gsub("\n", "<br/>") %></p>
+            </td>
+            <td class="checkbox">
+              <%= check_box :name => "element_ids[]", :value => ep.id %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td colspan="2">
+            <fieldset style="float: right">
+                <%= submit _("Add to topic"), :name => "add", :class => "button" %>
+                <%= submit _("Reject"), :name => "reject", :class => "button", :style => "margin-right: 0" %>
+            </fieldset>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <% end =%>
+  <%= paginator(@page_count) %>
+<% end %>

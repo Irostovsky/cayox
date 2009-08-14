@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>registrationFormValidation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registrationFormValidation</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>join_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Create new account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>user_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>user_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>user_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>user_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>user_password_confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Cancel</td>
+	<td>Cancel</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screenname must not be blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Full name must not be blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password must be at least 6 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin2}00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>${userLogin2}00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${inactiveUser1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname must not be blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin2}00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${inactiveUser1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Full name must not be blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Full name must not be blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>${userLogin2}00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${inactiveUser1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Password must be at least 6 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password must be at least 6 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Password does not match the confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Password does not match the confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screen name is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>123456789012345678901</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screenname must be 3-20 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname must be 3-20 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screenname must be 3-20 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screenname must be 3-20 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>qw</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screenname must be 3-20 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Screenname must be 3-20 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${inactiveUser1}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${accName}200llp.pl</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>qwqweqweqwe</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email has an invalid format</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>qqqqq</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>qqqqq</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Password must be at least 6 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password must be at least 6 characters long</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>qqqqqq</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>qqqqqqq</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Password does not match the confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password does not match the confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${inactiveUser1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>wwwww</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>wwwww</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${blockedUser1}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>${userLogin10}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>test+6sss@test.pl</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Screen name is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Screen name is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>${userLogin2}00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>${userLogin2}00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${inactiveUser1}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Email is already taken</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>join_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_name</td>
+	<td>javascript{'w' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_full_name</td>
+	<td>javascript{'w' + (new Date()).getTime()}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(new Date).getTime()</td>
+	<td>rndNumb</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_email</td>
+	<td>${accName}${rndNumb}${domain}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>user_password_confirmation</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>flash</td>
+	<td>Thanks for registering! Now, activate your account by clicking on the link we've sent you via email.</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>HUMAN POWERED SEARCH</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,1172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cayox 1.0\n"
+"POT-Creation-Date: 2009-03-20 12:29+0100\n"
+"PO-Revision-Date: 2009-03-20 12:38+0100\n"
+"Last-Translator: \n"
+"Language-Team: Polish <marcin.kulik@llp.pl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+
+#: app/views/elements/_show_topic_element.html.erb:10
+#: app/views/elements/_show_favourite_element.html.erb:12
+#: app/views/roles/index.html.erb:31
+#: app/views/favourites/show.html.erb:10
+msgid "Remove"
+msgstr ""
+
+#: app/views/elements/_show_topic_element.html.erb:13
+#: app/views/elements/_show_favourite_element.html.erb:14
+#: app/views/favourites/show.html.erb:13
+#: app/views/topics/show.html.erb:13
+#, fuzzy
+msgid "Edit"
+msgstr "edytuj"
+
+#: app/views/elements/_show_topic_element.html.erb:15
+#, fuzzy
+msgid "Share"
+msgstr "Zapisz"
+
+#: app/views/elements/_show_topic_element.html.erb:17
+#, fuzzy
+msgid "Add bookmark"
+msgstr "Edycja zakładki"
+
+#: app/views/elements/_show_topic_element.html.erb:19
+#: app/views/topics/show.html.erb:19
+msgid "Flag"
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:3
+msgid "This element has been proposed by you for topic '%s'."
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:5
+msgid "It has been accepted."
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:7
+msgid "It has been rejected."
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:16
+msgid "Propose for topic"
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:16
+msgid "Propose this element for topic '%s'"
+msgstr ""
+
+#: app/views/elements/_new_element_form.html.erb:5
+#, fuzzy
+msgid "Add element"
+msgstr "Dodaj więcej elementów"
+
+#: app/views/elements/_new_element_form.html.erb:5
+#: app/views/elements/_edit_element_form.html.erb:5
+#: app/views/users/new.html.erb:8
+#: app/views/users/_request_password.html.erb:17
+#: app/views/friends/_new_friend.html.erb:5
+#: app/views/layout/_user_menu.html.erb:3
+#: app/views/favourites/_edit_favourite_form.html.erb:5
+#: app/views/topics/_edit_topic_form.html.erb:5
+#: app/views/topics/_new_topic_form.html.erb:6
+#: app/views/topics/_join_group.html.erb:9
+#: app/views/bookmarks/_edit_bookmark.html.erb:8
+#: app/views/bookmarks/_new_bookmark.html.erb:6
+msgid "or"
+msgstr "lub"
+
+#: app/views/elements/_new_element_form.html.erb:5
+#: app/views/elements/_edit_element_form.html.erb:5
+#: app/views/users/new.html.erb:8
+#: app/views/users/_request_password.html.erb:17
+#: app/views/friends/_new_friend.html.erb:5
+#: app/views/favourites/_edit_favourite_form.html.erb:5
+#: app/views/topics/_edit_topic_form.html.erb:5
+#: app/views/topics/_new_topic_form.html.erb:6
+#: app/views/bookmarks/_edit_bookmark.html.erb:8
+#: app/views/bookmarks/_new_bookmark.html.erb:6
+msgid "Cancel"
+msgstr ""
+
+#: app/views/elements/_edit_element_form.html.erb:5
+#: app/views/favourites/_edit_favourite_form.html.erb:5
+#: app/views/topics/_edit_topic_form.html.erb:5
+#: app/views/bookmarks/_edit_bookmark.html.erb:8
+msgid "Update"
+msgstr "Uaktualnij"
+
+#: app/views/elements/_element_form.html.erb:4
+#: app/views/topics/_topic_form.html.erb:4
+#, fuzzy
+msgid "Language version"
+msgstr "Ustawienia języka"
+
+#: app/views/elements/_element_form.html.erb:9
+#: app/views/elements/_element_form.html.erb:12
+msgid "URL"
+msgstr ""
+
+#: app/views/elements/_element_form.html.erb:16
+#, fuzzy
+msgid "Element name"
+msgstr "Nazwa tematu"
+
+#: app/views/elements/_element_form.html.erb:20
+#: app/views/favourites/_favourite_form.html.erb:6
+#: app/views/topics/_topic_form.html.erb:11
+#: app/views/bookmarks/_bookmark_form.html.erb:15
+msgid "Description"
+msgstr "Opis"
+
+#: app/views/elements/_element_form.html.erb:25
+#: app/views/favourites/_favourite_form.html.erb:10
+#: app/views/topics/_topic_form.html.erb:15
+#: app/views/bookmarks/_bookmark_form.html.erb:19
+msgid "Tags"
+msgstr "Tagi"
+
+#: app/views/roles/index.html.erb:1
+msgid "Topic \"%s\" users"
+msgstr ""
+
+#: app/views/roles/index.html.erb:6
+#, fuzzy
+msgid "User name"
+msgstr "nazwa użytkownika"
+
+#: app/views/roles/index.html.erb:10
+msgid "Add new user"
+msgstr ""
+
+#: app/views/roles/index.html.erb:25
+msgid "Change"
+msgstr ""
+
+#: app/views/roles/_pending_users.html.erb:1
+msgid "PENDING USERS"
+msgstr ""
+
+#: app/views/roles/_pending_users.html.erb:7
+msgid "Accept"
+msgstr ""
+
+#: app/views/roles/_pending_users.html.erb:7
+msgid "Decline"
+msgstr ""
+
+#: app/views/users/index.html.erb:5
+#: app/views/layout/application.html.erb:22
+msgid "Search"
+msgstr "Szukaj"
+
+#: app/views/users/index.html.erb:11
+#: app/mailers/views/user_mailer/welcome.text.erb:5
+msgid "screen name"
+msgstr "nazwa użytkownika"
+
+#: app/views/users/index.html.erb:12
+msgid "actions"
+msgstr "akcje"
+
+#: app/views/users/index.html.erb:17
+msgid "edit"
+msgstr "edytuj"
+
+#: app/views/users/index.html.erb:19
+msgid "block"
+msgstr "blokuj"
+
+#: app/views/users/index.html.erb:21
+msgid "blocked"
+msgstr "zablokowany"
+
+#: app/views/users/index.html.erb:22
+msgid "unblock"
+msgstr "odblokuj"
+
+#: app/views/users/index.html.erb:26
+msgid "re-invite"
+msgstr "Zaproś ponowanie"
+
+#: app/views/users/edit.html.erb:1
+msgid "%s's Profile"
+msgstr "Profil %s"
+
+#: app/views/users/edit.html.erb:8
+#: app/views/users/edit.html.erb:38
+msgid "Save"
+msgstr "Zapisz"
+
+#: app/views/users/edit.html.erb:13
+msgid "Language settings"
+msgstr "Ustawienia języka"
+
+#: app/views/users/edit.html.erb:14
+msgid "Choose..."
+msgstr "Wybierz..."
+
+#: app/views/users/edit.html.erb:18
+msgid "Primary language"
+msgstr "Podstawowy język"
+
+#: app/views/users/edit.html.erb:21
+msgid "Secondary languages"
+msgstr "Dodatkowe języki"
+
+#: app/views/users/edit.html.erb:35
+msgid "Add another language"
+msgstr "Dodaj kolejny język"
+
+#: app/views/users/_password_fields.html.erb:3
+msgid "Change password"
+msgstr "Zmień hasło"
+
+#: app/views/users/_password_fields.html.erb:8
+#: app/views/shared/_login_form.html.erb:22
+msgid "Password"
+msgstr "Hasło"
+
+#: app/views/users/_password_fields.html.erb:12
+msgid "Password confirmation"
+msgstr "Potwierdź hasło"
+
+#: app/views/users/_user_form.html.erb:2
+#: app/views/users/_request_password.html.erb:11
+msgid "Screenname"
+msgstr "Nazwa użytkownika"
+
+#: app/views/users/_user_form.html.erb:6
+msgid "Name"
+msgstr "Imię"
+
+#: app/views/users/_user_form.html.erb:10
+#: app/views/users/_request_password.html.erb:14
+msgid "Email"
+msgstr "Email"
+
+#: app/views/users/new.html.erb:1
+#, fuzzy
+msgid "Create new account"
+msgstr "Stwórz nowy temat"
+
+#: app/views/users/new.html.erb:8
+#: app/views/topics/_new_topic_form.html.erb:6
+#: app/views/bookmarks/_new_bookmark.html.erb:6
+msgid "Create"
+msgstr "Stwórz"
+
+#: app/views/users/_request_password.html.erb:2
+msgid "If you have forgotten your Cayox password please enter your screenname and email address and we will send you password reset link."
+msgstr "Jeśli zapomniałeś(aś) swojego hasło do Cayox podaj swoją nazwę użytkownika oraz email a my wyślemy Ci instrukcje jak ustawić nowe hasło."
+
+#: app/views/users/_request_password.html.erb:17
+msgid "Send"
+msgstr "Wyślij"
+
+#: app/views/comments/_comments.html.erb:1
+msgid "Comments to "
+msgstr ""
+
+#: app/views/comments/_comments.html.erb:8
+#, fuzzy
+msgid "Add new comment"
+msgstr "Dodaj więcej elementów"
+
+#: app/views/comments/_comments.html.erb:17
+msgid "Comment:"
+msgstr ""
+
+#: app/views/comments/_comments.html.erb:20
+msgid "Comment!"
+msgstr ""
+
+#: app/views/comments/_element_comments.html.erb:11
+#: app/views/comments/_topic_comments.html.erb:12
+msgid "said:"
+msgstr ""
+
+#: app/views/comments/_element_comments.html.erb:24
+#: app/views/comments/_topic_comments.html.erb:24
+msgid "No comments at the moment."
+msgstr ""
+
+#: app/views/friends/index.html.erb:1
+msgid "FRIENDS"
+msgstr ""
+
+#: app/views/friends/index.html.erb:1
+msgid "Invite a friend"
+msgstr "Zaproś przyjaciela"
+
+#: app/views/friends/index.html.erb:7
+msgid "to cancel this friendship click"
+msgstr "aby anulować ta przyjaźń"
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:2
+msgid "Requested friendships"
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:6
+msgid "wants you to join his friends, click"
+msgstr "chce abyś dołączył do jego przyjaciół, naciśnij"
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:6
+msgid "HERE"
+msgstr "TUTAJ"
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:6
+#, fuzzy
+msgid "to accept it, or click "
+msgstr "aby zaakceptować"
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:6
+msgid "X"
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:6
+#, fuzzy
+msgid "to reject it"
+msgstr "odrzuć "
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:13
+msgid "Pending friendships"
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:17
+msgid " Friendship with "
+msgstr "Przyjaź z"
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:17
+msgid "is pending, click to "
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:17
+msgid "reject it"
+msgstr "odrzuć "
+
+#: app/views/friends/new.html.erb:1
+msgid "INVITE FRIEND"
+msgstr ""
+
+#: app/views/friends/_new_friend.html.erb:3
+msgid "Friends e-mail"
+msgstr "e-mail przyjaciela"
+
+#: app/views/friends/_new_friend.html.erb:5
+msgid "Invite"
+msgstr "Zaproś"
+
+#: app/views/exceptions/unauthenticated.html.erb:1
+#: app/views/layout/_user_menu.html.erb:3
+#: app/helpers/global_helpers.rb:15
+msgid "Login"
+msgstr "Zaloguj"
+
+#: app/views/layout/home.html.erb:18
+msgid "HUMAN POWERED SEARCH"
+msgstr ""
+
+#: app/views/layout/_user_menu.html.erb:4
+msgid "Join"
+msgstr "Zarejestruj się"
+
+#: app/views/layout/_user_menu.html.erb:6
+#: app/mailers/views/user_mailer/invite.text.erb:1
+msgid "Welcome"
+msgstr "Witaj"
+
+#: app/views/layout/_user_menu.html.erb:7
+msgid "Profile"
+msgstr "Profil"
+
+#: app/views/layout/_user_menu.html.erb:8
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: app/views/layout/_menu.html.erb:2
+#: app/helpers/global_helpers.rb:13
+#, fuzzy
+msgid "New Topic"
+msgstr "Nowy temat"
+
+#: app/views/layout/_menu.html.erb:3
+msgid "My Favourites"
+msgstr ""
+
+#: app/views/layout/_menu.html.erb:4
+msgid "My Topics"
+msgstr ""
+
+#: app/views/layout/_menu.html.erb:5
+msgid "Bookmarks"
+msgstr "Zakładki"
+
+#: app/views/layout/_menu.html.erb:6
+msgid "Friends"
+msgstr "Przyjaciele"
+
+#: app/views/layout/_menu.html.erb:8
+#, fuzzy
+msgid "Manage Users"
+msgstr "Ustawienia języka"
+
+#: app/views/favourites/index.html.erb:1
+msgid "MY FAVOURITES"
+msgstr ""
+
+#: app/views/favourites/index.html.erb:4
+#, fuzzy
+msgid "You have no favourites yet."
+msgstr "Zostałeś wylogowany."
+
+#: app/views/favourites/_favourite_form.html.erb:2
+msgid "Favourite name"
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:1
+msgid "New elements added to topic '%s'"
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:3
+msgid "Following elements have been added to topic by its maintainers. Please accept elements you want to add to favourite '%s'."
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:23
+msgid "Add to favourite"
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:24
+#: app/views/element_propositions/index.html.erb:27
+#, fuzzy
+msgid "Reject"
+msgstr "odrzuć "
+
+#: app/views/search/index.html.erb:7
+#, fuzzy
+msgid "Browse topics"
+msgstr "Nowy temat"
+
+#: app/views/search/search_results.html.erb:3
+msgid "There are element propositions for your topics."
+msgstr ""
+
+#: app/views/search/search_results.html.erb:3
+#: app/views/shared/_elements.html.erb:17
+msgid "Show them"
+msgstr ""
+
+#: app/views/search/search_results.html.erb:7
+#: app/views/topics/index.html.erb:1
+msgid "MY TOPICS"
+msgstr ""
+
+#: app/views/search/search_results.html.erb:7
+msgid "TOPICS"
+msgstr ""
+
+#: app/views/search/search_results.html.erb:10
+msgid "Tag %s has been removed as it didn't provide any result."
+msgstr ""
+
+#: app/views/search/search_results.html.erb:15
+msgid "Please filter topics by selecting tags."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:3
+msgid "OTHER ELEMENTS IN '%s'"
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:5
+msgid "ELEMENTS IN '%s'"
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:9
+msgid "Back to '%s'"
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:16
+msgid "New elements have been added to topic '%s'."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:29
+msgid "No elements in this favourite."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:29
+msgid "No elements in this topic."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:34
+#, fuzzy
+msgid "Add new element"
+msgstr "Dodaj więcej elementów"
+
+#: app/views/shared/_element_link.html.erb:9
+msgid "Votes: %s"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Bad"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "OK"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Good"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Cool"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Awesome"
+msgstr ""
+
+#: app/views/shared/_login_form.html.erb:2
+msgid "If you already have an account on CAYOX, you can log in using the form below."
+msgstr ""
+
+#: app/views/shared/_login_form.html.erb:19
+msgid "Screenname/email"
+msgstr "Użytkownik/email"
+
+#: app/views/shared/_login_form.html.erb:25
+msgid "Log In"
+msgstr "Zaloguj"
+
+#: app/views/shared/_login_form.html.erb:25
+msgid "Forgot my password"
+msgstr "Zapomniałem swojego hasła"
+
+#: app/views/element_propositions/index.html.erb:1
+msgid "Elements proposed for your topics"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:4
+msgid "Currently there are no proposed elements for topics you manage."
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:6
+msgid "Other Cayox users proposed following elements for topics you manage:"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:15
+#: app/mailers/views/propositions_mailer/notify.text.erb:6
+msgid "for topic '%s'"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:26
+msgid "Add to topic"
+msgstr ""
+
+#: app/views/topics/index.html.erb:4
+#, fuzzy
+msgid "You have no topics yet."
+msgstr "Zostałeś wylogowany."
+
+#: app/views/topics/index.html.erb:5
+msgid "Create new topic"
+msgstr "Stwórz nowy temat"
+
+#: app/views/topics/edit.html.erb:1
+msgid "EDIT TOPIC"
+msgstr ""
+
+#: app/views/topics/show.html.erb:10
+msgid "Edit Roles"
+msgstr ""
+
+#: app/views/topics/show.html.erb:16
+msgid "Add to favourites"
+msgstr ""
+
+#: app/views/topics/show.html.erb:18
+#: app/views/bookmarks/_bookmark_form.html.erb:3
+msgid "Link"
+msgstr "Link"
+
+#: app/views/topics/_topic_form.html.erb:7
+#, fuzzy
+msgid "Topic name"
+msgstr "Nazwa tematu"
+
+#: app/views/topics/_topic_form.html.erb:20
+msgid "Access level"
+msgstr ""
+
+#: app/views/topics/_topic_form.html.erb:20
+#, fuzzy
+msgid "Public"
+msgstr "odblokuj"
+
+#: app/views/topics/_topic_form.html.erb:20
+#: app/helpers/global_helpers.rb:20
+msgid "Closed User Group"
+msgstr ""
+
+#: app/views/topics/_topic_form.html.erb:20
+#, fuzzy
+msgid "Private"
+msgstr "Zaproś ponowanie"
+
+#: app/views/topics/new.html.erb:1
+msgid "NEW TOPIC"
+msgstr ""
+
+#: app/views/topics/_join_group.html.erb:2
+msgid "This user group has limited access. Would you like to ask the group moderator for access privileges? "
+msgstr ""
+
+#: app/views/topics/_join_group.html.erb:9
+msgid "Yes"
+msgstr ""
+
+#: app/views/topics/_join_group.html.erb:9
+msgid "No"
+msgstr ""
+
+#: app/views/bookmarks/index.html.erb:2
+msgid "BOOKMARKS"
+msgstr ""
+
+#: app/views/bookmarks/index.html.erb:2
+#: app/views/bookmarks/new.html.erb:1
+msgid "Create new bookmark"
+msgstr "Stwórz nową zakładkę"
+
+#: app/views/bookmarks/index.html.erb:21
+#, fuzzy
+msgid "Create topic from selected bookmarks"
+msgstr "Stwórz nową zakładkę"
+
+#: app/views/bookmarks/index.html.erb:33
+msgid "Add bookmarks to selected topic"
+msgstr ""
+
+#: app/views/bookmarks/edit.html.erb:1
+msgid "Edit bookmark"
+msgstr "Edycja zakładki"
+
+#: app/views/bookmarks/show.html.erb:5
+msgid "Tags:"
+msgstr "Tagi:"
+
+#: app/views/bookmarks/_bookmark_form.html.erb:11
+msgid "Bookmark name"
+msgstr "Nazwa zakładki"
+
+#: app/mailers/views/propositions_mailer/notify.text.erb:1
+#: app/mailers/views/user_mailer/password_reset_link.text.erb:1
+msgid "Hello, %s!"
+msgstr "Witaj %s!"
+
+#: app/mailers/views/propositions_mailer/notify.text.erb:3
+msgid "Cayox users proposed following elements to include in your topics:"
+msgstr ""
+
+#: app/mailers/views/propositions_mailer/notify.text.erb:9
+msgid "You can accept or reject proposed elements at "
+msgstr ""
+
+#: app/mailers/views/user_mailer/password_reset_link.text.erb:3
+msgid "As you need to reset password for your account please click on following link to setup new password:"
+msgstr "Aby zmienić hasło do swojego konta proszę kliknąć w poniższy link:"
+
+#: app/mailers/views/user_mailer/welcome.text.erb:3
+msgid "Your account has been created with following credentials:"
+msgstr "Konto dla Ciebie zostało utworzone z poniższymi danymi logowania:"
+
+#: app/mailers/views/user_mailer/welcome.text.erb:6
+msgid "password"
+msgstr "hasło"
+
+#: app/mailers/views/user_mailer/welcome.text.erb:8
+msgid "In order to use your account you must activate it by clicking on following link:"
+msgstr "Aby zacząć korzystać ze swojego konta musisz je aktywować klikając w poniższy link:"
+
+#: app/mailers/views/user_mailer/invite.text.erb:3
+msgid "Hi, %s invites you to Cayox "
+msgstr "Cześć, %s zaprasza Cię do używania Cayox"
+
+#: app/mailers/views/user_mailer/invite.text.erb:5
+#, fuzzy
+msgid "In order to create your account click on following link:"
+msgstr "Aby zacząć korzystać ze swojego konta musisz je aktywować klikając w poniższy link:"
+
+#: app/controllers/element_propositions.rb:24
+msgid "Selected elements have been added to respective topics."
+msgstr ""
+
+#: app/controllers/element_propositions.rb:29
+msgid "Selected element propositions have been rejected."
+msgstr ""
+
+#: app/controllers/exceptions.rb:14
+#: app/controllers/friends.rb:34
+#, fuzzy
+msgid "Sorry this friendship doesn't exist"
+msgstr "To zaproszenie do przyjaźni już istnieje"
+
+#: app/controllers/favourites.rb:60
+msgid "Selected new elements have been added to favourite."
+msgstr ""
+
+#: app/controllers/favourites.rb:63
+msgid "Selected new elements have been rejected."
+msgstr ""
+
+#: app/controllers/roles.rb:16
+#: app/controllers/roles.rb:32
+msgid "Sorry Owner can't change his own state"
+msgstr ""
+
+#: app/controllers/roles.rb:21
+#, fuzzy
+msgid "Role changed"
+msgstr "Stan użytkownika się zmienił"
+
+#: app/controllers/roles.rb:28
+msgid "Sorry could not add user to project"
+msgstr ""
+
+#: app/controllers/roles.rb:37
+msgid "User added to project"
+msgstr ""
+
+#: app/controllers/roles.rb:46
+msgid "User removed"
+msgstr ""
+
+#: app/controllers/roles.rb:48
+msgid "Can't delete this user"
+msgstr ""
+
+#: app/controllers/sessions.rb:10
+msgid "You have been logged out."
+msgstr "Zostałeś wylogowany."
+
+#: app/controllers/bookmarks.rb:40
+msgid "Bookmark added"
+msgstr "Zakładka dodana"
+
+#: app/controllers/bookmarks.rb:63
+msgid "Bookmark updated"
+msgstr "Zakładka uaktualniona"
+
+#: app/controllers/comments.rb:28
+#: app/controllers/comments.rb:38
+msgid "Comment not valid"
+msgstr ""
+
+#: app/controllers/users.rb:41
+msgid "User profile updated."
+msgstr "Profil użytkownika został zaktualizowany"
+
+#: app/controllers/users.rb:43
+msgid "Your profile has been updated."
+msgstr "Twój profil został zaktualizowany."
+
+#: app/controllers/users.rb:52
+#: app/controllers/users.rb:62
+msgid "Admin can't block himself"
+msgstr "Administrator nie może zablokować sam siebie"
+
+#: app/controllers/users.rb:56
+#, fuzzy
+msgid "User blocked"
+msgstr "zablokowany"
+
+#: app/controllers/users.rb:66
+#, fuzzy
+msgid "User unlocked"
+msgstr "zablokowany"
+
+#: app/controllers/users.rb:75
+#: merb/merb-auth/strategies.rb:25
+msgid "Sorry, your account has been blocked"
+msgstr "Twoje konto jest zablokowane"
+
+#: app/controllers/users.rb:78
+#: merb/merb-auth/strategies.rb:30
+msgid "Sorry, you need to activate your account first"
+msgstr "Najpierw musisz aktywować konto."
+
+#: app/controllers/users.rb:85
+msgid "Couldn't find user with screenname %s and email %s"
+msgstr "Użytkownik %s z adresem email %s nie istnieje"
+
+#: app/controllers/users.rb:98
+msgid "Thanks! Your account has been activated."
+msgstr "Dziękujemy! Twoje konto zostało aktywowane."
+
+#: app/controllers/users.rb:100
+msgid "Invalid activation link or account has already been activated"
+msgstr "Link aktywacyjny jest niepoprawny lub konto zostało już aktywowane"
+
+#: app/controllers/users.rb:108
+msgid "Sorry, your password reset token has expired"
+msgstr "Przepraszamy ale twój token do przywrócenia hasła wygasł"
+
+#: app/controllers/users.rb:113
+msgid "Please set your new password"
+msgstr "Ustal swoje nowe hasło"
+
+#: app/controllers/users.rb:116
+msgid "Invalid password reset link or password has already been reset"
+msgstr "Link do zmiany hasła jest niepoprawny lub hasło zostało już zmienione"
+
+#: app/controllers/users.rb:123
+#, fuzzy
+msgid "User invitation mail sent"
+msgstr "Wiadomość z zaproszeniem wysłana"
+
+#: app/controllers/users.rb:127
+msgid "Thanks for registering! Now, activate your account by clicking on the link we've sent you via email."
+msgstr "Dziękujemy za rejestracje! Aktywuj swoje konto klikając w link, który wysłaliśmy do Ciebie emailem."
+
+#: app/controllers/users.rb:132
+#, fuzzy
+msgid "Email with password reset instructions has been sent to provided email address."
+msgstr "Email z linkiem służącym do zmiany hasła został wysłany na adres %s"
+
+#: app/controllers/friends.rb:22
+msgid "Friend invited"
+msgstr "Przyjaciel został zaproszony"
+
+#: app/controllers/friends.rb:32
+msgid "Friendship accepted"
+msgstr "Osoba dodana do przyjaciół"
+
+#: app/controllers/friends.rb:40
+msgid "Friendship canceled"
+msgstr "Osoba usunięta z listy przyjaciół"
+
+#: app/controllers/friends.rb:46
+#: app/controllers/friends.rb:57
+#: app/models/friendship.rb:47
+msgid "Friendship rejected"
+msgstr "Zaproszenie do przyjaźni zostało odrzucone"
+
+#: app/controllers/friends.rb:48
+#: app/controllers/friends.rb:59
+msgid "This friendship was accepted, use cancel to break it"
+msgstr "Przyjaź została już zaakceptowana, aby ją odrzucić przejdz do opcji zerwania przyjaźni."
+
+#: app/controllers/friends.rb:76
+msgid "Email can't be blank"
+msgstr ""
+
+#: app/controllers/friends.rb:78
+msgid "Wrong email format"
+msgstr ""
+
+#: app/controllers/friends.rb:80
+#, fuzzy
+msgid "Invitation exists"
+msgstr "Wiadomość z zaproszeniem wysłana"
+
+#: app/controllers/friends.rb:83
+msgid "Email with invitation sent"
+msgstr "Wiadomość z zaproszeniem wysłana"
+
+#: app/controllers/elements.rb:64
+msgid "Element has been successfully removed."
+msgstr ""
+
+#: app/controllers/elements.rb:69
+msgid "This element has already been proposed for topic '%s'"
+msgstr ""
+
+#: app/controllers/elements.rb:72
+msgid "Element '%s' has been proposed for topic '%s'"
+msgstr ""
+
+#: app/models/observers/user_observer.rb:13
+msgid "Password reset link from Cayox"
+msgstr "Link do zresetowania hasła w Cayox"
+
+#: app/models/observers/invitation_observer.rb:8
+msgid "Invitation to Cayox!"
+msgstr ""
+
+#: app/models/membership_request.rb:21
+msgid "New pending users in your closed topic"
+msgstr ""
+
+#: app/models/element_proposition.rb:49
+msgid "New Cayox elements proposed"
+msgstr ""
+
+#: app/models/favourite.rb:19
+#, fuzzy
+msgid "Name must no be blank"
+msgstr "Imię i nazwisko nie może być puste"
+
+#: app/models/favourite.rb:20
+#: app/models/topic.rb:67
+#, fuzzy
+msgid "Name must be less than 100 characters long"
+msgstr "Nazwa tematu musi być krótsza niż 100 znaków"
+
+#: app/models/favourite.rb:21
+#: app/models/topic.rb:75
+#, fuzzy
+msgid "Description must be less than 1024 characters long"
+msgstr "Nazwa użytkownika musi być krótsza niż 20 znaków"
+
+#: app/models/favourite.rb:25
+#: app/models/topic.rb:57
+#: app/models/element.rb:42
+#: app/models/bookmark.rb:20
+#, fuzzy
+msgid "Tag list must be less than 1024 characters long"
+msgstr "Nazwa tematu musi być krótsza niż 100 znaków"
+
+#: app/models/friendship.rb:21
+msgid "Sorry can't make freidnship with self"
+msgstr "Przepraszamy ale nie można ustanowić przyjaźni z samym sobą"
+
+#: app/models/friendship.rb:26
+msgid "Sorry this freindship is pending"
+msgstr "To zaproszenie do przyjaźni już istnieje"
+
+#: app/models/friendship.rb:36
+msgid "Friendship relation established"
+msgstr "Przyjaźń dodana"
+
+#: app/models/friendship.rb:41
+#, fuzzy
+msgid "Friendship relation destroyed"
+msgstr "Zaproszenie do przyjaźni zostało odrzucone"
+
+#: app/models/user.rb:11
+msgid "Screenname must not be blank"
+msgstr "Nazwa użytkownika nie może być pusta"
+
+#: app/models/user.rb:12
+msgid "Screenname has an invalid format"
+msgstr "Nazwa użytkownika ma niepoprawny format"
+
+#: app/models/user.rb:13
+msgid "Screenname must be less than 20 characters long"
+msgstr "Nazwa użytkownika musi być krótsza niż 20 znaków"
+
+#: app/models/user.rb:15
+msgid "Full name must not be blank"
+msgstr "Imię i nazwisko nie może być puste"
+
+#: app/models/user.rb:17
+msgid "Email has an invalid format"
+msgstr "Adres email ma niepoprawny format"
+
+#: app/models/user.rb:33
+msgid "Screen name is already taken"
+msgstr "Nazwa użytkownika jest już zajęta"
+
+#: app/models/user.rb:34
+msgid "Email is already taken"
+msgstr "Adres email jest już zajęty"
+
+#: app/models/user.rb:35
+msgid "Password must be at least 6 characters long"
+msgstr "Hasło musi mieć przynajmniej 6 znaków"
+
+#: app/models/user.rb:37
+msgid "Password must not be blank"
+msgstr "Hasło nie może być puste"
+
+#: app/models/user.rb:38
+msgid "Password does not match the confirmation"
+msgstr "Podane hasła nie zgadzają się"
+
+#: app/models/user.rb:146
+msgid "Welcome to Cayox!"
+msgstr "Witaj w Cayox!"
+
+#: app/models/topic.rb:23
+msgid "Topic with that name already exists"
+msgstr ""
+
+#: app/models/topic.rb:65
+#, fuzzy
+msgid "Name must not be blank"
+msgstr "Imię i nazwisko nie może być puste"
+
+#: app/models/element.rb:50
+#, fuzzy
+msgid "Element name must not be blank"
+msgstr "Nazwa tematu nie może być pusta"
+
+#: app/models/element.rb:52
+#, fuzzy
+msgid "Element name must be less than 100 characters long"
+msgstr "Nazwa tematu musi być krótsza niż 100 znaków"
+
+#: app/models/element.rb:60
+#, fuzzy
+msgid "Element description must be less than 1024 characters long"
+msgstr "Nazwa tematu musi być krótsza niż 100 znaków"
+
+#: app/models/element.rb:177
+#: app/models/bookmark.rb:48
+msgid "URL is not valid"
+msgstr ""
+
+#: app/models/invitation.rb:14
+msgid "Sorry you can't invite self"
+msgstr "Przepraszamy ale nie można zaprosić samego siebie"
+
+#: app/models/bookmark.rb:14
+#, fuzzy
+msgid "Bookmark description must be less than 1024 characters long"
+msgstr "Nazwa tematu musi być krótsza niż 100 znaków"
+
+#: app/models/bookmark.rb:15
+msgid "Sorry user can have only one bookmark per link"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:5
+msgid "Sorry, something went wrong. Please try again later."
+msgstr ""
+
+#: app/helpers/global_helpers.rb:6
+msgid "Are you sure to remove this element?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:7
+msgid "Are you sure to remove this favourite?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:8
+msgid "Are you sure you want to remove bookmark?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:9
+msgid "You have unsaved changes in the form. Do you really want to switch the language?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:10
+msgid "Edit Topic"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:11
+#, fuzzy
+msgid "Edit Element"
+msgstr "Elementy"
+
+#: app/helpers/global_helpers.rb:12
+msgid "Edit Favourite"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:14
+#, fuzzy
+msgid "New Element"
+msgstr "Elementy"
+
+#: app/helpers/global_helpers.rb:16
+#, fuzzy
+msgid "Registration"
+msgstr "Zarejestruj"
+
+#: app/helpers/global_helpers.rb:17
+#, fuzzy
+msgid "New Bookmark"
+msgstr "Zakładki"
+
+#: app/helpers/global_helpers.rb:18
+#, fuzzy
+msgid "Edit Bookmark"
+msgstr "Edycja zakładki"
+
+#: app/helpers/global_helpers.rb:19
+#, fuzzy
+msgid "Invite Friend"
+msgstr "Zaproś przyjaciela"
+
+#: app/helpers/global_helpers.rb:21
+msgid "Are you sure you want to break this friendship ?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:22
+#, fuzzy
+msgid "Forgotten Password"
+msgstr "Zapomniałem swojego hasła"
+
+#: app/helpers/global_helpers.rb:23
+msgid "Please select at least one element."
+msgstr ""
+
+#: lib/i18n.rb:77
+msgid "Form submission failed because of %s problem(s)"
+msgstr "Wysłanie formularza nie powiodło się z powodu %s problemów:"
+
+#: merb/merb-auth/strategies.rb:38
+msgid "Invalid user/password combination"
+msgstr "Niepoprawna nazwa użytkownika/hasło"
+
+#~ msgid "Element %s has invalid format"
+#~ msgstr "Element %s ma niepoprawny format"
+#~ msgid "Couldn't create topic:"
+#~ msgstr "Nie można utworzyć tematu:"
+#~ msgid "Couldn't update topic:"
+#~ msgstr "Nie można zaktualizować tematu:"
+#~ msgid "Theme:"
+#~ msgstr "Temat:"
+#~ msgid "Elements:"
+#~ msgstr "Elementy:"
+#~ msgid "Themes"
+#~ msgstr "Tematy"
+#~ msgid "Themes you own"
+#~ msgstr "Tematy które posiadasz"
+#~ msgid "Themes you maintain"
+#~ msgstr "Tematy którymi zarządzasz"
+#~ msgid "Friendships"
+#~ msgstr "Przyjaźnie"
+#~ msgid "Password reset"
+#~ msgstr "Odzyskaj hasło"
+#~ msgid "Register in Cayox"
+#~ msgstr "Zarejestruj się w Cayox"
+#~ msgid "Registration failed because:"
+#~ msgstr "Rejestracja nie powiodła się:"
+#~ msgid "Profile update failed because:"
+#~ msgstr "Aktualizacja profilu nie powiodła się:"
+#~ msgid "Theme list"
+#~ msgstr "Lista tematów"
+#~ msgid "Voted"
+#~ msgstr "Głosowane"
+#~ msgid "What are you looking for?"
+#~ msgstr "Czego szukasz?"
+#~ msgid "Theme created"
+#~ msgstr "Temat został utworzony"
+#~ msgid "Welcome, %s!"
+#~ msgstr "Witaj %s!"
+#~ msgid "German"
+#~ msgstr "Niemiecki"
+#~ msgid "English"
+#~ msgstr "Angielski"
+#~ msgid "French"
+#~ msgstr "Francuski"
+#~ msgid "Polish"
+#~ msgstr "Polski"
+#~ msgid "screenname"
+#~ msgstr "nazwa użytkownika"
+#~ msgid "Authenticated Successfully"
+#~ msgstr "Zalogowano :)"
+#~ msgid "Logged Out"
+#~ msgstr "Wylogowano :)"
+

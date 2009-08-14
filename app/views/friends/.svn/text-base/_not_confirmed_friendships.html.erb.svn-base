@@ -1,0 +1,35 @@
+<% unless @requested_friendships.empty? %>
+  <p>
+    <h2><%= _("Requested friendships") %></h2>
+    <% @requested_friendships.each do |friendship| %>
+          <dl class="friend">
+          <dt> <%= friendship.user.name %> </dt>
+        <dd class="avatar">
+          <%= image_tag gravatar(friendship.user.email, 60) %>
+        </dd>
+          <dd class="actions">
+        <%= link_to _("Accept"),  url(:accept_friend,friendship), :class => "accept" %>
+        <%= link_to _("Reject"),  url(:break_friend,friendship), :class => "remove remove_requested" %>
+        </dd>
+        </dl>
+    <% end %>
+  </p>
+<% end %>
+
+<% unless @pending_friendships.empty? %>
+  <p>
+    <h2><%= _("Pending friendships") %> </h2>
+	
+    <% @pending_friendships.each do |friendship| %>
+    <dl class="friend">
+      <dt> <%= friendship.friend.name %> </dt>
+	  <dd class="avatar">
+	    <%= image_tag gravatar(friendship.friend.email, 60) %>
+	  </dd>
+	  <dd class="actions">
+	  <%= link_to _("Cancel"),  url(:reject_friend,friendship), :class => "remove remove_pending" %>
+	  </dd>
+    </dl>
+    <% end %>
+  </p>
+<% end %>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Cayox/!svn/ver/818/trunk/CayoxClouds/lib
+END
+tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Cayox/!svn/ver/614/trunk/CayoxClouds/lib/tags.rb
+END
+extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Cayox/!svn/ver/630/trunk/CayoxClouds/lib/extensions.rb
+END
+i18n.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Cayox/!svn/ver/818/trunk/CayoxClouds/lib/i18n.rb
+END
+iso-639-1-list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Cayox/!svn/ver/281/trunk/CayoxClouds/lib/iso-639-1-list.rb
+END
+stubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Cayox/!svn/ver/657/trunk/CayoxClouds/lib/stubs.rb
+END
+xss_terminator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/lib/xss_terminator.rb
+END
+abstract_storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Cayox/!svn/ver/566/trunk/CayoxClouds/lib/abstract_storage.rb
+END

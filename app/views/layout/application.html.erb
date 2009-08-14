@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    <title>CAYOX</title>
+    <%= partial "layout/assets" %>
+  </head>
+  <body class="content-page" id="<%= params[:controller].to_s.gsub("/", "_") + '_' + params[:action].to_s %>">
+    <div id="top">
+      <ul>
+        <%= partial "layout/top_links" %>
+      </ul>
+    </div>
+    
+    <div class="header clearfix">
+      <h1><a href="/"><img src="/images/cayox-logo-small.gif" alt="CAYOX" /></a></h1>
+      
+      <form id="search" class="filter_form" action="#" method="GET">
+        <fieldset>
+          <input type="text" id="filter" />
+          <a href="#" class="search-button filter-button"><%= _("Search") %></a>
+        </fieldset>
+        <ul id="suggestions" class="hidden">
+          <li>Lorem</li>
+          <li class="selected">Ipsum</li>
+          <li>Dolor sit</li>
+        </ul>
+      </form>
+    </div>
+    
+    <%= partial "layout/#{menu_type}_menu" unless session.user.guest? || menu_type.nil? %>
+
+    <div class="content">
+	  <div id="flash" class="<%= message.keys.first %>" style="<%= 'display: block' unless message.keys.empty? %>">
+	      <%= h message[message.keys.first] %>
+	  </div>
+     <%= catch_content :for_top_content %>
+     <div class="primary">
+        <%= catch_content :for_layout %> 
+     </div>
+     <div class="secondary">
+       <%= catch_content :for_right_column %>
+     </div>
+  </div>
+
+    
+    <ul class="footer">
+      <li>&copy; 2009 Moase Solutions</li>
+      <li><a href="#">About CAYOX</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Privacy policy</a></li>
+    </ul>
+    
+  </body>
+</html>

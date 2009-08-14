@@ -1,0 +1,136 @@
+/* layout */
+.wrapper {
+  width:960px;
+  margin:0 auto;
+}
+
+.header {
+  font-size: 40px;
+  font-weight: bold;
+  height: 140px;
+  margin-top: 20px;
+}
+
+.header-expanded {
+  height:165px;
+}
+
+.header .wrapper {
+  position:relative;
+  height:140px;
+  text-align: center;
+  font-family: 'Trebuchet MS', Arial;
+  font-weight: bold;
+  font-size: 120px;
+}
+
+.header-expanded .wrapper {
+  height:165px;
+}
+
+#content {
+  width:920px;
+  padding:20px 20px 75px 20px;
+  color:#444;
+  font-size:12px;
+  position:relative;
+  font-family: Tahoma;
+}
+
+#primary {
+  float:left;
+  width:600px;
+  padding: 0 10px;
+}
+
+#secondary {
+  width:300px;
+  float:left;
+}
+
+/* user information, preferences / logout */
+
+#userinfo {
+  position:absolute;
+  top:5px;
+  right:0;
+  font-size:10px;
+  width:250px;
+}
+
+#userinfo dt {
+  margin-right:5px;
+  padding-right:5px;
+  border-right:1px solid #80b2e2;
+  float:left;
+}
+
+#userinfo dd {
+  float:right;
+}
+
+#userinfo dd li {
+  float:left;
+  margin-right:5px;
+}
+
+#userinfo a {
+  /*color:black;*/
+}
+
+#userinfo a:hover {
+  /*color:#fff;*/
+}
+
+div#flash {
+  font-size:10pt;
+  font-weight:bold;
+  padding:15px;
+  text-align:center;
+  width:100%;
+  top: 0;
+  display: none;
+  margin-bottom: 10px;
+  background-position:left center;
+  background-repeat:no-repeat;
+}
+
+div#flash.notice {
+  color:#008800;
+  border: 1px solid #008800;
+  background-color: #eeffee;
+  text-align:left;
+  padding-left:40px;
+  display:block;
+  width:auto;
+}
+
+div#flash.error, div.error {
+  color:#cc0000;
+  border: 1px solid #cc0000;
+  background-color: #ffeeee;
+  text-align:left;
+  padding-left:40px;
+  display:block;
+  width:auto;
+}
+
+div.error {
+  padding:10px 10px 10px 40px;
+}
+
+div.error h2 {
+  font-size:13px;
+  font-weight:900;
+  color:#880000;
+}
+
+#content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#content .login_form {
+  margin-bottom: 100px;
+}

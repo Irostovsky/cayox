@@ -1,0 +1,15 @@
+<span class="back-link"><%= back_link_to_topic(@topic) %></span>
+<h2><%= translate(@element.name) %> <%= link_to(@element.link.site, @element.url, :class => "link", :target => "_blank", :title => @element.url) %></h2>
+
+<p class="description">
+  <%= partial(:element_thumbnail) %>
+  <%= translate(@element.description).to_s.gsub("\n", "<br/>") %>
+</p>
+
+<% if @topic.is_a?(Topic) %>
+  <%= partial(:show_topic_element) %>
+<% else %>
+  <%= partial(:show_favourite_element) %>
+<% end %>
+
+<% throw_content :for_right_column, partial("shared/elements", :with => @topic, :as => :parent) %>

@@ -1,0 +1,13 @@
+<span class="back-link"><%= back_link_to_results %></span>
+
+<h2><%= _("Reported items") %></h2>
+<p>
+  <%= _("Listed items have been reported by Cayox users as inappropriate.") %>
+  <%= _("If you agree with report and want to remove an item select it and click on 'Remove items'.") %>
+  <%= _("If you don't agree with report you can reject it by selecting item and clicking on 'Reject reports'.") %>
+</p>
+
+<%= partial(:"flags/list", :type => :topics, :collection => @topic_flags, :pagination_parameter => @topic_flags_page_count) %>
+<br/>
+<br/>
+<%=  partial(:"flags/list", :type => :elements, :collection => @element_flags, :pagination_parameter => @element_flags_page_count) %>

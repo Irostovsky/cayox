@@ -1,0 +1,5 @@
+<h2 class="<%= @topic.access_level.to_s %>"><%= translate(@topic.name) %></h2>
+<div class="description">
+  <%= partial "shared/owner_gravatar", :owners => @topic.owners %>
+  <%= translate(@topic.description).to_s.gsub("\n", "<br/>") %>
+</div>

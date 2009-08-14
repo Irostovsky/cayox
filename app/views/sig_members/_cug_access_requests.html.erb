@@ -1,0 +1,17 @@
+<h2><%= _("ACCESS REQUESTS") %></h2>
+
+<% unless @membership_requests.empty? %>
+  <p class="margin_after"><%= _("Here is the list of users requesting access to your topic as consumers:") %></p>
+  <% @membership_requests.each do |membership_request| %>
+    <dl class="friend">
+      <dt> <%= membership_request.user.name %></dt>
+      <dd class="avatar"><%= image_tag gravatar(membership_request.user.email, 60) %></dd>
+      <dd class="actions">
+        <%= link_to _("Accept"),  resource(@topic, membership_request, :accept), :class => "accept" %>
+        <%= link_to _("Reject"),  resource(@topic, membership_request, :reject), :class => "remove" %>
+      </dd>
+	  </dl>
+  <% end %>
+<% else %>
+  <p><%= _("Currently there are no users requesting access to your topic.") %></p>
+<% end %>

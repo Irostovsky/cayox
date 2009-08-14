@@ -1,0 +1,34 @@
+<span class="back-link"><%= back_link_to_results %></span>
+
+<%= partial :topic_info %>
+
+<% unless session.user.guest? %>
+<form id="vote_form" class="rating" title="Average Rating: <%= @topic.average_vote %>" action="#">
+  <%= hidden_field :name => "topic_id", :value => @topic.id %>
+  <%= partial "shared/rating_stars", :element => @topic, :readonly => false %>
+</form>
+<% end %>
+
+<ul class="action_links">
+  <% if !@topic.private? && (session.user.owned_topics.include?(@topic) || session.user.admin?) %>
+    <li class="key"><%= link_to _("Edit Roles"), resource(@topic, :sig_members)  %></li>
+    <li class="remove"><%= link_to _("Abandon"), resource(@topic, :abandon), :class => "abandon" %></li>
+  <% elsif @topic.private? %>
+    <li class="remove"><%= link_to _("Remove"), resource(@topic, :abandon), :class => "remove_topic" %></li>
+  <% end %>
+  <% if @topic.editable_by?(session.user) %>
+    <li class="edit"><%= link_to(_("Edit"), resource(@topic, :edit), :class => "edit_topic_link") %></li>
+  <% end %>
+  <% unless session.user.guest? || session.user.topics_from_favourites.include?(@topic) || @topic.access_level == :private %>
+    <li class="favourite"><%= link_to(_("Add to favourites"), '#', :class => "add_to_favs_link") %></li>
+  <% end %>
+  <li class="link"><%= link_to(_("Link"), resource(@topic, :permalink), :id => 'permalink_link') %></li>
+  <li class="flag"><%= link_to(_("Flag"), resource(@topic, :flags, :new), :class => "flag_topic_link") %></li>
+  <%= form :action => resource(:favourites, :topic_id => @topic.id), :id => "add_to_favs_form", :method => 'post' do %><% end =%>
+</ul>
+
+<%= partial("comments/comments", :with => @topic, :as => :commentable) %>
+
+<%= autocomplete_url_script(resource(@topic, :element_tags_autocomplete)) %>
+
+<% throw_content :for_right_column, partial("shared/elements", :with => @topic, :as => :parent) + element_tag_cloud(@all_tags, @selected_tags) %>

@@ -1,0 +1,22 @@
+<p>
+  <%= _("If you feel that '%s' doesn't belong here or is inappropriate in some way tell us why.") % translate(@object.name) %><br/><br/>
+  <span class="<%= "highlight" if request.post? && !@flag %>"><%= _("Please select a reason for reporting this:") %></span>
+</p>
+<div class="flags">
+  <% @flags.each do |flag| %>
+    <p class="radio">
+      <%= radio_button :name => "flag_id", :value => flag.id, :label => _(flag.description), :id => "flag_id_#{flag.id}", :checked => ((@flag && @flag.id == flag.id) ? "checked" : false) %>
+    </p>
+  <% end %>
+</div>
+
+<% if session.user.guest? %>
+  <input type="hidden" id="recaptcha_public_key" value="<%= Cayox::CONFIG[:recaptcha_public_key] %>" />
+  <span><%= _("Enter words from the image below:") %></span><br/><br/>
+  <div id="recaptcha" style="height: 130px;"></div>
+  <br/>
+<% end %>
+
+<p class="indented">
+  <%= submit _("Report"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), '#', :class => "close") %>
+</p>

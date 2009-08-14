@@ -1,0 +1,12 @@
+<p>
+  <%= text_field :name, :label => _("Favourite name") %>
+  <%= error_on(@favourite, :name) %>
+</p>
+<p>
+  <%= text_area :description, :label => _("Description") %>
+  <%= error_on(@favourite, :description) %>
+</p>
+<p>
+  <%= text_field :tag_list, :label => _("Tags"), :value => formatted_tags(@favourite.tag_list) %>
+  <%= error_on(@favourite, :tag_list) %>
+</p>

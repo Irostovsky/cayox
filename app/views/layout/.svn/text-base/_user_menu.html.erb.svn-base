@@ -1,0 +1,7 @@
+<ul id="nav">
+  <li><%= link_to _('New Topic'), resource(:topics, :new), :class => "new_topic_link" %></li>
+  <li><%= link_to _('My Favourites'), resource(:favourites), :class => (params[:controller] == "favourites" || params[:controller] == "elements" && params[:favourite_id] ? "selected" : "") %></li>
+  <li><%= link_to _('My Topics'), resource(:mytopics), :class => (session[:mytopics] && (params[:controller].in?(["mytopics", "topics", "roles"]) || (params[:controller] == "elements" && params[:topic_id])) ? "selected" : "") %></li>
+  <li><%= link_to _('Bookmarks'), resource(:bookmarks), :class => (params[:controller] == "bookmarks" ? "selected" : "") %></li>
+  <li><%= link_to _('Friends'), resource(:friends), :class => (params[:controller] == "friends" ? "selected" : "") %></li>
+</ul>

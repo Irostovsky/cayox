@@ -1,0 +1,18 @@
+<p class="form_description">
+  <%= _("If you have lost your Cayox activation mail please enter your email address and we will send it again.") %>
+</p>
+<div class="password_reset">
+  <% if message[:error] %>
+    <div class="error"><%= message[:error] %></div>
+  <% end %>
+  <%= form :action => resource(:users, :resend_activation) do %>
+    <fieldset>
+      <p>
+        <%= text_field :name => "email", :label => _("Email") %>
+      </p>
+      <p class="indented">
+        <%= submit _("Send"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), '#', :class => "close") %>
+      </p>
+    </fieldset>
+  <% end =%>
+</div>

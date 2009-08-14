@@ -1,0 +1,11 @@
+<h3>Bookmarks </h3>
+<ul id='all_bookmarks'>
+  <% @all_bookmarks.each do |bookmark| %>
+    <li>
+      <%= link_to bookmark.link.site, bookmark.link.url %>
+      <div>
+        <%= h bookmark.description %>
+      </div>
+    </li>
+  <% end %>
+</ul>

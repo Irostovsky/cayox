@@ -1,0 +1,9 @@
+<%= css_include_tag 'reset', 'common','framework', 'forms', 'tables', 'jquery.rating', 'nyroModal', 'nyroOverrides', 'ui.datepicker', :bundle => true %>
+<%= js_include_tag 'lib/jquery', 'lib/jquery.livequery', 'lib/jquery-extensions', 'lib/message', 'lib/modal', 'lib/jquery.autocomplete.js', 'application', 'lib/jquery.rating', 'lib/jquery.nyroModal-1.4.2.js', 'lib/ZeroClipboard.js', 'lib/jquery.cycle.min', 'lib/ui.datepicker', :bundle => true %>
+<script type="text/javascript">
+  var TRANSLATIONS = <%= javascript_translations %>;
+</script>
+<%= auto_link %>
+<%= js_include_tag 'sig_members' if params[:controller] == 'admin/sig_members' %>
+<%= js_include_tag 'flags' if params[:controller] == 'admin/flags' %>
+<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script>

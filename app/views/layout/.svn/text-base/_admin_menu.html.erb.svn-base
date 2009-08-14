@@ -1,0 +1,6 @@
+<ul id="nav">
+  <li><%= link_to _('Users'), resource(:admin, :users) %></li>
+  <li><%= link_to _('Topics'), resource(:admin, :topics) %></li>
+  <li><%= link_to _('Flagged items'), resource(:admin, :flags) %></li>
+  <li><%= link_to _('Notifications'), resource(:admin, :notifications) %></li>
+</ul>

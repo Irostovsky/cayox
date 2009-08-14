@@ -1,0 +1,2 @@
+<h2><%= _("Edit bookmark") %></h2>
+<%= partial (:edit_bookmark) %>

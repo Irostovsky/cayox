@@ -1,0 +1,12 @@
+<p>
+  <%= _("This user group has limited access. Would you like to ask the group moderator for access privileges? ") %>
+</p>
+
+<%= form :action => url(:join_topic) do %>
+  <fieldset>
+    <%= hidden_field :name => "topic_id", :value => params[:id] %>
+    <p class="indented">
+      <%= submit _("Yes"), :class => "button" %> <%= _("or") %> <%= link_to(_("No"), "/", :class => "close") %>
+    </p>
+  </fieldset>
+<% end =%>

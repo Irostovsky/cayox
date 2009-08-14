@@ -1,0 +1,42 @@
+<h2><%= _("OWNERSHIP REQUESTS") %></h2>
+
+<% unless @ownership_requests.empty? %>
+  <p class="margin_after"><%= _("Here is the list of topics for which you have been added as 'owner'. Please accept or reject these requests.") %></p>
+  <ul class="requests_list">
+  <% @ownership_requests.each do |request| %>
+      <li class="clearfix">
+        <strong><%= translate(request.topic.name) %></strong>
+      </li>
+      <li class="clearfix">
+        <%= link_to _("Accept"), resource(request.topic, request, :accept), :class => "accept" %>
+        <%= link_to _("Reject"), resource(request.topic, request, :reject), :class => "remove" %>
+      </li>
+  <% end %>
+  </ul>
+<% else %>
+  <p><%= _("Currently there are no topics for which you have been added as 'owner'.") %></p>
+<% end %>
+
+
+
+<h2><%= _("ADOPTABLE TOPICS") %></h2>
+<% unless @adoptables.empty? %>
+
+  <p class="margin_after">
+	<%= _("Here is the list of topics which owners want to abandon, you can become 'owner' of them by clicking accept") %>
+  </p>
+
+   <ul class="requests_list">
+     <% @adoptables.each do |adoptable_topic| %>
+     <li class="clearfix">
+	   <strong><%= translate(adoptable_topic.name) %></strong>
+	 </li>
+	 <li class="clearfix">
+		<%= link_to _("Take the lead"), resource(adoptable_topic,:adopt), :class => "accept" %>
+	 </li>
+     <% end %>
+   </ul>
+
+<% else %>
+  <p><%= _("Currently there are no topics left for adoption") %></p>
+<% end %>

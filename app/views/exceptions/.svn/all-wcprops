@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Cayox/!svn/ver/626/trunk/CayoxClouds/app/views/exceptions
+END
+unauthenticated.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Cayox/!svn/ver/293/trunk/CayoxClouds/app/views/exceptions/unauthenticated.html.erb
+END
+not_found.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Cayox/!svn/ver/626/trunk/CayoxClouds/app/views/exceptions/not_found.html.erb
+END
+not_acceptable.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Cayox/!svn/ver/125/trunk/CayoxClouds/app/views/exceptions/not_acceptable.html.erb
+END

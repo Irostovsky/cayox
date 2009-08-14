@@ -1,0 +1,11 @@
+<h4><%= _("Create new account") %></h4>
+
+<%= form_for @user, :action => url(:users) do %>
+  <fieldset>
+    <%= partial :user_form %>
+    <%= partial :password_fields %>
+    <p class="indented">
+      <%= submit _("Create"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), "/", :class => "close") %>
+    </p>
+  </fieldset>
+<% end =%>

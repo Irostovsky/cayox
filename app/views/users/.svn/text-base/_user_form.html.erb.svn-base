@@ -1,0 +1,12 @@
+<p>
+  <%= text_field :name, :label => _("Screenname") %>
+  <%= error_on(@user, :name) %>
+</p>
+<p>
+  <%= text_field :full_name, :label => _("Name") %>
+  <%= error_on(@user, :full_name) %>
+</p>
+<p>
+  <%= text_field :email,  :label => _("Email") %>
+  <%= error_on(@user, :email) %>
+</p>

@@ -1,0 +1,14 @@
+<ul class="topic_list">
+<% @topics.each do |topic| %>
+  <li>
+	  <% if topic.access_level == :closed_user_group && !session.user.all_topics.include?(topic) && !session.user.admin? %>
+        <%= link_to(translate(topic.name), resource(topic, :join), :class => topic.access_level.to_s + " closed_topic" ) %>
+      <% else %>
+        <%= link_to(translate(topic.name), admin ? resource(:admin, topic) : resource(topic), :class => topic.access_level.to_s) %>
+      <% end %>
+      <span>(<%= "#{topic.elements.count} #{_('elements')}, #{_("%s visits") % topic.views}" %>)</span>
+      <p><%= translate(topic.description).truncate(100) %></p>
+  </li>
+<% end %>
+</ul>
+<%= paginator(@page_count) %>

@@ -1,0 +1,55 @@
+<h2>Users list</h2>
+
+<%= form :action => '' , :method => :get do %>
+  <%= text_field :query %>
+  <%= check_box :inactive, :label => "Inactive" %>
+  <%= check_box :blocked, :label => "Blocked" %>
+  <%= check_box :active, :label => "Active" %>
+  <%= submit _("Search"), :class => "user_filter_button" %>
+<% end =%>
+
+<br/>
+
+<table id="role_administration" class="pretty">
+  <tr>
+    <th><%= _("Screen name") %></th>
+    <th><%= _("Registered at") %></th>
+    <th><%= _("Last login") %></th>
+    <th><%= _("Actions") %></th>
+    <th><%= _("Status") %></th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.name, resource(:admin, user, :edit) %></td>
+    
+	<td>
+	  <%= user.created_at.strftime("%d/%m/%Y") %>	
+	</td>
+	<td>
+		<%= user.last_login.strftime("%d/%m/%Y") if user.last_login %>
+	</td>
+	<td>
+      <% unless user.blocked %>
+        <%= link_to _('Block'), resource(:admin, user, :block) %>
+      <% else %>
+        (<%= _("Blocked") %>)
+        <%= link_to _('unblock'), resource(:admin, user, :unblock) %>
+      <% end %>
+      | <%= link_to _('Notifications'), resource(:admin, :notifications, :notifications_filter_form => { :user_id => user.id }) %>
+      | <%= link_to _('Profile'), resource(:admin, user, :edit) %>
+	  <% unless user.active? %>
+        | <%= link_to _("Re-send activation"), resource(:admin, user, :resend_activation_mail) %>
+      <% end %>
+      | <%= link_to _('Remove'), resource(:admin, user, :remove), :class => "remove_user" %>
+      <% if user.active? %>
+      | <%= link_to _("Password reset link"), resource(:admin, user, :password_reset_link) %>
+      <% end %>
+	</td>
+    <td>
+	  <%= user.status %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= paginator(@page_count) %>

@@ -1,0 +1,9 @@
+<span class="back-link"><%= back_link_to_results %></span>
+<h2><%= @bookmark.name %> <a class="link" href="<%= @bookmark.link.url %>" target="blank"><%= @bookmark.link.url %></a></h2>
+ 
+<p>
+<%= _("Tags:") %> <%= @bookmark.tag_list.join(", ") %>
+</p>
+
+<% throw_content(:for_right_column, bookmark_description(@bookmark) ) %>
+

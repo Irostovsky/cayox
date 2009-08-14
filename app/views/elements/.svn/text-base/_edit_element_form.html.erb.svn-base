@@ -1,0 +1,8 @@
+<%= form_for @element, :action => resource(@topic, @element), :method => 'put', :class => "editing" do %>
+  <fieldset>
+    <%= partial :element_form %>
+    <p class="indented">
+      <%= submit _("Update"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), resource(@topic, @element), :class => "close") %>
+    </p>
+  </fieldset>
+<% end =%>

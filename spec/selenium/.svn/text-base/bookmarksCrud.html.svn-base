@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://cayox.llpdemo.com/" />
+<title>bookmarksCRUD</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">bookmarksCRUD</td></tr>
+</thead><tbody>
+<!--bookmarks-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>login_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>If you already have an account on CAYOX, you can log in using the form below.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login</td>
+	<td>${userLogin3}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bookmarks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>BOOKMARKS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>create_topic_from_bookmarks_link</td>
+	<td></td>
+</tr>
+<!--new bookmark-->
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bookmark name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>http://www.google.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>google search engine</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>one of the best search engines</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td>search engines, google</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=google search engine</td>
+	<td></td>
+</tr>
+<!--add bookmark - no protocol-->
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>www.example.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>example portal</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>one of the best portals</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td>portals, example</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>example portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>example portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>example portal</td>
+	<td></td>
+</tr>
+<!--view bookmark-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>one of the best search engines</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>bookmarks[]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=exact:http://www.google.pl/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=exact:http://www.google.pl/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Tags: google, search engines</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>DESCRIPTION</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>one of the best search engines</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=exact:http://www.google.pl/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bookmarks</td>
+	<td></td>
+</tr>
+<!--new bookmark: cancel-->
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>http://www.sronet.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>sronet</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>onet sronet</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td>sronet</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>google search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=sronet</td>
+	<td></td>
+</tr>
+<!--edit & check bookmark-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Edit Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>http://www.google.pl/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>google</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>search</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td>search engine</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Update']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Bookmark updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Bookmark updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<!--edit bookmark: cancel-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Edit Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>satan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>satanic</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td>satanus</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>search engine</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>satan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>satanic</td>
+	<td></td>
+</tr>
+<!--cancel delete bookmark & delete bookmark -->
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseCancelOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=google</td>
+	<td></td>
+</tr>
+<!--prerequisites for exception flow-->
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>http://www.google.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>google</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>googledesc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td>googletag</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=google</td>
+	<td></td>
+</tr>
+<!--exception flow: blank form-->
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Link is not valid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Link is not valid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Name must not be blank</td>
+	<td></td>
+</tr>
+<!--exception flow: already existing link 1-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>http://www.google.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You already have a bookmark for this link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You already have a bookmark for this link</td>
+	<td></td>
+</tr>
+<!--exception flow: already existing link 2-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>http://www.google.pl/</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You already have a bookmark for this link</td>
+	<td></td>
+</tr>
+<!--exception flow: already existing link 3-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>www.google.pl</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_tag_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You already have a bookmark for this link</td>
+	<td></td>
+</tr>
+<!--validations-->
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>https://www.google.com/</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>sss</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>sss</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=sss</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=sss</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>ftp://www.google.com/</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>cvbc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>vbcvb</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Link is not valid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Link is not valid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>BOOKMARKS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>www.google.pl/test/test/</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>cvbc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>vbcvb</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>BOOKMARKS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=cvbc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=cvbc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>qwqwqw.qwqwqw.qwqw/q/weqweqweqeqwe/qeq/eqweqweqweqweqwe/qw/eq/weqweqwe/qwe/qwe/qwe/qweqweqwe/1.html</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_description</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>BOOKMARKS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bookmark added</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>qwqwqw.qwqwqw.qwqw/q/weqweqweqeqwe/qeq/eqweqweqweqweqwe/qw/eq/weqweqwe/qwe/qwe/qwe/qweqweqwe/ofgohfoghofgh/fpghofgohfoghfgwew/werwer/wer/werwerwerw/rwe/rwerwerwdfgd/gdfgd/fg/dfgdf/df/gdfgdfg/4.html</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>htl</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>BOOKMARKS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=htl</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=htl</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>create_new_bookmark_link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>New Bookmark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_url</td>
+	<td>http://qwqwqw.qwqwqw.qwqw/q/weqweqweqeqwe/qeq/eqweqweqweqweqwe/qw/eq/weqweqwe/qwe/qwe/qwe/qweqweqwe/ofgohfoghofgh/fpghofgohfoghfgwew/werwer/wer/werwerwerw/rwe/rwerwerwdfgd/gdfututututyutyu/tyu/tu/tyutyututtutut/utututtu3ertert/ertertetrhf/hfghfghfghfgh/fghfghfhfghgf/hfgghfghgfhfhf/hgfhgfghgfhgfhgfghjghjkghj/ghjghjghj/ghjghjghj/ghjgd/fg/dfgdf/df/gdfgdfg/4.html</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>bookmark_name</td>
+	<td>jjjj</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='submit' and @name='submit' and @value='Create']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>BOOKMARKS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=jjjj</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=jjjj</td>
+	<td></td>
+</tr>
+<!--remove test data-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bookmarks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li').length</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=destroy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove bookmark?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>dom=window.document.getElementsByClassName('topic_list')[0].getElementsByTagName('li').length</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>You have been logged out.</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

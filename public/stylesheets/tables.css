@@ -1,0 +1,57 @@
+table.wide {
+  width: 100%;
+}
+
+table.list {
+  margin-bottom: 40px;
+}
+
+table th {
+  background-color: #DDD;
+  font-weight: bold;
+}
+
+table td, table th {
+  padding: 7px;
+}
+
+table.ui-datepicker td, table.ui-datepicker th {
+  padding: 0;
+  text-align: right;
+}
+
+table.pretty td {
+  border-top: 1px solid #ddd;
+  vertical-align: bottom;
+}
+
+table.pretty {
+  border-right: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+
+th.checkbox {
+  width: 20px;
+}
+
+.new_role_form td {
+  border-top: 1px solid #ddd;
+}
+
+#role_administration .username {
+  width: 300px;
+}
+
+#role_administration .actions {
+  width: 80px;
+}
+
+/* #role_administration {
+  table-layout: fixed;
+} */
+
+table.ui-datepicker td.ui-datepicker-current-day a {
+  background:white none repeat scroll 0 0;
+  font-weight:bold;
+}

@@ -1,0 +1,10 @@
+<h2><%= _("MY TOPICS") %></h2>
+
+<% if @topics.empty? %>
+  <%= _("You have no topics yet.") %>
+  <%= link_to(_("Create new topic"), resource(:topics, :new), :class => "new_topic_link") %>
+<%  else %>
+  <%= partial "search/topic_list" %>
+<% end %>
+
+<% throw_content(:for_right_column, topic_tag_cloud(@topics_tags, @selected_tags)) %>

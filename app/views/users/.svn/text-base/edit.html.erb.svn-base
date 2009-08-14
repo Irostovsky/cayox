@@ -1,0 +1,62 @@
+<% unless @user.name.to_s.empty? %>
+  <h2><%= _("%s's Profile") % @user.name %></h2>
+<% else %>
+  <h2><%= _("Profile") %></h2>
+<% end %>
+
+<%= form_for @user, :action => resource(@user), :id => "edit_user_form" do %>
+  <fieldset>
+    <%= partial :user_form %>
+    <%= partial :password_fields %>
+    <p class="indented">
+      <%= submit _("Save"), :class => "button" %>
+    </p>
+  </fieldset>
+<% end =%>
+
+<h2><%= _("Language settings") %></h2>
+<% languages = [["", _("Choose...")]] + Language.all(:order => [:name]).map { |lang| [lang.id, lang.name] } %>
+<%= form_for @user, :action => resource(@user) do %>
+  <fieldset>
+    <p>
+      <%= select :primary_language_id, :label => _("Primary language"), :collection => languages %>
+    </p>
+    <h3>
+      <%=  _("Secondary languages") %>
+    </h3>
+    <% @user.secondary_languages.all.each do |lang| %>
+      <p>
+        <%= select :name => "user[secondary_languages][]", :selected => lang.id.to_s, :label => "&nbsp;", :collection => languages %>
+        <%= link_to(image_tag('icons/minus.png'), '#', :class => "remove_language") %>
+      </p>
+    <% end %>
+    <!-- hidden select for adding new language -->
+    <p style="display: none" id="language_combo_template">
+      <%= select :name => "user[secondary_languages][]", :label => "&nbsp;", :collection => languages %>
+      <%= link_to(image_tag('icons/minus.png'), '#', :class => "remove_language") %>
+    </p>
+    <p class="indented">
+      <%= link_to(_("Add another language"), '#', :id => "add_language") %>
+    </p>
+    <p class="indented">
+      <%= submit _("Save"), :class => "button" %>
+    </p>
+  </fieldset>
+<% end =%>
+
+<h2><%= _("Other settings") %></h2>
+<%= form_for @user, :action => resource(@user) do %>
+  <fieldset>
+    <p class="wide">
+      <%= select :search_results_per_page, :label => _("No. of topics per page"), :collection => [[10, 10], [20, 20], [50, 50]], :class => "number" %>
+    </p>
+    <p class="wide">
+      <%= select :elements_per_page, :label => _("No. of topic elements per page"), :collection => [[10, 10], [20, 20], [50, 50]], :class => "number" %>
+    </p>
+    <p class="indented">
+      <%= submit _("Save"), :class => "button" %>
+    </p>
+  </fieldset>
+<% end =%>
+
+<% throw_content :for_right_column, partial("sig_members/ownership_requests") %>

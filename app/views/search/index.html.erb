@@ -1,0 +1,16 @@
+<span class="back-link"><%= link_to(_("New search"), url(:home)) %></span>
+<h2><%=  _("TOPICS") %></h2>
+
+<%= invalid_tags_info(@invalid_tags) %>
+
+<% if @selected_tags.empty? %>
+  <h3><%= _("Please filter topics by selecting tags.") %></h3>
+<% end %>
+
+<div id="topic_list">
+  <%= partial "topics/topics_list", :admin => false %>
+</div>
+
+<%= autocomplete_url_script("/search/tags_autocomplete") %>
+
+<% throw_content :for_right_column, topic_tag_cloud(@topics_tags, @selected_tags) %>

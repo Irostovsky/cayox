@@ -1,0 +1,33 @@
+<h2><%= _("Notifications") %></h2>
+
+<% unless @notifications.empty? %>
+  <%= form :action => resource(:admin, :notifications, :resend) do %>
+  <table class="pretty wide" id="notifications">
+    <tr>
+      <th class="checkbox"></th>
+      <th><%= _("Type") %></th>
+      <th><%= _("User") %></th>
+      <th><%= _("Created at") %></th>
+      <th><%= _("Last sent at") %></th>
+    </tr>
+  <% @notifications.each do |n| %>
+    <tr>
+      <td><%= check_box :name => "notification_ids[]", :value => n.id %></td>
+      <td><%= n.name %></td>
+      <td><%= n.user.name %></td>
+      <td><%= n.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+      <td><%= n.sent_at.strftime("%Y-%m-%d %H:%M") %></td>
+    </tr>
+  <% end %>
+  </table>
+  <%= paginator(@page_count) %>
+  <br/><br/>
+  <fieldset>
+  <%= submit _("Resend selected"), :class => "button", :id => "resend_button" %>
+  </fieldset>
+  <% end =%>
+<% else %>
+  <%= _("No notifications found for selected filter.") %>
+<% end %>
+
+<% throw_content :for_right_column, partial(:filter) %>

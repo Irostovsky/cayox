@@ -1,0 +1,18 @@
+<%= _("Hello!") %>
+
+<% if @item.is_a?(Topic) %>
+<%= _("Cayox user %s wants you to look at topic '%s'.") % [@user.full_name, @item.name[@lang]] %>
+<% else %>
+<%= _("Cayox user wants you to look at element '%s' in topic '%s'.") % [@item.name[@lang], @item.topic.name[@lang]] %>
+<% end %>
+<% unless @comment.blank? %>
+<%= _("His comment is:") %>
+  <%= @comment %>
+<% end %>
+
+<%= _("You can view it at following link:") %>
+
+  <%= @item.permalink(@lang) %>
+
+Cayox
+<%= @url %>

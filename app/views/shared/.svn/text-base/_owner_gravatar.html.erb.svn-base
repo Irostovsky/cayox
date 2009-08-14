@@ -1,0 +1,7 @@
+<% unless owners.empty? %>
+  <div class="owners">
+    <% owners.each do |owner| %>
+      <img class="user-icon" src="<%= gravatar(owner.email, 48) %>" />
+    <% end %>
+  </div>
+<% end %>

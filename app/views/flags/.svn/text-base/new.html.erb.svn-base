@@ -1,0 +1,5 @@
+<%= form :action => (@object.is_a?(Topic) ? resource(@object, :flags) : resource(@object.topic, @object.element, :flags)) do %>
+  <fieldset>
+    <%= partial :flag_form %>
+  </fieldset>
+<% end =%>

@@ -1,0 +1,25 @@
+<h3><%= _("Comments on ") %><em><%= translate(commentable.name) %></em></h3>
+
+<div id="<%=commentable.class.to_s.downcase%>_comments">
+	<%= partial "comments/#{commentable.class.to_s.downcase}_comments" %>
+</div>
+
+<% unless session.user.guest? %>
+  <h3><%= _("Add new comment") %></h3>
+
+  <% if @comment %>
+    <%= error_messages_for @comment %>
+  <% end %>
+
+  <%= form :action => resource( :comments, :type => commentable.class.to_s, :id => commentable.id ) do %>
+    <fieldset>
+      <p>
+	    <%= text_area :name => :comment, :label => _("Comment:") %>
+	  </p>
+      <p class="indented">
+        <%= submit _("Comment!"), :class => "button" %>
+      </p>
+    </fieldset>
+  <% end =%>
+
+<% end %>

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Cayox/!svn/ver/805/trunk/CayoxClouds/app/models/notifications
+END
+registration_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/registration_notification.rb
+END
+role_changed_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/app/models/notifications/role_changed_notification.rb
+END
+flags_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/flags_notification.rb
+END
+summary_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/app/models/notifications/summary_notification.rb
+END
+role_assigned_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Cayox/!svn/ver/805/trunk/CayoxClouds/app/models/notifications/role_assigned_notification.rb
+END
+notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Cayox/!svn/ver/771/trunk/CayoxClouds/app/models/notifications/notification.rb
+END
+element_propositions_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/element_propositions_notification.rb
+END
+role_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/app/models/notifications/role_notification.rb
+END
+role_removed_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Cayox/!svn/ver/754/trunk/CayoxClouds/app/models/notifications/role_removed_notification.rb
+END
+friendship_request_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/friendship_request_notification.rb
+END
+invitation_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/invitation_notification.rb
+END
+password_reset_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/password_reset_notification.rb
+END
+membership_requests_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Cayox/!svn/ver/746/trunk/CayoxClouds/app/models/notifications/membership_requests_notification.rb
+END

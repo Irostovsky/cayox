@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    <title>CAYOX</title>
+    <%= partial "layout/assets" %>
+  </head>
+  <body >
+    <a href="/"><img src="/images/cayox-logo-small.gif" alt="CAYOX" /></a>
+
+    <div id="menu">
+      <div>
+        <%= link_to "My Bookmarks", resource(:plugin, :bookmarks) %>
+      </div>
+      <div>
+        <%= link_to "My Favourites" %>
+      </div>
+      <div>
+        <%= link_to "My Topics" %>
+      </div>
+      <div>
+        <%= link_to "This Site" %>
+      </div>
+      <div>
+        <%= link_to "Histories" %>
+      </div>
+      <div style="clear: both"/>
+    </div>
+
+    <div id="plugin_content">
+      <%= catch_content :for_layout %>
+    </div>
+  </body>
+</html>

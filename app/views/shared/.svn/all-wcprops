@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Cayox/!svn/ver/725/trunk/CayoxClouds/app/views/shared
+END
+_element_link.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Cayox/!svn/ver/505/trunk/CayoxClouds/app/views/shared/_element_link.html.erb
+END
+_login_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Cayox/!svn/ver/649/trunk/CayoxClouds/app/views/shared/_login_form.html.erb
+END
+_elements.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Cayox/!svn/ver/641/trunk/CayoxClouds/app/views/shared/_elements.html.erb
+END
+_rating_stars.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Cayox/!svn/ver/553/trunk/CayoxClouds/app/views/shared/_rating_stars.html.erb
+END
+_owner_gravatar.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Cayox/!svn/ver/686/trunk/CayoxClouds/app/views/shared/_owner_gravatar.html.erb
+END
+_permalink.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Cayox/!svn/ver/725/trunk/CayoxClouds/app/views/shared/_permalink.html.erb
+END

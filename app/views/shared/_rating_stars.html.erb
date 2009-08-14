@@ -1,0 +1,4 @@
+<% labels = [_("Bad"), _("OK"), _("Good"), _("Cool"), _("Awesome")] %>
+<% 1.upto(5) do |i| %>
+  <input name="rate<%= readonly ? "_#{element.id}_ro" : '' %>" type="radio" class="vote_star" value="<%= i %>" title="<%= labels[i-1] %>" <%= readonly ? 'disabled="disabled"' : '' %> <%= 'checked="checked" _checked="1"' if element.average_vote.to_f.round == i.to_i %> />
+<% end %>

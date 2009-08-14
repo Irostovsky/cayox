@@ -1,0 +1,26 @@
+Required ruby version: 1.8.7
+
+Required GEMs:
+
+merb 1.0.11
+dm-core 0.9.11
+dm-more 0.9.11
+builder-2.0.0
+
+those 3 gems should install all necessary dependencies.
+
+Copy config/local_config.rb.example to config/local_config.rb and edit it:
+- configure mailer to use either sendmail or smtp,
+- set mail_from and site_url config options to production values,
+- set thumb_api_key for Thumbalizr thumbnails.
+
+To setup initial database run following rake tasks:
+
+rake db:automigrate
+rake cayox:prepare_languages
+rake cayox:prepare_flags
+
+
+In order to setup captcha for flagging you need to:
+- register on http://recaptcha.net, add a site (for cayox.com domain or more flexible for all domains), you will receive public and private keys
+- put those keys into config/local_config.rb (copy 2 config lines from local_config.rb.example)

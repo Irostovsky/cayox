@@ -1,0 +1,21 @@
+<h2><%= _("Filter") %></h2>
+
+<%= form_for @filter_form, :action => resource(:admin, :notifications), :method => :get do %>
+  <fieldset>
+    <p>
+      <%= select :type_, :label => _("Notification type"), :collection => [["", _("All")]] + @notification_types %>
+    </p>
+    <p>
+      <%= select :user_id, :label => _("User"), :collection => [["", _("All")]] + @users.map { |u| [u.id.to_s, u.name] } %>
+    </p>
+    <p>
+      <%= text_field :date_from, :label => _("Created after date"), :class => 'datepicker' %>
+    </p>
+    <p>
+      <%= text_field :date_to, :label => _("Created before date"), :class => 'datepicker' %>
+    </p>
+    <p class="indented">
+      <%= submit _("Filter"), :class => "button" %>
+    </p>
+  </fieldset>
+<% end =%>

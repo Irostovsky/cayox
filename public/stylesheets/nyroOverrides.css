@@ -1,0 +1,9 @@
+div#nyroModalFull div#nyroModalWrapper, div#nyroModalFull div#nyroModalLoading {
+  border-color: black;
+  border-style: solid;
+  border-width: 0 2px 2px 1px;
+}
+
+div#nyroModalWrapper div#nyroModalContent {
+  padding: 0;
+}

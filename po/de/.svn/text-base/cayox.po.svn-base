@@ -1,0 +1,1868 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cayox 1.0\n"
+"POT-Creation-Date: 2009-07-02 19:29+0200\n"
+"PO-Revision-Date: 2009-07-02 19:39+0100\n"
+"Last-Translator: Oliver Eichler <oliver.eichler@quimron.com>\n"
+"Language-Team: German <germanteam@cayox.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: app/controllers/admin/elements.rb:9
+msgid "Element '%s' has been successfully blocked."
+msgstr ""
+
+#: app/controllers/admin/elements.rb:14
+msgid "Element '%s' has been successfully unblocked."
+msgstr ""
+
+#: app/controllers/admin/elements.rb:19
+msgid "Element '%s' has been permanently removed from the system."
+msgstr ""
+
+#: app/controllers/admin/notifications.rb:32
+msgid "Selected notifications have been resent."
+msgstr ""
+
+#: app/controllers/admin/topics.rb:18
+msgid "Topic '%s' has been permanently removed from the system."
+msgstr ""
+
+#: app/controllers/admin/users.rb:40
+msgid "Could not promote user to admin, check if profile is valid"
+msgstr ""
+
+#: app/controllers/admin/users.rb:47
+msgid "Admin can't demote himself"
+msgstr ""
+
+#: app/controllers/admin/users.rb:61
+#, fuzzy
+msgid "User updated."
+msgstr "Anzeige Namen"
+
+#: app/controllers/admin/users.rb:69
+msgid "Can't block self"
+msgstr ""
+
+#: app/controllers/admin/users.rb:73
+#: app/controllers/users.rb:103
+msgid "User blocked"
+msgstr ""
+
+#: app/controllers/admin/users.rb:75
+msgid "Could not block user, check if profile is valid"
+msgstr ""
+
+#: app/controllers/admin/users.rb:82
+msgid "Can't unblock self"
+msgstr ""
+
+#: app/controllers/admin/users.rb:86
+msgid "User unlocked"
+msgstr ""
+
+#: app/controllers/admin/users.rb:88
+msgid "Error while unblocking uer, check if profile is valid"
+msgstr ""
+
+#: app/controllers/admin/users.rb:96
+#, fuzzy
+msgid "User activation mail sent"
+msgstr "Email mit Einladung versendet"
+
+#: app/controllers/admin/users.rb:101
+msgid "User '%s' has been permanently removed from the system."
+msgstr ""
+
+#: app/controllers/admin/users.rb:106
+#, fuzzy
+msgid "Mail with password reset link sent"
+msgstr "Email mit Einladung versendet"
+
+#: app/controllers/bookmarks.rb:45
+#, fuzzy
+msgid "Bookmark added"
+msgstr "Bookmarks"
+
+#: app/controllers/bookmarks.rb:68
+#, fuzzy
+msgid "Bookmark updated"
+msgstr "Bookmarks"
+
+#: app/controllers/comments.rb:28
+#: app/controllers/comments.rb:39
+msgid "Comment not valid"
+msgstr ""
+
+#: app/controllers/element_propositions.rb:26
+msgid "Selected elements have been added to respective topics."
+msgstr ""
+
+#: app/controllers/element_propositions.rb:31
+msgid "Selected element propositions have been rejected."
+msgstr ""
+
+#: app/controllers/element_propositions.rb:35
+#: app/controllers/flags_base.rb:34
+msgid "Sorry, selected items haven't been found. They were accepted by another owner or topic has been removed."
+msgstr ""
+
+#: app/controllers/elements.rb:65
+msgid "Element has been successfully removed."
+msgstr ""
+
+#: app/controllers/elements.rb:70
+msgid "This element has already been proposed for topic '%s'."
+msgstr ""
+
+#: app/controllers/elements.rb:73
+msgid "Element '%s' has been proposed for topic '%s'."
+msgstr ""
+
+#: app/controllers/elements.rb:75
+msgid "Sorry, topic for which you want to propose this element has been removed."
+msgstr ""
+
+#: app/controllers/elements.rb:96
+#: app/controllers/topics.rb:102
+msgid "Permalink from Cayox"
+msgstr ""
+
+#: app/controllers/exceptions.rb:14
+msgid "Permission Denied."
+msgstr ""
+
+#: app/controllers/favourites.rb:61
+msgid "Selected new elements have been added to favourite."
+msgstr ""
+
+#: app/controllers/favourites.rb:64
+msgid "Selected new elements have been rejected."
+msgstr ""
+
+#: app/controllers/flags_base.rb:27
+msgid "Selected reports have been rejected."
+msgstr ""
+
+#: app/controllers/flags_base.rb:30
+msgid "Selected items have been removed."
+msgstr ""
+
+#: app/controllers/friends.rb:25
+msgid "Friend invited"
+msgstr ""
+
+#: app/controllers/friends.rb:35
+#, fuzzy
+msgid "Friendship request accepted"
+msgstr "Freundschaft akzeptiert"
+
+#: app/controllers/friends.rb:37
+#: app/controllers/friends.rb:65
+msgid "Sorry this friendship doesn't exist"
+msgstr ""
+
+#: app/controllers/friends.rb:43
+msgid "Friendship canceled"
+msgstr ""
+
+#: app/controllers/friends.rb:49
+msgid "Invitation canceled"
+msgstr ""
+
+#: app/controllers/friends.rb:51
+#: app/controllers/friends.rb:62
+msgid "This friendship was accepted, use cancel to break it"
+msgstr ""
+
+#: app/controllers/friends.rb:60
+#, fuzzy
+msgid "Friendship request rejected"
+msgstr "Freundschaft akzeptiert"
+
+#: app/controllers/membership_requests.rb:13
+msgid "Accepted access to topic for user %s."
+msgstr ""
+
+#: app/controllers/membership_requests.rb:18
+msgid "Rejected access to topic for user %s."
+msgstr ""
+
+#: app/controllers/sessions.rb:30
+msgid "You have been logged out."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:21
+msgid "Selected user has already been assigned to this topic."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:23
+#, fuzzy
+msgid "Provided email has invalid format."
+msgstr "Die Email Addresse muss vom Format 'abc@xyz' sein"
+
+#: app/controllers/sig_members_base.rb:31
+msgid "Role '%s' has been successfully assigned to user %s."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:38
+msgid "You can't change this role as user %s is the only owner of this topic."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:42
+msgid "Role for user %s has been successfully changed."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:44
+msgid "You didn't choose new role for user %s."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:53
+msgid "Role '%s' has been successfully removed from user %s."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:56
+msgid "Role '%s' can't be removed from you as you are the only active owner."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:60
+msgid "Role '%s' has been reassigned from user %s to you."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:74
+msgid "You have accepted 'owner' role for topic '%s'."
+msgstr ""
+
+#: app/controllers/sig_members_base.rb:80
+msgid "You have rejected 'owner' role for topic '%s'."
+msgstr ""
+
+#: app/controllers/topics.rb:62
+msgid "Please select one or more bookmarks"
+msgstr ""
+
+#: app/controllers/topics.rb:66
+#, fuzzy
+msgid "Bookmarks added to Topic"
+msgstr "Bookmarks"
+
+#: app/controllers/topics.rb:68
+msgid "Error while adding bookmarks to topic"
+msgstr ""
+
+#: app/controllers/topics.rb:119
+msgid "Topic '%s' has been removed."
+msgstr ""
+
+#: app/controllers/topics.rb:125
+msgid "Topic '%s' has been abandoned."
+msgstr ""
+
+#: app/controllers/topics.rb:129
+msgid "Topic '%s' has been moved to adoption."
+msgstr ""
+
+#: app/controllers/topics.rb:148
+#, fuzzy
+msgid "Topic adopted"
+msgstr "Topic Name"
+
+#: app/controllers/topics.rb:150
+msgid "Topic could not be adopted"
+msgstr ""
+
+#: app/controllers/users.rb:31
+msgid "Your profile has been updated."
+msgstr ""
+
+#: app/controllers/users.rb:42
+#: merb/merb-auth/strategies.rb:25
+msgid "Sorry, your account has been blocked"
+msgstr ""
+
+#: app/controllers/users.rb:45
+#: merb/merb-auth/strategies.rb:30
+msgid "Sorry, you need to activate your account first"
+msgstr ""
+
+#: app/controllers/users.rb:52
+msgid "Couldn't find user with email %s"
+msgstr ""
+
+#: app/controllers/users.rb:66
+msgid "Thanks! Your account has been activated. Now please set your screenname, full name and password."
+msgstr ""
+
+#: app/controllers/users.rb:68
+msgid "Thanks! Your account has been activated."
+msgstr ""
+
+#: app/controllers/users.rb:71
+msgid "Invalid activation link or account has already been activated"
+msgstr ""
+
+#: app/controllers/users.rb:80
+msgid "Sorry, your password reset token has expired"
+msgstr ""
+
+#: app/controllers/users.rb:85
+msgid "Please set your new password"
+msgstr ""
+
+#: app/controllers/users.rb:88
+msgid "Invalid password reset link or password has already been reset"
+msgstr ""
+
+#: app/controllers/users.rb:97
+#: app/controllers/users.rb:115
+#, fuzzy
+msgid "Activation mail sent"
+msgstr "Email mit Einladung versendet"
+
+#: app/controllers/users.rb:101
+msgid "User already active"
+msgstr ""
+
+#: app/controllers/users.rb:105
+msgid "Error while resending activation mail"
+msgstr ""
+
+#: app/controllers/users.rb:120
+msgid "Thanks for registering! Now, activate your account by clicking on the link we've sent you via email."
+msgstr "Vielen dank für die Registrierung! Aktivieren Sie Ihren Account mit dem Link, den Sie per email erhalten haben."
+
+#: app/controllers/users.rb:125
+msgid "Email with password reset instructions has been sent to provided email address."
+msgstr ""
+
+#: app/helpers/global_helpers.rb:5
+msgid "Sorry, something went wrong. Please try again later."
+msgstr ""
+
+#: app/helpers/global_helpers.rb:6
+msgid "Are you sure you want to remove this element?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:7
+msgid "Are you sure you want to remove this favourite?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:8
+msgid "Are you sure you want to remove bookmark?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:9
+msgid "You have unsaved changes in the form. Do you really want to switch the language?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:10
+#: app/views/layout/_user_menu.html.erb:2
+#: app/views/mytopics/index.html.erb:11
+msgid "New Topic"
+msgstr "Neues Topic"
+
+#: app/helpers/global_helpers.rb:11
+msgid "Edit Topic"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:12
+#, fuzzy
+msgid "Flag Topic"
+msgstr "Neues Topic"
+
+#: app/helpers/global_helpers.rb:13
+#, fuzzy
+msgid "New Element"
+msgstr "Elemente"
+
+#: app/helpers/global_helpers.rb:14
+#, fuzzy
+msgid "Edit Element"
+msgstr "Elemente"
+
+#: app/helpers/global_helpers.rb:15
+#, fuzzy
+msgid "Flag Element"
+msgstr "Elemente"
+
+#: app/helpers/global_helpers.rb:16
+msgid "Edit Favourite"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:17
+#: app/views/exceptions/unauthenticated.html.erb:1
+#: app/views/layout/_modal.html.erb:20
+#: app/views/layout/_top_links.html.erb:3
+msgid "Login"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:18
+#, fuzzy
+msgid "Registration"
+msgstr "Register"
+
+#: app/helpers/global_helpers.rb:19
+#, fuzzy
+msgid "New Bookmark"
+msgstr "Bookmarks"
+
+#: app/helpers/global_helpers.rb:20
+#, fuzzy
+msgid "Edit Bookmark"
+msgstr "Bookmarks"
+
+#: app/helpers/global_helpers.rb:21
+#, fuzzy
+msgid "Invite Friend"
+msgstr "Freunde"
+
+#: app/helpers/global_helpers.rb:22
+#: app/views/topics/_topic_form.html.erb:19
+msgid "Closed User Group"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:23
+msgid "Are you sure you want to break this friendship ?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:24
+msgid "Are you sure you want to cancel this friendship request?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:25
+msgid "Are you sure you want to cancel this request?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:26
+msgid "Are you sure you want to cancel this invite?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:27
+#, fuzzy
+msgid "Forgotten Password"
+msgstr "Passwort"
+
+#: app/helpers/global_helpers.rb:28
+msgid "Request Activation Mail"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:29
+msgid "Please select at least one element."
+msgstr ""
+
+#: app/helpers/global_helpers.rb:30
+msgid "Please select at least one item."
+msgstr ""
+
+#: app/helpers/global_helpers.rb:31
+msgid "Are you sure you want to promote this person to become administrator?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:32
+msgid "Are you sure you want to remove admin rights from this user?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:33
+#, fuzzy
+msgid "Permalink"
+msgstr "Deutsch"
+
+#: app/helpers/global_helpers.rb:34
+msgid "Are you sure you want to abandon this topic?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:35
+msgid "This topic will be hidden and not accessible by the users. Are you sure?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:36
+msgid "Are you sure to unblock this topic?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:37
+msgid "This element will be hidden and not accessible by the users. Are you sure?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:38
+msgid "Are you sure to unblock this element?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:39
+msgid "Are you really sure to permanently remove this topic from the system?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:40
+msgid "Are you really sure to permanently remove this element from the system?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:41
+msgid "Are you really sure to permanently remove this user from the system?"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:42
+msgid "You need to select at least one notification."
+msgstr ""
+
+#: app/helpers/global_helpers.rb:158
+#: app/views/layout/_user_menu.html.erb:4
+msgid "My Topics"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:158
+#, fuzzy
+msgid "Favourites"
+msgstr "My Favoriten"
+
+#: app/helpers/global_helpers.rb:158
+msgid "search results"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:159
+#: app/views/layout/_user_menu.html.erb:5
+msgid "Bookmarks"
+msgstr "Bookmarks"
+
+#: app/helpers/global_helpers.rb:159
+#, fuzzy
+msgid "topics"
+msgstr "Neues Topic"
+
+#: app/helpers/global_helpers.rb:180
+#: app/views/sig_members/index.html.erb:1
+msgid "Back to '%s'"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:188
+msgid "Existing translations"
+msgstr ""
+
+#: app/helpers/global_helpers.rb:189
+#, fuzzy
+msgid "Your languages"
+msgstr "Weitere Sprachen"
+
+#: app/helpers/global_helpers.rb:190
+#, fuzzy
+msgid "Other languages"
+msgstr "Andere Sprache hinzufügen"
+
+#: app/mailers/views/permalink_mailer/permalink.text.erb:1
+#, fuzzy
+msgid "Hello!"
+msgstr "Hallo, %s!"
+
+#: app/mailers/views/permalink_mailer/permalink.text.erb:4
+msgid "Cayox user %s wants you to look at topic '%s'."
+msgstr ""
+
+#: app/mailers/views/permalink_mailer/permalink.text.erb:6
+msgid "Cayox user wants you to look at element '%s' in topic '%s'."
+msgstr ""
+
+#: app/mailers/views/permalink_mailer/permalink.text.erb:9
+msgid "His comment is:"
+msgstr ""
+
+#: app/mailers/views/permalink_mailer/permalink.text.erb:13
+msgid "You can view it at following link:"
+msgstr ""
+
+#: app/mailers/views/system_mailer/system_event.text.erb:1
+#, fuzzy
+msgid "Hello %s!"
+msgstr "Hallo, %s!"
+
+#: app/models/bookmark.rb:14
+msgid "Bookmark description must be less than 1024 characters long"
+msgstr ""
+
+#: app/models/bookmark.rb:15
+msgid "You already have a bookmark for this link"
+msgstr ""
+
+#: app/models/bookmark.rb:40
+msgid "Link is not valid"
+msgstr ""
+
+#: app/models/bookmark.rb:47
+#: app/models/favourite.rb:74
+msgid "You need to specify per_page parameter!"
+msgstr ""
+
+#: app/models/bookmark.rb:58
+msgid "You need to specify user for bookmark search!"
+msgstr ""
+
+#: app/models/element.rb:44
+#, fuzzy
+msgid "Element name must not be blank"
+msgstr "Der Themenname darf nicht leer sein"
+
+#: app/models/element.rb:46
+msgid "Element name must be less than 100 characters long"
+msgstr ""
+
+#: app/models/element.rb:54
+msgid "Element description must be less than 1024 characters long"
+msgstr ""
+
+#: app/models/element.rb:78
+msgid "You must provide topic or favourite for elements search!"
+msgstr ""
+
+#: app/models/element.rb:185
+msgid "URL is not valid"
+msgstr ""
+
+#: app/models/favourite.rb:19
+#, fuzzy
+msgid "Name must no be blank"
+msgstr "Der Themenname darf nicht leer sein"
+
+#: app/models/favourite.rb:20
+#: app/models/topic.rb:65
+msgid "Name must be less than 100 characters long"
+msgstr ""
+
+#: app/models/favourite.rb:21
+#: app/models/topic.rb:73
+msgid "Description must be less than 1024 characters long"
+msgstr ""
+
+#: app/models/favourite.rb:25
+#: lib/tags.rb:23
+msgid "Tag list must be less than 1024 characters long"
+msgstr ""
+
+#: app/models/favourite.rb:58
+msgid "You need to specify user for favourite search!"
+msgstr ""
+
+#: app/models/forms/invitation_form.rb:4
+#: app/models/forms/permalink_form.rb:4
+msgid "You must enter email address"
+msgstr ""
+
+#: app/models/forms/invitation_form.rb:5
+#: app/models/forms/permalink_form.rb:5
+#, fuzzy
+msgid "This email address has an invalid format"
+msgstr "Die Email Addresse muss vom Format 'abc@xyz' sein"
+
+#: app/models/forms/invitation_form.rb:8
+msgid "Sorry, but you can't invite yourself."
+msgstr ""
+
+#: app/models/forms/invitation_form.rb:12
+#, fuzzy
+msgid "Friendship already exists."
+msgstr "Freundschaft akzeptiert"
+
+#: app/models/forms/invitation_form.rb:14
+msgid "User with this email has already been invited."
+msgstr ""
+
+#: app/models/forms/notification_filter_form.rb:7
+#, fuzzy
+msgid "Date from has invalid format"
+msgstr "Das Element %s muss vom Format 'http://...' sein"
+
+#: app/models/forms/notification_filter_form.rb:12
+#, fuzzy
+msgid "Date to has invalid format"
+msgstr "Das Element %s muss vom Format 'http://...' sein"
+
+#: app/models/forms/permalink_form.rb:6
+msgid "Language cannot be empty"
+msgstr ""
+
+#: app/models/friendship.rb:15
+#, fuzzy
+msgid "Sorry invitation exists"
+msgstr "Email mit Einladung versendet"
+
+#: app/models/friendship.rb:16
+msgid "Sorry this freindship is pending"
+msgstr ""
+
+#: app/models/friendship.rb:55
+msgid "Sorry can't make freidnship with self"
+msgstr ""
+
+#: app/models/notifications/element_propositions_notification.rb:8
+msgid "New Cayox elements proposed"
+msgstr ""
+
+#: app/models/notifications/element_propositions_notification.rb:14
+msgid "Cayox users proposed following elements to include in your topics:"
+msgstr ""
+
+#: app/models/notifications/element_propositions_notification.rb:17
+#: app/views/element_propositions/index.html.erb:17
+msgid "for topic '%s'"
+msgstr ""
+
+#: app/models/notifications/element_propositions_notification.rb:19
+msgid "You can accept or reject proposed elements at "
+msgstr ""
+
+#: app/models/notifications/flags_notification.rb:18
+msgid "Flagged Cayox topics and elements"
+msgstr ""
+
+#: app/models/notifications/flags_notification.rb:27
+msgid "Following of your topics have been flagged:"
+msgstr ""
+
+#: app/models/notifications/flags_notification.rb:29
+#: app/models/notifications/flags_notification.rb:36
+msgid "as"
+msgstr ""
+
+#: app/models/notifications/flags_notification.rb:34
+msgid "Following of your elements have been flagged:"
+msgstr ""
+
+#: app/models/notifications/flags_notification.rb:36
+#: app/views/flags/_list.html.erb:14
+msgid "in topic '%s'"
+msgstr ""
+
+#: app/models/notifications/flags_notification.rb:40
+msgid "You can manage flagged items at"
+msgstr ""
+
+#: app/models/notifications/friendship_request_notification.rb:8
+#, fuzzy
+msgid "Friendship requested in Cayox"
+msgstr "Freundschaft akzeptiert"
+
+#: app/models/notifications/invitation_notification.rb:4
+#, fuzzy
+msgid "Invited to Cayox!"
+msgstr "Willkommen bei Cayox!"
+
+#: app/models/notifications/membership_requests_notification.rb:8
+msgid "New pending membership request for your closed topic"
+msgstr ""
+
+#: app/models/notifications/membership_requests_notification.rb:17
+msgid "Following users want to join topic '%s':"
+msgstr ""
+
+#: app/models/notifications/membership_requests_notification.rb:21
+msgid "To accept or reject these requests go to: "
+msgstr ""
+
+#: app/models/notifications/password_reset_notification.rb:4
+msgid "Password reset link from Cayox"
+msgstr ""
+
+#: app/models/notifications/registration_notification.rb:4
+msgid "Welcome to Cayox!"
+msgstr "Willkommen bei Cayox!"
+
+#: app/models/notifications/role_assigned_notification.rb:4
+#, fuzzy
+msgid "Role assigned in Cayox"
+msgstr "Bei Cayox registrieren"
+
+#: app/models/notifications/role_assigned_notification.rb:9
+msgid "You have been assigned a '%s' role for Cayox topic '%s'."
+msgstr ""
+
+#: app/models/notifications/role_assigned_notification.rb:11
+#: app/models/notifications/role_changed_notification.rb:10
+#: app/models/notifications/role_notification.rb:22
+msgid "Please accept or reject this role on your profile page."
+msgstr ""
+
+#: app/models/notifications/role_changed_notification.rb:4
+#: app/models/notifications/role_notification.rb:16
+#, fuzzy
+msgid "Role changed in Cayox"
+msgstr "Bei Cayox registrieren"
+
+#: app/models/notifications/role_changed_notification.rb:9
+#: app/models/notifications/role_notification.rb:21
+msgid "Your role for Cayox topic '%s' has been changed to '%s'."
+msgstr ""
+
+#: app/models/notifications/role_removed_notification.rb:4
+#, fuzzy
+msgid "Role removed in Cayox"
+msgstr "Bei Cayox registrieren"
+
+#: app/models/notifications/role_removed_notification.rb:8
+msgid "Your '%s' role for Cayox topic '%s' has been removed."
+msgstr ""
+
+#: app/models/notifications/summary_notification.rb:8
+msgid "Summary of notifications from Cayox"
+msgstr ""
+
+#: app/models/topic.rb:29
+msgid "Topic with that name already exists"
+msgstr ""
+
+#: app/models/topic.rb:63
+#, fuzzy
+msgid "Name must not be blank"
+msgstr "Der Themenname darf nicht leer sein"
+
+#: app/models/topic.rb:80
+msgid "You cannot set this topic to private as it has some roles assigned"
+msgstr ""
+
+#: app/models/user.rb:13
+msgid "Screenname must not be blank"
+msgstr ""
+
+#: app/models/user.rb:15
+msgid "Full name must not be blank"
+msgstr ""
+
+#: app/models/user.rb:17
+msgid "Email has an invalid format"
+msgstr "Die Email Addresse muss vom Format 'abc@xyz' sein"
+
+#: app/models/user.rb:35
+msgid "Screen name is already taken"
+msgstr "Dieser Anzeigenamen wird bereits verwendet"
+
+#: app/models/user.rb:36
+msgid "Screenname must be 3-20 characters long"
+msgstr ""
+
+#: app/models/user.rb:37
+msgid "Screenname has an invalid format"
+msgstr ""
+
+#: app/models/user.rb:38
+msgid "Email is already taken"
+msgstr "Diese Email Addresse wird bereits verwendet"
+
+#: app/models/user.rb:39
+msgid "Password must be at least 6 characters long"
+msgstr ""
+
+#: app/models/user.rb:41
+msgid "Password must not be blank"
+msgstr "Das Passwort darf nicht leer sein"
+
+#: app/models/user.rb:42
+msgid "Password does not match the confirmation"
+msgstr "Passwörter stimmen nicht überein"
+
+#: app/views/admin/_element_link.html.erb:3
+#: app/views/shared/_element_link.html.erb:9
+msgid "Votes: %s"
+msgstr ""
+
+#: app/views/admin/_element_link.html.erb:4
+#: app/views/admin/topics/show.html.erb:10
+msgid "Unblock"
+msgstr ""
+
+#: app/views/admin/_element_link.html.erb:4
+#: app/views/admin/topics/show.html.erb:10
+#: app/views/admin/users/index.html.erb:33
+msgid "Block"
+msgstr ""
+
+#: app/views/admin/_element_link.html.erb:6
+#: app/views/admin/topics/show.html.erb:7
+msgid "Permanently remove"
+msgstr ""
+
+#: app/views/admin/_elements.html.erb:3
+msgid "BLOCKED ELEMENTS IN '%s'"
+msgstr ""
+
+#: app/views/admin/_elements.html.erb:5
+#: app/views/shared/_elements.html.erb:5
+msgid "ELEMENTS IN '%s'"
+msgstr ""
+
+#: app/views/admin/_elements.html.erb:9
+#: app/views/admin/topics/index.html.erb:1
+msgid "Visible"
+msgstr ""
+
+#: app/views/admin/_elements.html.erb:9
+#: app/views/admin/topics/index.html.erb:1
+#: app/views/admin/users/index.html.erb:35
+msgid "Blocked"
+msgstr ""
+
+#: app/views/admin/_elements.html.erb:19
+#: app/views/shared/_elements.html.erb:24
+msgid "No elements in this topic."
+msgstr ""
+
+#: app/views/admin/notifications/_filter.html.erb:1
+#: app/views/admin/notifications/_filter.html.erb:18
+msgid "Filter"
+msgstr ""
+
+#: app/views/admin/notifications/_filter.html.erb:6
+msgid "Notification type"
+msgstr ""
+
+#: app/views/admin/notifications/_filter.html.erb:6
+#: app/views/admin/notifications/_filter.html.erb:9
+msgid "All"
+msgstr ""
+
+#: app/views/admin/notifications/_filter.html.erb:9
+#: app/views/admin/notifications/index.html.erb:9
+#, fuzzy
+msgid "User"
+msgstr "Anzeige Namen"
+
+#: app/views/admin/notifications/_filter.html.erb:12
+#, fuzzy
+msgid "Created after date"
+msgstr "Neues Topic erstellen"
+
+#: app/views/admin/notifications/_filter.html.erb:15
+msgid "Created before date"
+msgstr ""
+
+#: app/views/admin/notifications/index.html.erb:1
+#: app/views/admin/users/index.html.erb:38
+#: app/views/layout/_admin_menu.html.erb:5
+msgid "Notifications"
+msgstr ""
+
+#: app/views/admin/notifications/index.html.erb:8
+msgid "Type"
+msgstr ""
+
+#: app/views/admin/notifications/index.html.erb:10
+#, fuzzy
+msgid "Created at"
+msgstr "Anlegen"
+
+#: app/views/admin/notifications/index.html.erb:11
+msgid "Last sent at"
+msgstr ""
+
+#: app/views/admin/notifications/index.html.erb:26
+msgid "Resend selected"
+msgstr ""
+
+#: app/views/admin/notifications/index.html.erb:30
+msgid "No notifications found for selected filter."
+msgstr ""
+
+#: app/views/admin/topics/index.html.erb:3
+msgid "BLOCKED TOPICS"
+msgstr ""
+
+#: app/views/admin/topics/index.html.erb:5
+msgid "VISIBLE TOPICS"
+msgstr ""
+
+#: app/views/admin/topics/show.html.erb:13
+#: app/views/topics/show.html.erb:14
+msgid "Edit Roles"
+msgstr ""
+
+#: app/views/admin/users/edit.html.erb:2
+#: app/views/users/edit.html.erb:2
+msgid "%s's Profile"
+msgstr "Das Profil von: %s"
+
+#: app/views/admin/users/edit.html.erb:4
+#: app/views/admin/users/index.html.erb:39
+#: app/views/layout/_top_links.html.erb:8
+#: app/views/users/edit.html.erb:4
+msgid "Profile"
+msgstr "Profil"
+
+#: app/views/admin/users/edit.html.erb:11
+#: app/views/users/edit.html.erb:12
+#: app/views/users/edit.html.erb:42
+#: app/views/users/edit.html.erb:57
+msgid "Save"
+msgstr "Speichern"
+
+#: app/views/admin/users/edit.html.erb:17
+msgid "Promote to Admin"
+msgstr ""
+
+#: app/views/admin/users/edit.html.erb:20
+msgid "Demote from Admin"
+msgstr ""
+
+#: app/views/admin/users/index.html.erb:8
+#: app/views/layout/application.html.erb:22
+msgid "Search"
+msgstr "Suchen"
+
+#: app/views/admin/users/index.html.erb:15
+#, fuzzy
+msgid "Screen name"
+msgstr "Anzeigenamen"
+
+#: app/views/admin/users/index.html.erb:16
+#, fuzzy
+msgid "Registered at"
+msgstr "Register"
+
+#: app/views/admin/users/index.html.erb:17
+msgid "Last login"
+msgstr ""
+
+#: app/views/admin/users/index.html.erb:18
+#: app/views/sig_members/index.html.erb:12
+msgid "Actions"
+msgstr ""
+
+#: app/views/admin/users/index.html.erb:19
+msgid "Status"
+msgstr ""
+
+#: app/views/admin/users/index.html.erb:36
+msgid "unblock"
+msgstr ""
+
+#: app/views/admin/users/index.html.erb:41
+#, fuzzy
+msgid "Re-send activation"
+msgstr "Register"
+
+#: app/views/admin/users/index.html.erb:43
+#: app/views/elements/_show_favourite_element.html.erb:12
+#: app/views/elements/_show_topic_element.html.erb:10
+#: app/views/favourites/show.html.erb:10
+#: app/views/sig_members/index.html.erb:34
+#: app/views/topics/show.html.erb:17
+msgid "Remove"
+msgstr ""
+
+#: app/views/admin/users/index.html.erb:45
+#, fuzzy
+msgid "Password reset link"
+msgstr "Passwort zurücksetzten"
+
+#: app/views/bookmarks/_bookmark_form.html.erb:3
+#: app/views/bookmarks/_bookmark_form.html.erb:6
+#: app/views/elements/_show_topic_element.html.erb:15
+#: app/views/topics/show.html.erb:25
+msgid "Link"
+msgstr ""
+
+#: app/views/bookmarks/_bookmark_form.html.erb:10
+#, fuzzy
+msgid "Bookmark name"
+msgstr "Bookmarks"
+
+#: app/views/bookmarks/_bookmark_form.html.erb:14
+#: app/views/elements/_element_form.html.erb:19
+#: app/views/favourites/_favourite_form.html.erb:6
+#: app/views/topics/_topic_form.html.erb:10
+msgid "Description"
+msgstr "Beschreibung"
+
+#: app/views/bookmarks/_bookmark_form.html.erb:18
+#: app/views/elements/_element_form.html.erb:24
+#: app/views/favourites/_favourite_form.html.erb:10
+#: app/views/topics/_topic_form.html.erb:14
+msgid "Tags"
+msgstr ""
+
+#: app/views/bookmarks/_edit_bookmark.html.erb:7
+#: app/views/elements/_edit_element_form.html.erb:5
+#: app/views/favourites/_edit_favourite_form.html.erb:5
+#: app/views/topics/_edit_topic_form.html.erb:5
+msgid "Update"
+msgstr ""
+
+#: app/views/bookmarks/_edit_bookmark.html.erb:7
+#: app/views/bookmarks/_new_bookmark.html.erb:6
+#: app/views/elements/_edit_element_form.html.erb:5
+#: app/views/elements/_new_element_form.html.erb:5
+#: app/views/favourites/_edit_favourite_form.html.erb:5
+#: app/views/flags/_flag_form.html.erb:21
+#: app/views/friends/_new_friend.html.erb:8
+#: app/views/layout/_top_links.html.erb:3
+#: app/views/shared/_permalink.html.erb:6
+#: app/views/shared/_permalink.html.erb:32
+#: app/views/topics/_edit_topic_form.html.erb:5
+#: app/views/topics/_join_group.html.erb:9
+#: app/views/topics/_new_topic_form.html.erb:6
+#: app/views/users/_activation_mail_request.html.erb:14
+#: app/views/users/_request_password.html.erb:14
+#: app/views/users/new.html.erb:8
+msgid "or"
+msgstr "oder"
+
+#: app/views/bookmarks/_edit_bookmark.html.erb:7
+#: app/views/bookmarks/_new_bookmark.html.erb:6
+#: app/views/elements/_edit_element_form.html.erb:5
+#: app/views/elements/_new_element_form.html.erb:5
+#: app/views/favourites/_edit_favourite_form.html.erb:5
+#: app/views/flags/_flag_form.html.erb:21
+#: app/views/friends/_new_friend.html.erb:8
+#: app/views/friends/_not_confirmed_friendships.html.erb:30
+#: app/views/shared/_permalink.html.erb:6
+#: app/views/shared/_permalink.html.erb:32
+#: app/views/topics/_edit_topic_form.html.erb:5
+#: app/views/topics/_new_topic_form.html.erb:6
+#: app/views/users/_activation_mail_request.html.erb:14
+#: app/views/users/_request_password.html.erb:14
+#: app/views/users/new.html.erb:8
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: app/views/bookmarks/_new_bookmark.html.erb:6
+#: app/views/topics/_new_topic_form.html.erb:6
+#: app/views/users/new.html.erb:8
+msgid "Create"
+msgstr "Anlegen"
+
+#: app/views/bookmarks/edit.html.erb:1
+#, fuzzy
+msgid "Edit bookmark"
+msgstr "Bookmarks"
+
+#: app/views/bookmarks/index.html.erb:1
+msgid "BOOKMARKS"
+msgstr ""
+
+#: app/views/bookmarks/index.html.erb:1
+#: app/views/bookmarks/new.html.erb:1
+#, fuzzy
+msgid "Create new bookmark"
+msgstr "Neues Topic erstellen"
+
+#: app/views/bookmarks/index.html.erb:20
+msgid "Create topic from selected bookmarks"
+msgstr ""
+
+#: app/views/bookmarks/index.html.erb:38
+msgid "Add bookmarks to selected topic"
+msgstr ""
+
+#: app/views/bookmarks/show.html.erb:5
+msgid "Tags:"
+msgstr ""
+
+#: app/views/comments/_comments.html.erb:1
+msgid "Comments on "
+msgstr ""
+
+#: app/views/comments/_comments.html.erb:8
+#, fuzzy
+msgid "Add new comment"
+msgstr "Elemente hinzufügen"
+
+#: app/views/comments/_comments.html.erb:17
+msgid "Comment:"
+msgstr ""
+
+#: app/views/comments/_comments.html.erb:20
+msgid "Comment!"
+msgstr ""
+
+#: app/views/comments/_element_comments.html.erb:11
+#: app/views/comments/_topic_comments.html.erb:12
+msgid "said:"
+msgstr ""
+
+#: app/views/comments/_element_comments.html.erb:24
+#: app/views/comments/_topic_comments.html.erb:24
+msgid "No comments at the moment."
+msgstr ""
+
+#: app/views/dashboard/index.html.erb:1
+msgid "DASHBOARD"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:3
+msgid "Elements proposed for your topics"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:6
+msgid "Currently there are no proposed elements for topics you manage."
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:8
+msgid "Other Cayox users proposed following elements for topics you manage:"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:28
+msgid "Add to topic"
+msgstr ""
+
+#: app/views/element_propositions/index.html.erb:29
+#: app/views/favourites/fresh.html.erb:26
+#: app/views/friends/_not_confirmed_friendships.html.erb:12
+#: app/views/sig_members/_cug_access_requests.html.erb:11
+#: app/views/sig_members/_ownership_requests.html.erb:12
+msgid "Reject"
+msgstr ""
+
+#: app/views/elements/_element_form.html.erb:3
+#: app/views/shared/_permalink.html.erb:28
+#: app/views/topics/_topic_form.html.erb:3
+msgid "Language version"
+msgstr ""
+
+#: app/views/elements/_element_form.html.erb:8
+#: app/views/elements/_element_form.html.erb:11
+msgid "URL"
+msgstr ""
+
+#: app/views/elements/_element_form.html.erb:15
+#, fuzzy
+msgid "Element name"
+msgstr "Topic Name"
+
+#: app/views/elements/_flag_success.html.erb:2
+msgid "Thank you for reporting. Element '%s' has been flagged by you as '%s'."
+msgstr ""
+
+#: app/views/elements/_flag_success.html.erb:3
+#: app/views/flags/_report_status.html.erb:9
+msgid "Close"
+msgstr ""
+
+#: app/views/elements/_new_element_form.html.erb:5
+#, fuzzy
+msgid "Add element"
+msgstr "Elemente hinzufügen"
+
+#: app/views/elements/_show_favourite_element.html.erb:3
+msgid "This element has been proposed by you for topic '%s'."
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:5
+msgid "It has been accepted."
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:7
+msgid "It has been rejected."
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:14
+#: app/views/elements/_show_topic_element.html.erb:13
+#: app/views/favourites/show.html.erb:13
+#: app/views/topics/show.html.erb:20
+msgid "Edit"
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:16
+msgid "Propose for topic"
+msgstr ""
+
+#: app/views/elements/_show_favourite_element.html.erb:16
+msgid "Propose this element for topic '%s'"
+msgstr ""
+
+#: app/views/elements/_show_topic_element.html.erb:17
+#, fuzzy
+msgid "Add bookmark"
+msgstr "Bookmarks"
+
+#: app/views/elements/_show_topic_element.html.erb:19
+#: app/views/topics/show.html.erb:26
+msgid "Flag"
+msgstr ""
+
+#: app/views/exceptions/not_found.html.erb:1
+msgid "Requested resource cannot be found. Try searching on %s"
+msgstr ""
+
+#: app/views/exceptions/not_found.html.erb:1
+msgid "homepage"
+msgstr ""
+
+#: app/views/favourites/_favourite_form.html.erb:2
+msgid "Favourite name"
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:3
+msgid "New elements added to topic '%s'"
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:5
+msgid "Following elements have been added to topic by its maintainers. Please accept elements you want to add to favourite '%s'."
+msgstr ""
+
+#: app/views/favourites/fresh.html.erb:25
+msgid "Add to favourite"
+msgstr ""
+
+#: app/views/favourites/index.html.erb:1
+msgid "MY FAVOURITES"
+msgstr "MY FAVORITEN"
+
+#: app/views/favourites/index.html.erb:4
+msgid "You have no favourites yet."
+msgstr ""
+
+#: app/views/flags/_flag_form.html.erb:2
+msgid "If you feel that '%s' doesn't belong here or is inappropriate in some way tell us why."
+msgstr ""
+
+#: app/views/flags/_flag_form.html.erb:3
+msgid "Please select a reason for reporting this:"
+msgstr ""
+
+#: app/views/flags/_flag_form.html.erb:15
+msgid "Enter words from the image below:"
+msgstr ""
+
+#: app/views/flags/_flag_form.html.erb:21
+msgid "Report"
+msgstr ""
+
+#: app/views/flags/_list.html.erb:1
+msgid "Flagged topics"
+msgstr ""
+
+#: app/views/flags/_list.html.erb:1
+#, fuzzy
+msgid "Flagged elements"
+msgstr "Elemente hinzufügen"
+
+#: app/views/flags/_list.html.erb:4
+msgid "Currently there are no flagged topics."
+msgstr ""
+
+#: app/views/flags/_list.html.erb:4
+msgid "Currently there are no flagged elements."
+msgstr ""
+
+#: app/views/flags/_list.html.erb:15
+msgid "flagged as '%s'"
+msgstr ""
+
+#: app/views/flags/_list.html.erb:26
+msgid "Remove items"
+msgstr ""
+
+#: app/views/flags/_list.html.erb:27
+msgid "Reject reports"
+msgstr ""
+
+#: app/views/flags/_report_status.html.erb:2
+msgid "Thank you for reporting. '%s' has been flagged by you as '%s'."
+msgstr ""
+
+#: app/views/flags/_report_status.html.erb:4
+msgid "Your request is <strong>waiting</strong> for topic maintainer approval."
+msgstr ""
+
+#: app/views/flags/_report_status.html.erb:6
+msgid "Your request has been <strong>rejected</strong> by topic maintainer."
+msgstr ""
+
+#: app/views/flags/index.html.erb:3
+msgid "Reported items"
+msgstr ""
+
+#: app/views/flags/index.html.erb:5
+msgid "Listed items have been reported by Cayox users as inappropriate."
+msgstr ""
+
+#: app/views/flags/index.html.erb:6
+msgid "If you agree with report and want to remove an item select it and click on 'Remove items'."
+msgstr ""
+
+#: app/views/flags/index.html.erb:7
+msgid "If you don't agree with report you can reject it by selecting item and clicking on 'Reject reports'."
+msgstr ""
+
+#: app/views/friends/_new_friend.html.erb:4
+#, fuzzy
+msgid "Friend's e-mail"
+msgstr "Freunde"
+
+#: app/views/friends/_new_friend.html.erb:8
+msgid "Invite"
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:3
+msgid "Requested friendships"
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:11
+#: app/views/sig_members/_cug_access_requests.html.erb:10
+#: app/views/sig_members/_ownership_requests.html.erb:11
+msgid "Accept"
+msgstr ""
+
+#: app/views/friends/_not_confirmed_friendships.html.erb:21
+msgid "Pending friendships"
+msgstr ""
+
+#: app/views/friends/index.html.erb:1
+msgid "FRIENDS"
+msgstr ""
+
+#: app/views/friends/index.html.erb:1
+msgid "Invite a friend"
+msgstr ""
+
+#: app/views/friends/new.html.erb:1
+msgid "INVITE FRIEND"
+msgstr ""
+
+#: app/views/layout/_admin_menu.html.erb:2
+msgid "Users"
+msgstr ""
+
+#: app/views/layout/_admin_menu.html.erb:3
+#, fuzzy
+msgid "Topics"
+msgstr "Neues Topic"
+
+#: app/views/layout/_admin_menu.html.erb:4
+msgid "Flagged items"
+msgstr ""
+
+#: app/views/layout/_modal.html.erb:24
+#: app/views/shared/_login_form.html.erb:22
+#: app/views/users/_password_fields.html.erb:8
+msgid "Password"
+msgstr "Passwort"
+
+#: app/views/layout/_modal.html.erb:31
+#: app/views/shared/_login_form.html.erb:27
+msgid "Forgot my password"
+msgstr ""
+
+#: app/views/layout/_modal.html.erb:32
+#, fuzzy
+msgid "Register a new account"
+msgstr "Neues Topic erstellen"
+
+#: app/views/layout/_top_links.html.erb:4
+msgid "Join"
+msgstr "Anmelden"
+
+#: app/views/layout/_top_links.html.erb:6
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: app/views/layout/_top_links.html.erb:7
+#, fuzzy
+msgid "Administration"
+msgstr "Register"
+
+#: app/views/layout/_top_links.html.erb:9
+msgid "Logout"
+msgstr "Abmelden"
+
+#: app/views/layout/_user_menu.html.erb:3
+msgid "My Favourites"
+msgstr "My Favoriten"
+
+#: app/views/layout/_user_menu.html.erb:6
+#: app/views/sig_members/index.html.erb:49
+msgid "Friends"
+msgstr "Freunde"
+
+#: app/views/layout/homepage.html.erb:18
+msgid "HUMAN POWERED SEARCH"
+msgstr ""
+
+#: app/views/mytopics/index.html.erb:3
+msgid "There are element propositions for your topics."
+msgstr ""
+
+#: app/views/mytopics/index.html.erb:3
+#: app/views/mytopics/index.html.erb:8
+#: app/views/shared/_elements.html.erb:12
+msgid "Show them"
+msgstr ""
+
+#: app/views/mytopics/index.html.erb:8
+msgid "There are pending flagged items for your topics."
+msgstr ""
+
+#: app/views/mytopics/index.html.erb:11
+#: app/views/topics/index.html.erb:1
+msgid "MY TOPICS"
+msgstr ""
+
+#: app/views/search/home.html.erb:6
+#, fuzzy
+msgid "Browse topics"
+msgstr "Neues Topic"
+
+#: app/views/search/index.html.erb:1
+#, fuzzy
+msgid "New search"
+msgstr "Suchen"
+
+#: app/views/search/index.html.erb:2
+msgid "TOPICS"
+msgstr ""
+
+#: app/views/search/index.html.erb:7
+msgid "Please filter topics by selecting tags."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:3
+msgid "OTHER ELEMENTS IN '%s'"
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:11
+msgid "New elements have been added to topic '%s'."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:24
+msgid "No elements in this favourite."
+msgstr ""
+
+#: app/views/shared/_elements.html.erb:29
+#, fuzzy
+msgid "Add new element"
+msgstr "Elemente hinzufügen"
+
+#: app/views/shared/_login_form.html.erb:2
+msgid "If you already have an account on CAYOX, you can log in using the form below."
+msgstr ""
+
+#: app/views/shared/_login_form.html.erb:19
+msgid "Screenname/email"
+msgstr ""
+
+#: app/views/shared/_login_form.html.erb:25
+msgid "Log In"
+msgstr "Anmelden"
+
+#: app/views/shared/_login_form.html.erb:28
+#, fuzzy
+msgid "Resend activation mail"
+msgstr "Email mit Einladung versendet"
+
+#: app/views/shared/_permalink.html.erb:1
+msgid "Permalink for"
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:2
+msgid "Here is permalink for '%s'. If you want to copy it to clipboard click on 'Copy' button or select it and press Ctrl+C."
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:6
+msgid "Copy"
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:14
+msgid "Send it to your friend"
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:15
+msgid "If you want to share this link with your friend enter his e-mail address and add some comment."
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:19
+msgid "E-mail address"
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:23
+msgid "Comment for this link"
+msgstr ""
+
+#: app/views/shared/_permalink.html.erb:32
+#: app/views/users/_activation_mail_request.html.erb:14
+#: app/views/users/_request_password.html.erb:14
+msgid "Send"
+msgstr "Senden"
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Bad"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "OK"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Good"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Cool"
+msgstr ""
+
+#: app/views/shared/_rating_stars.html.erb:1
+msgid "Awesome"
+msgstr ""
+
+#: app/views/sig_members/_cug_access_requests.html.erb:1
+msgid "ACCESS REQUESTS"
+msgstr ""
+
+#: app/views/sig_members/_cug_access_requests.html.erb:4
+msgid "Here is the list of users requesting access to your topic as consumers:"
+msgstr ""
+
+#: app/views/sig_members/_cug_access_requests.html.erb:16
+msgid "Currently there are no users requesting access to your topic."
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:1
+msgid "OWNERSHIP REQUESTS"
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:4
+msgid "Here is the list of topics for which you have been added as 'owner'. Please accept or reject these requests."
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:17
+msgid "Currently there are no topics for which you have been added as 'owner'."
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:22
+msgid "ADOPTABLE TOPICS"
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:26
+msgid "Here is the list of topics which owners want to abandon, you can become 'owner' of them by clicking accept"
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:35
+msgid "Take the lead"
+msgstr ""
+
+#: app/views/sig_members/_ownership_requests.html.erb:41
+msgid "Currently there are no topics left for adoption"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:2
+msgid "'%s' USERS"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:5
+msgid "Here you can manage user roles assigned to this topic."
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:10
+#, fuzzy
+msgid "User name"
+msgstr "Anzeige Namen"
+
+#: app/views/sig_members/index.html.erb:11
+msgid "Role"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:17
+msgid "you"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:18
+#: app/views/sig_members/index.html.erb:23
+msgid "waiting for acceptance"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:28
+msgid "Change"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:45
+#, fuzzy
+msgid "Add new role"
+msgstr "Elemente hinzufügen"
+
+#: app/views/sig_members/index.html.erb:49
+msgid "Others"
+msgstr ""
+
+#: app/views/sig_members/index.html.erb:53
+#, fuzzy
+msgid "Add role"
+msgstr "Elemente hinzufügen"
+
+#: app/views/topics/_join_group.html.erb:2
+msgid "This user group has limited access. Would you like to ask the group moderator for access privileges? "
+msgstr ""
+
+#: app/views/topics/_join_group.html.erb:9
+msgid "Yes"
+msgstr ""
+
+#: app/views/topics/_join_group.html.erb:9
+msgid "No"
+msgstr ""
+
+#: app/views/topics/_topic_form.html.erb:6
+#, fuzzy
+msgid "Topic name"
+msgstr "Topic Name"
+
+#: app/views/topics/_topic_form.html.erb:19
+msgid "Access level"
+msgstr ""
+
+#: app/views/topics/_topic_form.html.erb:19
+msgid "Public"
+msgstr ""
+
+#: app/views/topics/_topic_form.html.erb:19
+msgid "Private"
+msgstr "privat"
+
+#: app/views/topics/index.html.erb:4
+msgid "You have no topics yet."
+msgstr ""
+
+#: app/views/topics/index.html.erb:5
+msgid "Create new topic"
+msgstr "Neues Topic erstellen"
+
+#: app/views/topics/show.html.erb:15
+msgid "Abandon"
+msgstr ""
+
+#: app/views/topics/show.html.erb:23
+msgid "Add to favourites"
+msgstr ""
+
+#: app/views/users/_activation_mail_request.html.erb:2
+msgid "If you have lost your Cayox activation mail please enter your email address and we will send it again."
+msgstr ""
+
+#: app/views/users/_activation_mail_request.html.erb:11
+#: app/views/users/_request_password.html.erb:11
+#: app/views/users/_user_form.html.erb:10
+msgid "Email"
+msgstr ""
+
+#: app/views/users/_password_fields.html.erb:3
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: app/views/users/_password_fields.html.erb:12
+msgid "Password confirmation"
+msgstr "Passwort bestätigen"
+
+#: app/views/users/_request_password.html.erb:2
+msgid "If you have forgotten your Cayox password please enter your screenname and email address and we will send you password reset link."
+msgstr ""
+
+#: app/views/users/_user_form.html.erb:2
+msgid "Screenname"
+msgstr "Anzeigenamen"
+
+#: app/views/users/_user_form.html.erb:6
+msgid "Name"
+msgstr ""
+
+#: app/views/users/edit.html.erb:17
+msgid "Language settings"
+msgstr ""
+
+#: app/views/users/edit.html.erb:18
+msgid "Choose..."
+msgstr ""
+
+#: app/views/users/edit.html.erb:22
+msgid "Primary language"
+msgstr "Erste Sprache"
+
+#: app/views/users/edit.html.erb:25
+msgid "Secondary languages"
+msgstr "Weitere Sprachen"
+
+#: app/views/users/edit.html.erb:39
+msgid "Add another language"
+msgstr "Andere Sprache hinzufügen"
+
+#: app/views/users/edit.html.erb:47
+msgid "Other settings"
+msgstr ""
+
+#: app/views/users/edit.html.erb:51
+msgid "No. of topics per page"
+msgstr ""
+
+#: app/views/users/edit.html.erb:54
+msgid "No. of topic elements per page"
+msgstr ""
+
+#: app/views/users/new.html.erb:1
+msgid "Create new account"
+msgstr "Neues Konto anlegen"
+
+#: lib/i18n.rb:77
+msgid "Form submission failed because of %s problem(s)"
+msgstr "Die Eingabe konnte nicht bearbeitet werden wegen %s Problem(en)"
+
+#: lib/stubs.rb:7
+msgid "Add by email"
+msgstr ""
+
+#: lib/tags.rb:21
+msgid "Tag '%s' is too long (max 50 chars)"
+msgstr ""
+
+#: lib/tasks/flags.rake:6
+#: lib/tasks/flags.rake:11
+msgid "Spam or junk"
+msgstr ""
+
+#: lib/tasks/flags.rake:7
+#: lib/tasks/flags.rake:12
+msgid "Porn adult content"
+msgstr ""
+
+#: lib/tasks/flags.rake:8
+#: lib/tasks/flags.rake:13
+msgid "Hateful or offensive"
+msgstr ""
+
+#: merb/merb-auth/strategies.rb:40
+msgid "Invalid user/password combination"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Share"
+#~ msgstr "Speichern"
+#~ msgid "screen name"
+#~ msgstr "Anzeige Namen"
+
+#, fuzzy
+#~ msgid " Friendship with "
+#~ msgstr "Freundschaft akzeptiert"
+#~ msgid "password"
+#~ msgstr "Passwort"
+#~ msgid "Hi, %s invites you to Cayox "
+#~ msgstr "Hallo, %s hat Sie zu Cayox eingeladen."
+#~ msgid "Registration failed because:"
+#~ msgstr "Registrierung konnte nicht ausgeführt werden weil:"
+#~ msgid "What are you looking for?"
+#~ msgstr "Wonach suchen Sie?"
+#~ msgid "Themes"
+#~ msgstr "Topics"
+#~ msgid "Theme list"
+#~ msgstr "Topic Liste"
+#~ msgid "Theme created"
+#~ msgstr "Topic angelegt"
+#~ msgid "Welcome, %s!"
+#~ msgstr "Willkommen, %s!"
+#~ msgid "Couldn't create topic:"
+#~ msgstr "Topic konnte nicht angelegt werden:"
+#~ msgid "Couldn't update topic:"
+#~ msgstr "Topic konnte nicht aktualisiert werden:"
+#~ msgid "English"
+#~ msgstr "Englisch"
+#~ msgid "French"
+#~ msgstr "Französisch"
+#~ msgid "Polish"
+#~ msgstr "Polnisch"
+

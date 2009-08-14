@@ -1,0 +1,4 @@
+<p>
+  <%= _("Thank you for reporting. Element '%s' has been flagged by you as '%s'.") % [translate(@element.name), _(@flag.description)] %>
+  <%= link_to _("Close"), '#', :class => "close" %>
+</p>

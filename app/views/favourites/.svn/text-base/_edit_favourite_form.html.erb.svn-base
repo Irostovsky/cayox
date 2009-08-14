@@ -1,0 +1,8 @@
+<%= form_for @favourite, :action => resource(@favourite), :method => "put" do %>
+  <fieldset>
+    <%= partial :favourite_form %>
+    <p class="indented">
+      <%= submit _("Update"), :class => "button" %> <%= _("or") %> <%= link_to(_("Cancel"), resource(@favourite), :class => "close") %>
+    </p>
+  </fieldset>
+<% end =%>

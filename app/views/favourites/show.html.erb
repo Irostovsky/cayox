@@ -1,0 +1,20 @@
+<span class="back-link"><%= back_link_to_results %></span>
+<h2 class="favourite"><%= @favourite.name %></h2>
+<div class="description">
+  <%= partial "shared/owner_gravatar", :owners => @favourite.topic.owners %>
+  <%= @favourite.description.to_s.gsub("\n", "<br/>") %>
+</div>
+
+<ul class="action_links">
+  <% if @favourite.removable_by?(session.user) %>
+    <li class="remove"><%= link_to(_('Remove'), '#', :class => "remove_favourite") %></li>
+  <% end %>
+  <% if @favourite.editable_by?(session.user) %>
+    <li class="edit"><%= link_to(_("Edit"), resource(@favourite, :edit), :class => "edit_favourite_link") %></li>
+  <% end %>
+</ul>
+<%= form :action => resource(@favourite), :id => "remove_favourite_form", :method => 'delete' do %><% end =%>
+
+<%= autocomplete_url_script(resource(@favourite, :element_tags_autocomplete)) %>
+
+<% throw_content :for_right_column, partial("shared/elements", :with => @favourite, :as => :parent) + element_tag_cloud(@all_tags, @selected_tags) %>

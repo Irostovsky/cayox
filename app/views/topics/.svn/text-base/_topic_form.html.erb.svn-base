@@ -1,0 +1,22 @@
+<p>
+  <%= select :name => "lang", :class => "language_select", :selected => @language.iso_code,
+             :label => _("Language version"), :collection => language_options(@topic), :text_method => :name, :value_method => :iso_code %>
+</p>
+<p>
+  <%= text_field :name, :value => @topic.name[@language.iso_code], :label => _("Topic name") %>
+  <%= error_on(@topic, :name) %>
+</p>
+<p>
+  <%= text_area @topic.description[@language.iso_code], :name => "topic[description]", :id => "topic_description", :label => _("Description") %>
+  <%= error_on(@topic, :description) %>
+</p>
+<p>
+  <%= text_field :tag_list, :label => _("Tags"), :value => formatted_tags(@topic.tag_list) %>
+  <%= error_on(@topic, :tag_list) %>
+</p>
+<% if @topic.new_record? || session.user.owned_topics.count(SigMember.topic_id => @topic.id) > 0 %>
+  <p>
+    <%= select :access_level, :label => _("Access level"), :collection => [[:public, _("Public")], [:closed_user_group, _("Closed User Group")], [:private, _("Private")]] %>
+    <%= error_on(@topic, :access_level) %>
+  </p>
+<% end %>
