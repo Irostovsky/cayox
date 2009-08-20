@@ -2,10 +2,7 @@
 <ul id='all_bookmarks'>
   <% @all_bookmarks.each do |bookmark| %>
     <li>
-      <%= link_to bookmark.link.site, bookmark.link.url %>
-      <div>
-        <%= h bookmark.description %>
-      </div>
+      <%= link_to bookmark.link.site, bookmark.link.url %> <%= h bookmark.description %>
     </li>
   <% end %>
 </ul>

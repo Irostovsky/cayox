@@ -17,6 +17,6 @@ src/*
 .hg/*
 .svn/*
 nbproject
-#config/database.yml
+config/database.yml
 coverage
 .directory
