@@ -1,84 +1,86 @@
-<cayox>
+﻿<cayox>  
   <OnlineSignOut>
     <cayoxcontrol name="bCayoxMenu">
       <type>splitbutton</type>
       <captions>Cayox</captions>
-      <image>Resources/item222.jpg</image>
-      <items>
+      <image>item222</image>
+      <items>        
         <cayoxcontrol name="bCayoxSignIn">
           <captions>Sign In</captions>
-          <image/>
+          <image></image>
           <action>
-          <type>goToUrl</type>
-          <value>www.alpha.cayox.com/signin</value>
+            <type>goToUrl</type>
+            <value>www.apple.com</value>
           </action>
         </cayoxcontrol>
         <cayoxcontrol name="bCayoxAbout">
           <captions>About</captions>
-          <image/>
+          <image></image>
           <action>
-          <type>nativeDialogBox</type>
-          <value>AboutDialog</value>
+            <type>nativeDialogBox</type>
+            <value>AboutDialog</value>
           </action>
         </cayoxcontrol>
         <cayoxcontrol name="bCayoxHelp">
           <captions>Help</captions>
-          <image/>
+          <image></image>
           <action>
-          <type>goToUrl</type>
-          <value>www.alpha.cayox.com/help</value>
+            <type>goToUrl</type>
+            <value>www.google.com</value>
           </action>
         </cayoxcontrol>
       </items>
     </cayoxcontrol>
   </OnlineSignOut>
-  <!--Есть инет, user прошел аутентификацию-->
 
+  <!--Есть инет, user прошел аутентификацию-->
   <OnlineSignIn>
+
     <cayoxcontrol name="bImageButton1">
       <type>button</type>
-      <captions/>
-      <image>ImageButton.jpg</image>
+      <captions></captions>
+      <image>item222</image>
       <action>
-      <type>sideBar</type>
-      <value>SideBarDialog</value>
+        <type>sideBar</type>
+        <value>SideBarDialog</value>
       </action>
     </cayoxcontrol>
+
     <cayoxcontrol name="bCayoxMenu">
       <type>splitbutton</type>
       <captions>Cayox</captions>
-      <image>Resources/item222.jpg</image>
+      <image>item222</image>
       <items>
         <cayoxcontrol name="bCayoxSignIn">
           <captions>Sign In</captions>
-          <image/>
+          <image></image>
           <action>
-          <type>goToUrl</type>
-          <value>www.alpha.cayox.com/signin</value>
+            <type>goToUrl</type>
+            <value>www.microsoft.com</value>
           </action>
         </cayoxcontrol>
         <cayoxcontrol name="bCayoxSideBar">
           <captions>Side Bar</captions>
-          <image>ImageButton.jpg</image>
+          <image>item222</image>
           <action>
-          <type>sideBar</type>
-          <value>SideBarDialog</value>
+            <type>sideBar</type>
+            <value>SideBarDialog</value>
           </action>
         </cayoxcontrol>
         <cayoxcontrol name="bCayoxAbout">
           <captions>About</captions>
-          <image/>
+          <image></image>
           <action>
-          <type>nativeDialogBox</type>
-          <value>AboutDialog</value>
+            <type>nativeDialogBox</type>
+            <value>AboutDialog</value>
           </action>
-          </cayoxcontrol>
-          <cayoxcontrol name="bCayoxHelp">
+        </cayoxcontrol>
+        <cayoxcontrol name="bCayoxHelp">
           <captions>Help</captions>
-          <image/>
+          <image></image>
           <action>
-          <type>goToUrl</type>
-          <value>www.alpha.cayox.com/help</value>
+            <type>goToUrl</type>
+            <value>www.google.com</value>
           </action>
         </cayoxcontrol>
       </items>
@@ -86,8 +88,11 @@
   </OnlineSignIn>
 
   <OfflineSignOut>
+
   </OfflineSignOut>
 
   <OfflineSignIn>
+
   </OfflineSignIn>
+
 </cayox>
